@@ -8,9 +8,9 @@ const presets = require('./configs/presets')
 const config = {
   title: "前端记录文档", // 网站首页标题
   tagline: "作为前端工程师，不断的记录会让你技术得到提升！",  // 网站首页副标题
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
-  // onBrokenLinks: "throw",
+  url: "https://sunsboyxu.github.io",
+  baseUrl: "/yogeexu-docs/",
+  onBrokenLinks: "throw",
   // onBrokenMarkdownLinks: "warn",
   favicon: "favicon.ico",
   staticDirectories: ['static'],
