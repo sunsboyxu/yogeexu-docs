@@ -16,7 +16,8 @@ const config = {
   staticDirectories: ['static'],
   organizationName: "sunsboyxu",
   projectName: "yogeexu-docs",
-  trailingSlash: true,
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
   i18n: { // 国际化 en zh-Hans
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans"],
