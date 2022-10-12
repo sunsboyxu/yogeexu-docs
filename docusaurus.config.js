@@ -6,8 +6,8 @@ const footer = require('./configs/footer')
 const presets = require('./configs/presets')
 
 const config = {
-  title: "前端记录文档", // 网站首页标题
-  tagline: "作为前端工程师，不断的记录会让你技术得到提升！",  // 网站首页副标题
+  title: "前端技术 Docs", // 网站首页标题
+  tagline: "前端工程师，不断记录才会让技术得到提升！！！",  // 网站首页副标题
   url: "https://sunsboyxu.github.io",
   baseUrl: "/yogeexu-docs/",
   onBrokenLinks: "throw",

@@ -1,13 +1,3 @@
----
-title: 第一篇博客
-description: 使用 docusaurus2 搭建的博客系统
-slug: docusaurus2
-authors: [sunsboyxu]
-tags: [hello, docusaurus-v2, 博客]
-image: /logo.jpg
-hide_table_of_contents: false
----
-
 欢迎，来到 [yogeexu的博客](https://sunsboyxu.github.io/yogeexu-docs/) 此博客使用 [**Docusaurus 2**](https://docusaurus.io/) 搭建
 
 ![Docusaurus Plushie](https://docusaurus.io/zh-CN/assets/images/social-card-8dc2413b4f9e86328bf77575e91171d7.png)
@@ -34,4 +24,3 @@ hide_table_of_contents: false
 ``` bash
 cmd /C 'set "GIT_USER=sunsboyxu" && npm run deploy'
 ```
-
