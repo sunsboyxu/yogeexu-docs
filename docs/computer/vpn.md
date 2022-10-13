@@ -3,10 +3,7 @@
 - [Ghelper](http://googlehelper.net/)
 - [节点列表](https://9.234456.xyz/abc.html)
 - [fastlink](http://byfastlink.xyz/auth/login)
-<<<<<<< HEAD
 - [nodefree](https://github.com/Fukki-Z/nodefree)
-=======
->>>>>>> 23adf04bac914d83134eb970c2aef4b6fdf55a19
 
 ## 1 相关资源
 - [aneeo](https://aneeo.com/)
@@ -28,25 +25,19 @@
 - [v2rayN](https://github.com/2dust)
 - [v2rayN-Core PC端](https://github.com/2dust/v2rayN/releases)
 - [v2rayN-Core Andorid端](https://github.com/2dust/v2rayNG/releases)
-<<<<<<< HEAD
 - [v2rayN-教程使用教程](https://merlinblog.xyz/wiki/v2rayn.html)
-=======
->>>>>>> 23adf04bac914d83134eb970c2aef4b6fdf55a19
 - [v2ray免费账号](https://github.com/Alvin9999/new-pac/wiki/)
 - [手动设置V2Ray PAC代理模式访问P站、Telegram、Github等等](https://www.zyskys.com/posts/60593.html)
 - [V2Ray搭建详细图文教程](https://www.linuxwf.com/2020/04/10/V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B/#%E5%89%8D%E8%A8%80)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 23adf04bac914d83134eb970c2aef4b6fdf55a19
 ## 5 Clash
-- [clash for windows 下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases)
-- [clash for windows 汉化包下载](https://sabrinathings.lanzoui.com/b01hweblc)
-- [clash Mac下载](https://github.com/Fndroid/clash_for_windows_pkg/releases)
-- [Clash for Mac 教程](https://merlinblog.xyz/wiki/clash-for-windows-for-mac.html)
+- [Clash for windows 下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+- [Clash for windows 汉化包下载](https://sabrinathings.lanzoui.com/b01hweblc)
 - [Clash for Windows 教程](https://merlinblog.xyz/wiki/cfw.html)
-- [ClashForAndroid](https://github.com/Kr328/ClashForAndroid)
+- [Clash for macOS 下载](https://github.com/Fndroid/clash_for_windows_pkg/releases)
+- [Clash for macOS 教程](https://merlinblog.xyz/wiki/clash-for-windows-for-mac.html)
+- [Clash for android](https://github.com/Kr328/ClashForAndroid)
 
 ### 如何汉化 Clash for Windows
 - [clash for windows 汉化包下载](https://sabrinathings.lanzoui.com/b01hweblc)

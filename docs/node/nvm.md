@@ -15,10 +15,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 ``` bash
 # nvm 环境变量
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
+环境变量配置到 .zshrc 或者 .bash_profile 的最后
 
 ``` js
 // 打开后，按 s键，后进行编辑
@@ -34,6 +34,12 @@ source ~/.bash_profile
 nvm --version
 nvm ls
 ```
+
+### 相关问题
+nvm 设置 default node 版本失效，指向 system 版本
+
+- [Nvm uses system node instead of default](https://github.com/nvm-sh/nvm/issues/1184)
+- [Nvm uses system node instead of default](https://github.com/cytopia/devilbox/issues/846)
 
 
 ## window11 下 nvm 的安装和配置
@@ -103,12 +109,10 @@ C:\Python310\Scripts\;C:\Python310\;%SystemRoot%\system32;%SystemRoot%;%SystemRo
 ## 常用命令
 - nvm version                // 查看 nvm 版本
 - nvm install stable         // 安装最新稳定版 node
+- nvm install --lts          // 下载最新 LTS node 版本
 - nvm install 12             // 安装某个版本的node
 - nvm uninstall 12           // 卸载某个版本
 - nvm ls                     // node 列表
 - nvm current                // 当前使用的 node 版本
 - nvm use 16                 // 切换 node 版本
 - nvm alias default v16.13.1 // 设置默认使用 node 版本
-
-
-

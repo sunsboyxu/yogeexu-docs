@@ -37,9 +37,11 @@ fe80::10 localhost
 ```
 
 ## SwitchHosts
-- [SwitchHosts工具下载](https://swh.app)
-[](https://blog.csdn.net/weixin_56727438/article/details/125718383)
+
+- [SwitchHosts 官网](https://swh.app)
+- [SwitchHosts 下载](https://github.com/oldj/SwitchHosts/tags)
+- [快速切换本地host文件的工具](https://blog.csdn.net/weixin_56727438/article/details/125718383)
+- [SwitchHosts管理hosts](https://mp.weixin.qq.com/s/A37XnD3HdcGSWUflj6JujQ)
+- [github加速教程](https://jishuin.proginn.com/p/763bfbd7d158)
+
 通过 SwitchHosts 工具可以很好的来修改和管理自己的 host文件配置，Windows系统和Mac系统都可以使用
-
-
-### 

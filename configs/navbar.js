@@ -25,7 +25,7 @@ module.exports = {
     { to: "/guitar", label: "吉他", position: "left" },
     { to: "/tea", label: "请你喝茶", position: "left" },
     {
-      href: "https://github.com/facebook/docusaurus",
+      href: "https://github.com/sunsboyxu/yogeexu-docs",
       label: "GitHub",
       position: "right",
     },

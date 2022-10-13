@@ -3,6 +3,7 @@
 ## 博客搭建
 - [docusaurus](https://docusaurus.io/zh-CN/)
 - [hexo](https://hexo.io/)
+- [](https://hexo.io/zh-cn/)
 - [butterfly](https://butterfly.js.org/)
 - [hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
 
