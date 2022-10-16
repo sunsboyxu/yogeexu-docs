@@ -1,23 +1,25 @@
 # windows 11
+
 - [Windows 上设置开发环境](https://docs.microsoft.com/zh-cn/windows/dev-environment/)
 
 ## window11 安装
+
 - [系统要求](https://www.microsoft.com/zh-cn/windows/windows-11-specifications)
 - [受信任的平台模块-TPM](https://docs.microsoft.com/zh-cn/windows/security/information-protection/tpm/trusted-platform-module-overview)
 - [window11下载](https://www.microsoft.com/zh-cn/software-download/windows11)
 - [Windows 11 规格、功能和电脑要求](https://www.microsoft.com/zh-cn/windows/windows-11-specifications?r=1)
 - [在电脑上启用 TPM 2.0](https://support.microsoft.com/zh-cn/windows/%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E5%90%AF%E7%94%A8-tpm-2-0-1fd5a332-360d-4f46-a1e7-ae6b0c90645c)
 
-
 ## Windows 程序包管理器
 
 ### winget
-- [winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/)
 
+- [winget](https://docs.microsoft.com/zh-cn/windows/package-manager/winget/)
 
 ## windows11 小技巧
 
 ### 关闭-推荐的项目
+
 - [windows11 关闭-推荐的项目](https://jingyan.baidu.com/article/9f7e7ec08d22802e29155414.html)
 
 ### 右键菜单的展开
@@ -33,6 +35,7 @@ reg.exe delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a
 ```
 
 ### WindowsApps 你当前无权访问该文件夹
+
 [](https://www.yebaike.com/14/202104/3013305.html)
 一般在 Microsoft store 下载的应用默认安装在 C:\Program Files\WindowsApps 下，
 WindowsApps 是个隐藏的目录，点击 查看 -> 显示 -> 选中 隐藏的项目
@@ -47,7 +50,6 @@ WindowsApps 是个隐藏的目录，点击 查看 -> 显示 -> 选中 隐藏的�
 - 方法二
 右击 WindowsApps 文件夹，选择 属性 -> 选择 安全 下的 高级 -> 后面同上操作
 
-
 ## windows11 软件使用
 
 7zip压缩软件
@@ -60,7 +62,6 @@ Clash
 PotPlayer
 QuickCut
 
-
 ## 问题处理
 
 ### WindowsTerminal.exe - 系统错误
@@ -72,7 +73,5 @@ Visual Studio 2015 运行库是 Visual C++ Redistributable Package 安装运行�
 下载并安装微软 Visual Studio 2015 版运行库后重启系统，msvcp140.dll 文件即可修复成功
 
 [Microsoft Visual C++ 可再发行程序包最新支持的下载](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-Microsoft Visual C++ 可再发行程序包最新支持的下载：https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170，
+Microsoft Visual C++ 可再发行程序包最新支持的下载：<https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170>，
 找到 Visual Studio 2015、2017、2019 和 2022，我是 64位系统的，下载 体系结构 X64 的 VC_redist.x64.exe 进行安装即可
-
-

@@ -17,7 +17,7 @@ module.exports = [
         // 一般使用场景：字符串 editUrl
         // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
         // 高级使用场景：函数 editUrl
-        editUrl: ({locale, blogDirPath, blogPath, permalink}) => `https://github.com/facebook/docusaurus/edit/main/website/${blogDirPath}/${blogPath}`,
+        editUrl: ({ locale, blogDirPath, blogPath, permalink }) => `https://github.com/facebook/docusaurus/edit/main/website/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogTitle: '博客标题',
         blogDescription: '博客',

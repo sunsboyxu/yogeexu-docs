@@ -1,5 +1,9 @@
 # Terminal
 
+## Powershell
+
+- [macOS 上安装 PowerShell](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.2)
+
 ## iterm2
 
 - [iTerm2](https://iterm2.com/)

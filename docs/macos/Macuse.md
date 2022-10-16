@@ -1,4 +1,5 @@
 # Mac doc
+
 - [使用手册](https://support.apple.com/zh-cn/guide/mac-help/welcome/10.15/mac)
 - [如何固定桌面排序](https://blog.csdn.net/guang_s/article/details/84333857)
 - [在 Mac 上设置 VPN 连接](https://support.apple.com/zh-cn/guide/mac-help/mchlp2963/10.15/mac/10.15)
@@ -8,12 +9,15 @@
 - [无线局域网](https://support.apple.com/zh-cn/HT202068)
 
 ## Mac 实用小技巧
+
 - [专业截屏指南](https://apps.apple.com/cn/story/id1456413984)
 
 ## Mac 快捷键
+
 - [快捷键参考1](https://huajiakeji.com/macos/2018-10/1572.html)
 
 Mac 快捷键使用
+
 ``` js
 command + R // 刷新网页
 shift + command + R //强制刷新
@@ -29,6 +33,7 @@ control + command + [0-8] //快速整理访达
 ```
 
 Mac 浏览器（Chrome）快捷键使用
+
 ``` js
 command + W // 关闭当期网页
 command + T // 打开新的标签页
@@ -37,6 +42,7 @@ shift + command + B // 隐藏标签
 ```
 
 ## Mac 软件
+
 - [知您网](https://www.zhiniw.com)
 - [macwk](https://www.macwk.com/)
 - [程序员与Mac](https://www.jianshu.com/p/540fd77b0b3e)
@@ -53,10 +59,10 @@ shift + command + B // 隐藏标签
 - [Mac hosts 管理](https://github.com/oldj/SwitchHosts)
 - [SwitchHosts 官网](https://swh.app/)
 - [FileZilla for Mac(FTP工具)](https://www.mac69.com/mac/168.html)
-- [JetBrains PhpStorm 2018 for Mac(PHP集成开发工具) ](https://www.mac69.com/mac/3454.html)
-
+- [JetBrains PhpStorm 2018 for Mac(PHP集成开发工具)](https://www.mac69.com/mac/3454.html)
 
 ## 终端使用(terminal)
+
 - [如何切换默认的Shell终端命令窗口：zsh 和 bash](https://support.apple.com/zh-cn/HT208050)
 - [Mac 终端 oh-my-zsh 配置](https://www.jianshu.com/p/64344229778a)
 - [zsh终端美化](https://sspai.com/post/55176)
@@ -64,6 +70,7 @@ shift + command + B // 隐藏标签
 - [oh-my-zsh主题](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
 
 ### iTerm2
+
 - [iTerm2官网](https://iterm2.com/)
 - [iTerm2下载地址](https://iterm2.com/downloads.html)
 - [iTerm2使用指南](https://blog.csdn.net/qq_41037571/article/details/121184107)
@@ -73,6 +80,7 @@ shift + command + B // 隐藏标签
 下载的文件解压后，拖到电脑 应用所在的文件夹下即可
 
 ### 切换默认的 shell
+
 ``` js
 // 查看系统所有的 shell 列表
 cat /etc/shells
@@ -88,6 +96,7 @@ chsh -s /bin/bash
 ```
 
 ### oh-my-zsh
+
 - [ohmyz官网](https://ohmyz.sh/)
 - [oh-my-zsh主题地址](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
 - [oh-my-zsh主题安装命令](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
@@ -100,11 +109,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ```
 
 ## 添加读写权限
+
 ``` js
 sudo chown -R  用户名 /目录名/目录名2
 ```
 
 ## 环境变量配置
+
 - [mac .zshrc 文件找不到问题](https://blog.csdn.net/weixin_42345592/article/details/109677712)
 - [简化常用命令](https://blog.csdn.net/lonewolf521125/article/details/81363520)
 
@@ -160,6 +171,7 @@ source ~/.bash_profile
 ```
 
 保存退出的说明
+
 ``` js
 :w             // 保存
 :w filename    // 另存为filename
@@ -170,6 +182,7 @@ source ~/.bash_profile
 ```
 
 #### Found a swap file by the name '.bash_profile.swp' 问题
+
 在编辑文件时没有保存就异常退出了，vim 为了保证文件的安全性，会在编辑文件时创建一个交换文件 swap file
 
 ``` js
@@ -206,6 +219,7 @@ mongod --dbpath=/usr/local/mongodb/data/db
 # 配置 mongodb 快启动
 alias mongodbServer='mongod --dbpath=/usr/local/mongodb/data/db'
 ```
+
 <code>:wq!</code> 保存后，刷新配置 <code>source ~/.bash_profile</code> 终端输入，配置的快速启动命令
 
 ``` bash
@@ -213,22 +227,26 @@ mongodserver
 ```
 
 如，查看 vue-cli 的版本
+
 ``` bash
 # 查看 vue-cli 的版本
 alias vuev='vue --version'
 ```
 
 ## Mac 安装 window10
+
 - [parallels desktop](https://www.parallels.cn/welcome-new/)
 - [Parallels Desktop 16 for Mac v16.1.2 PD虚拟机 中文破解版下载](http://www.fengmac.com/2274.html)
 
 ## Mac 外接显示器
+
 - [Mac外接显示器保持同步](https://blog.csdn.net/weixin_39685578/article/details/111819082)
 - [Mac外接显示器教程](https://blog.csdn.net/weixin_50937908/article/details/109492930)
 
 ## 抓包工具
 
 ### Charles
+
 - [charles](https://www.charlesproxy.com/download/)
 - [Charles破解和安装](https://zhuanlan.zhihu.com/p/248767986)
 - [Charles 激活码计算器](https://www.zzzmode.com/mytools/charles/)

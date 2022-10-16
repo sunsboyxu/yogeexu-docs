@@ -6,6 +6,7 @@
 - [vue3新版中文文档](https://staging-cn.vuejs.org/)
 - [Vue 3 迁移指南](https://v3-migration.vuejs.org/)
 - [Vue3 Api](https://cn.vuejs.org/api/)
+<https://www.bilibili.com/video/BV1St4y1A71B/?vd_source=25757068558276aa3a3b5e068ec0182b>
 
 ## vue3学习
 
@@ -21,8 +22,6 @@
 - [](https://www.jianshu.com/p/289919a35070)
 - [](https://www.jianshu.com/p/13c405104ed8)
 - [](https://www.jianshu.com/p/b8545d49fc69)
-
-
 
 - [vuejs 官网](https://vuejs.org/)
 - [vuejs 官网中文翻译](https://staging-cn.vuejs.org/)

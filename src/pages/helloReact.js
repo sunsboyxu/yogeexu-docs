@@ -13,7 +13,7 @@ export default function HelloReact() {
       }}>
         <p>
           修改 <code>src/pages/helloReact.js</code>
-        </p> 
+        </p>
       </div>
     </Layout>
   )

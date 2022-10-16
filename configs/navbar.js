@@ -10,7 +10,7 @@ module.exports = {
     width: 32,
     height: 32,
     className: 'custom-navbar-logo-class',
-    style: {border: '1px solid #eee',borderRadius: '50%'},
+    style: { border: '1px solid #eee', borderRadius: '50%' },
   },
   style: 'primary',
   hideOnScroll: true,
