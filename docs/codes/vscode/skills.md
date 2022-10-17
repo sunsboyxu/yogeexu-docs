@@ -1,0 +1,51 @@
+# vscode 优化处理
+
+## vue项目 tempalte 显示 波浪线
+
+- [去除红色波浪线](https://blog.csdn.net/weixin_30570101/article/details/101775614)
+
+``` js
+// 错误提示
+TypeScript intellisense is disabled on template. To enable, 
+configure `"jsx": "preserve"` in the `"compilerOptions"` property of tsconfig or jsconfig. 
+To disable this prompt instead, configure `"experimentalDisableTemplateSupport": true` in `"vueCompilerOptions"` property.volar
+```
+
+``` json
+// 处理方法 jsconfig.json
+// "jsx":"preserve"
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "jsx":"preserve" ,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  }
+}
+```
+
+## 无法使用 JSX，除非提供了 "--jsx"
+
+- [无法使用 JSX，除非提供了 "--jsx"](https://blog.csdn.net/weixin_42164539/article/details/124075375)
+
+- 文件->首选项->设置-> '搜索设置：vetur' -> 找到
+- Vetur › Validation: Script 取消勾选 √
+- Vetur › Validation: Style 取消勾选 √
+- Vetur › Validation: Template 取消勾选 √
+- 文件->首选项->设置-> '搜索设置：eslint' -> 找到 Eslint: Enable
+
+## 其他问题
+
+- [Comments are not permitted in JSON](https://blog.csdn.net/qq_21271511/article/details/108219791)

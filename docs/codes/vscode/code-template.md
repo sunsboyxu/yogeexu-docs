@@ -1,69 +1,11 @@
-# vscode 使用
+# vscode 配置代码模板
 
-- [idea破解码](https://www.yht7.com/cate/123)
-- [JetBrains全系列软件激活教程激活码以及JetBrains系列软件汉化包](https://www.macwk.com/article/jetbrains-crack)
-
-[开发工具>VSCode](https://www.php.cn/tool/vscode/)
-
-## vue项目 tempalte 显示 波浪线
-
-错误提示
-
-``` js
-TypeScript intellisense is disabled on template. To enable, 
-configure `"jsx": "preserve"` in the `"compilerOptions"` property of tsconfig or jsconfig. 
-To disable this prompt instead, configure `"experimentalDisableTemplateSupport": true` in `"vueCompilerOptions"` property.volar
-```
-
-解决
-
-``` json
-// jsconfig.json
-// "jsx":"preserve"
-{
-  "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "baseUrl": "./",
-    "moduleResolution": "node",
-    "jsx":"preserve" ,
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
-  }
-}
-
-```
-
-## vscode 去除 vue下 红色波浪线
-
-[去除红色波浪线](https://blog.csdn.net/weixin_30570101/article/details/101775614)
-
-## 无法使用 JSX，除非提供了 “--jsx“
-
-[无法使用 JSX，除非提供了 “--jsx“](https://blog.csdn.net/weixin_42164539/article/details/124075375)
-
-- 文件->首选项->设置-> '搜索设置：vetur' -> 找到
-- Vetur › Validation: Script 取消勾选 √
-- Vetur › Validation: Style 取消勾选 √
-- Vetur › Validation: Template 取消勾选 √
-- 文件->首选项->设置-> '搜索设置：eslint' -> 找到 Eslint: Enable
-
-## vscode 配置 .vue 文件 快速模板
+## 配置 .vue 文件 快速模板
 
 文件->首选项->用户代码片段-> '输入 vue' -> 点击 vue.json 进行配置
-!多个模板可以自定义名字
-// vue.json
 
 ``` json
+// vue.json
 {
     "vue template": {
         "prefix": "!vue", // 快捷键命令
@@ -105,7 +47,7 @@ To disable this prompt instead, configure `"experimentalDisableTemplateSupport":
 }
 ```
 
-## 其他 文件的 模板，配置差不多 如：html
+## 配置 .html 文件 快速模板
 
 ``` html
 {
@@ -143,26 +85,3 @@ To disable this prompt instead, configure `"experimentalDisableTemplateSupport":
     }
 }
 ```
-
-# tab键 自动补全 html 代码
-
-文件 => 首选项 => 设置=> 工作台=> 外观 => settings.json 添加：
-
-``` json
-{
-    "emmet.triggerExpansionOnTab": true
-}
-```
-
-# 快捷键使用
-
-## 全局搜索（ctrl + shift + F）
-
-# vscode 插件使用
-
-Vetur - vue 插件
-Prettier - Code formatter
-
-# 问题处理
-
-[Comments are not permitted in JSON](https://blog.csdn.net/qq_21271511/article/details/108219791)

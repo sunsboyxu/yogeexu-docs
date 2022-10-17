@@ -1,5 +1,15 @@
 # vscode 开发设置
 
+## tab键 自动补全 html 代码
+
+文件 -> 首选项 -> 设置 -> 工作台 -> 外观 -> settings.json 添加
+
+``` json
+{
+    "emmet.triggerExpansionOnTab": true
+}
+```
+
 ## 保存代码格式化
 
 windows下 文件 -> 首选项 -> 设置 -> 输入：editor.codeActionsOnSave -> 点击 在 settings.json 中编辑

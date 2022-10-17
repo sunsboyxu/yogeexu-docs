@@ -65,7 +65,6 @@
 </snippet>
 ```
 
-
 ## 使用问题
 
 [安装模板插件和制作vue模版](https://blog.csdn.net/Lxylovezlj/article/details/78109497)
