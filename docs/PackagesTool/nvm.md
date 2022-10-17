@@ -1,7 +1,10 @@
 # nvm
+
 [nvm-sh](https://github.com/nvm-sh/nvm)
 
 ## Mac下 nvm 的安装和配置
+
+- [](https://www.jianshu.com/p/038e9b0f7f39)
 
 1 安装，在终端（Terminal）中输入
 
@@ -18,6 +21,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
+
 环境变量配置到 .zshrc 或者 .bash_profile 的最后
 
 ``` js
@@ -36,11 +40,11 @@ nvm ls
 ```
 
 ### 相关问题
+
 nvm 设置 default node 版本失效，指向 system 版本
 
 - [Nvm uses system node instead of default](https://github.com/nvm-sh/nvm/issues/1184)
 - [Nvm uses system node instead of default](https://github.com/cytopia/devilbox/issues/846)
-
 
 ## window11 下 nvm 的安装和配置
 
@@ -55,6 +59,7 @@ nvm 设置 default node 版本失效，指向 system 版本
 第二个是 nodejs 的安装存放路径（D:\nodejs）
 
 ### 设置 全局模路径 和 缓存路径
+
 在 D:\nodejs，目录下新建 node_global 和 node_cache 目录
 
 ``` js
@@ -96,17 +101,17 @@ C:\Python310\Scripts\;C:\Python310\;%SystemRoot%\system32;%SystemRoot%;%SystemRo
 用户变量定位到 D:\nodejs\node_global，
 否则安装 npm install @vue/cli -g 时，使用 vue --version 会出现，vue 命令终端的报错：vue : 无法将“vue”项识别为 cmdlet、函数、脚本文件或可运行程序的名称
 
-
 ### vue : 无法加载文件 D:\nodejs\node_global\vue.ps1，因为在此系统上禁止运行脚本
 
  Windows PowerShell 执行策略
- 
- ### 相关问题解决
- - [vue : 无法加载文件 D:\Nodejs\node_global\vue.ps1，因为在此系统上禁止运行脚本](https://blog.csdn.net/jiyuzzz/article/details/121048727)
- - [](https://www.pudn.com/news/62552329b744eb386fdaeff5.html)
 
+### 相关问题解决
+
+- [vue : 无法加载文件 D:\Nodejs\node_global\vue.ps1，因为在此系统上禁止运行脚本](https://blog.csdn.net/jiyuzzz/article/details/121048727)
+- [](https://www.pudn.com/news/62552329b744eb386fdaeff5.html)
 
 ## 常用命令
+
 - nvm version                // 查看 nvm 版本
 - nvm install stable         // 安装最新稳定版 node
 - nvm install --lts          // 下载最新 LTS node 版本

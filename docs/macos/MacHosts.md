@@ -1,6 +1,7 @@
 # Mac Hosts
 
 ## hosts文件介绍
+
 - [hosts文件介绍](https://baike.baidu.com/item/hosts/10474546)
 - [window系统中Hosts文件介绍](https://blog.csdn.net/fuhanghang/article/details/125293347)
 - [GitHub520](https://github.com/521xueweihan/GitHub520)
@@ -45,3 +46,6 @@ fe80::10 localhost
 - [github加速教程](https://jishuin.proginn.com/p/763bfbd7d158)
 
 通过 SwitchHosts 工具可以很好的来修改和管理自己的 host文件配置，Windows系统和Mac系统都可以使用
+
+- [远程hosts配置地址1](https://gitee.com/ineo6/hosts/raw/master/hosts)
+- [远程hosts配置地址2](https://raw.hellogithub.com/hosts)

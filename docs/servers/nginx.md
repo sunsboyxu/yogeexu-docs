@@ -7,7 +7,9 @@
 [nginx配置跨域2](https://blog.csdn.net/xiojing825/article/details/83383524)
 
 ## Mac Nginx
-[Mac 安装Nginx详细教程](https://blog.csdn.net/Wjhsmart/article/details/115739192)
+
+- [Mac 安装Nginx详细教程](https://blog.csdn.net/Wjhsmart/article/details/115739192)
+- [Mac非brew方式安装nginx教程](https://www.jianshu.com/p/bac250bcdaf9)
 
 ``` js
 brew services start nginx

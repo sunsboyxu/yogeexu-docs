@@ -97,17 +97,6 @@ chsh -s /bin/bash
 
 ### oh-my-zsh
 
-- [ohmyz官网](https://ohmyz.sh/)
-- [oh-my-zsh主题地址](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
-- [oh-my-zsh主题安装命令](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
-
-``` bash
-// 安装不成功，可以多试几次
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-// 安装成功会修改，.zshrc 的配置
-```
-
 ## 添加读写权限
 
 ``` js

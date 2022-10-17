@@ -17,12 +17,16 @@ Homebrew 是一款包管理工具，目前支持 macOS 和 Linux 系统，
 - [homebrew-install](https://github.com/ineo6/homebrew-install)
 
 ## 镜像切换
+
 - [镜像助手](https://brew.idayer.com/guide/change-source)
 
+## brew tap
 
-
+- [brew tap 功能详解](https://blog.csdn.net/yyws2039725/article/details/103655156)
+- [brew tap 功能详解2](https://cloud.tencent.com/developer/article/1956502)
 
 ## 常用命令
+
 ``` bash
 brew ls                  // 本地软件库列表
 brew search xxx          // 查找软件 xx
