@@ -1,17 +1,18 @@
 # 正则
 
 ## 提取文件名
+
 通过 require.context() 自动注册组件，通过正则来获取组件的名称
 
 ``` js
 const requireComponents = require.context('@/components/global', false, /\.vue$/)
 export default {
-	install: function(Vue) {
-		requireComponents.keys().forEach(key => {
-			const compName = key.replace(/\.|\/|.vue/g, '')
-			Vue.component(compName, requireComponents(key).default || requireComponents(key))
-		})
-	}
+ install: function(Vue) {
+  requireComponents.keys().forEach(key => {
+   const compName = key.replace(/\.|\/|.vue/g, '')
+   Vue.component(compName, requireComponents(key).default || requireComponents(key))
+  })
+ }
 }
 ```
 
