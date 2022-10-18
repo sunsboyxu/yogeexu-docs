@@ -32,7 +32,13 @@ npx create-docusaurus@latest --help
 ```
 
 ``` js
+// 新建一个 docusaurus2 项目命令
+
+// 新建了 一个 docusaurus-blog 项目，使用了 classic 模板，使用 npm/yarn/pnpm 其中某一个包管理器 
 npx create-docusaurus@latest 项目名称(如：docusaurus-blog) 使用的模版(如：classic) [根目录] -p npm/yarn/pnpm
+
+// 使用 typescript
+npx create-docusaurus@latest 项目名称(如：docusaurus-blog) 使用的模版(如：classic) [根目录] -p npm/yarn/pnpm --typescript
 ```
 
 ### npx + npm 创建 docusaurus2 项目
@@ -48,3 +54,42 @@ npx create-docusaurus@latest docusaurus-blog classic -p npm
 // 包管理工具使用 yarn
 npx create-docusaurus@latest docusaurus-blog classic -p yarn
 ```
+
+![创建 docusaurus-blog 项目](https://files.mdnice.com/user/32658/d1b553d0-452b-41c8-8a65-ec8b937244f5.png)
+
+### 项目目录说明
+
+```
+docusaurus-blog
+├── blog
+│   ├── 2019-05-28-hola.md
+│   ├── 2019-05-29-hello-world.md
+│   └── 2020-05-30-welcome.md
+├── docs
+│   ├── doc1.md
+│   ├── doc2.md
+│   ├── doc3.md
+│   └── mdx.md
+├── src
+│   ├── css
+│   │   └── custom.css
+│   └── pages
+│       ├── styles.module.css
+│       └── index.js
+├── static
+│   └── img
+├── docusaurus.config.js
+├── package.json
+├── README.md
+├── sidebars.js
+└── yarn.lock
+```
+
+- /blog/ - 包含博客的 Markdown 文件。如果禁博客插件，可以删除这个目录，或者也可以在设置 path 选项之后修改它的名称
+- /docs/ - 包含文档的 Markdown 文件。可以在 sidebars.js 中自定义文档的侧边栏顺序。 如果后续禁用了文档插件，可以删除这个目录，或者你也可以在设置 path 选项之后修改它的名称
+- /src/ - 如页面或自定义 React 组件一类的非文档文件。 严格来说，不一定要把非文档类文件放在这里。不过把它们放在一个集中的目录，可以让代码检查或者处理更为简便。
+- /src/pages - 所有放在此目录中的 JSX/TSX/MDX 文件都会被转换成网站页面
+- /static/ - 静态目录。此处的所有内容都会被复制进 build 文件夹
+- /docusaurus.config.js - 站点配置文件
+- /package.json - Docusaurus 网站是一个 React 应用，你可以安装并使用任何 npm 包。
+- /sidebars.js - 由文档使用，用于指定侧边栏中的文档顺序
