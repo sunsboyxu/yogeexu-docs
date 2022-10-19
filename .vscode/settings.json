@@ -1,5 +1,11 @@
 {
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
+  "workbench.colorTheme": "Atom One Dark",
   "files.autoSave": "onFocusChange",
+  "editor.fontSize": 14,
   "editor.fontFamily": "Consolas,JetBrainsMono Nerd Font",
-  "editor.fontSize": 14
+  "editor.codeActionsOnSave": {
+      "source.fixAll": true
+  }
 }

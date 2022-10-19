@@ -1,5 +1,7 @@
 # Flutter
+
 ::: tip 相关文档
+
 - [Flutter中文网](https://flutterchina.club/get-started/install/)
 - [Flutter官网-英文](https://flutter.dev/docs)
 - [Flutter实战书籍](https://book.flutterchina.club/)
@@ -12,23 +14,28 @@
 :::
 
 ## 1 Flutter - 续博客
+
 - [《Flutter实战》](https://book.flutterchina.club/)
 - [](https://www.jianshu.com/u/39bb72583e13)
 - [Flutter | 老孟](http://laomengit.com/)
 - [全局点击空白处隐藏键盘](https://mp.weixin.qq.com/s/jaWUgUaO5eFmoUZpkoGPXw)
 
 ## 2 Dart 官网
-- [dart](https://dart.dev/) 
+
+- [dart](https://dart.dev/)
 - [Get the Dart SDK](https://dart.dev/get-dart)
 
 ## 3 Gradle
+
 [gradle](https://gradle.org/)
 
 ## 4 Java(JDK) 安装
+
 [JDK下载地址](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 [注：选择适合你环境的，Accept License Agreement 下载记得勾选这个]
 
 ## 5 window Flutter 环境搭建
+
 - [Windows上怎么配置flutter开发环境？这篇文章手把手教你](https://zhuanlan.zhihu.com/p/69713480)
 - 配置 java 环境变量
 - JAVA_HOME
@@ -36,6 +43,7 @@
 - CLASS_PATH
 
 ### 5-1 Android Studio (sdk) 安装
+
 - [需要翻墙](https://developer.android.com/)
 
 ::: info
@@ -50,6 +58,7 @@ CLASS_PATH
 - [JDK 和 Android SDk 环境搭建](https://www.jianshu.com/p/2cdb0c67962a)
 
 ### 5-3 Flutter SDK 安装
+
 - [SDK下载地址](https://flutter.dev/docs/development/tools/sdk/releases)
 
 ::: tip
@@ -64,40 +73,45 @@ CLASS_PATH
 5 再次使用 命令 flutter doctor 检测环境
   输入 flutter --android-licenses （android的一些协议）
   一直输入 y 回车就好了
-6 通过 android studio 新建 第一个 Flutter  项目 
+6 通过 android studio 新建 第一个 Flutter  项目
 7 运行到 虚拟机或者手机上
 :::
 
 ## 6 安装夜神模拟器
+
 Z:\Nox\bin 下面打开命令窗口 输入： nox_adb.exe connect 127.0.0.1:62001
 
 ## 7 Mac 搭建 Flutter 环境
+
 [查看最新镜像地址](https://flutter.dev/community/china)
 [SDK下载地址](https://flutter.dev/docs/development/tools/sdk/releases?tab=macos)
 
 ### 1 将下载的 sdk 解压到 自己 安装软件的目录
-	/Users/sunsboy/flutter
-	
+
+ /Users/sunsboy/flutter
+
 ### 2 添加 Flutter 环境变量
+
 [环境变量和镜像](https://docs.flutter.dev/community/china)
 1、命令窗口 输入vi ~/.bash_profile
 2、向上滚动屏幕，出现Swap file "~/.bash_profile.swp"already exists!
-	[O]penRead-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q)uit, (A)bort:
-	按e，即edit
+ [O]penRead-Only, (E)dit anyway, (R)ecover, (D)elete it, (Q)uit, (A)bort:
+ 按e，即edit
 3、进入vim，输入
-	// 你的安装地址 /Users/sunsboy/flutter/bin
-	export PATH=/Users/sunsboy/flutter/bin:$PATH
-	// 镜像
-	export PUB_HOSTED_URL=https://pub.flutter-io.cn
-	export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+ // 你的安装地址 /Users/sunsboy/flutter/bin
+ export PATH=/Users/sunsboy/flutter/bin:$PATH
+ // 镜像
+ export PUB_HOSTED_URL=<https://pub.flutter-io.cn>
+ export FLUTTER_STORAGE_BASE_URL=<https://storage.flutter-io.cn>
 4、输入完毕，如果要保存退出，按[esc]，再输入:wq!（注意：包含前面的冒号和后面的感叹号），再按[enter]，重启terminal生效
 
 window下
 打开 CMD
-set PUB_HOSTED_URL=https://pub.flutter-io.cn
-set FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-	
+set PUB_HOSTED_URL=<https://pub.flutter-io.cn>
+set FLUTTER_STORAGE_BASE_URL=<https://storage.flutter-io.cn>
+
 ### 打开命令窗口 flutter doctor 检测 Mac下 flutter 环境是否符合
+
   ios toolchain
   根据提示 依次输入命令安装 变好了！
   brew update
@@ -107,6 +121,7 @@ set FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
   brew install ideviceinstaller
 
 ### Vscode 搭建 Flutter 开发环境
+
 Dart 和 Flutter 插件安装
 创建项目
 flutter create flutter
@@ -119,127 +134,129 @@ O 键 切换 Android 和 ios 预览模式
 Q 键 退出调试预览模式
 
 ## 慕课网 Flutter 教程
+
 [贾鹏辉的技术博客官网](https://www.devio.org/)
 [Flutter从入门到进阶-实战携程网App](https://git.imooc.com/coding-321/flutter_trip)
 [Flutter与iOS混合开发实战 辅导文档-持续更新](https://coding.m.imooc.com/questiondetail.html?qid=150168)
 [项目开发中有哪些常用快捷键？](https://coding.imooc.com/learn/questiondetail/157268.html)
 [徐爱卿](https://www.jianshu.com/u/1c09737416aa)
 
+### 创建第一个Flutter项目 flutter1,以及目录介绍
 
-#### 创建第一个Flutter项目 flutter1,以及目录介绍
 flutter create flutter1
 cd flutter1
 flutter1 -
-	-- ios ios的工程目录
-	-- android 安卓工程目录
-	-- lib flutter dart文件
-	-- pubspec.yaml  flutter依赖包配置文件
-	
+ -- ios ios的工程目录
+ -- android 安卓工程目录
+ -- lib flutter dart文件
+ -- pubspec.yaml  flutter依赖包配置文件
+
 #### Flutter 常用数据类型
+
 数字（num | int | double）
 字符串
 布尔（ bool）
 集合：
-	List
-	Map
+ List
+ Map
 var
 
-
 #### Flutter 面向对象（OOP）
+
 1 封装 继承 多态（特性）
 2 类：
-	对象
-	变量
-	方法：
-		构造方法：
-				标准构造方法
-				初始化列表
-				工厂构造方法
-		实例方法
-		setters和getters
-		静态方法
+ 对象
+ 变量
+ 方法：
+  构造方法：
+    标准构造方法
+    初始化列表
+    工厂构造方法
+  实例方法
+  setters和getters
+  静态方法
 3 抽象：
-	  抽象类
-	  抽象方法
+   抽象类
+   抽象方法
 4 mixins
 
-
 #### Flutter 函数/方法
-1 方法构成：
-		  返回值
-		  参数：
-			  普通参数
-			  可选参数
-			  参数默认值
-2 方法类型：
-		  入口方法
-		  构造方法
-		  实例方法
-		  setters和getters
-		  静态方法
-		  抽象方法
-		  私有方法
-		  匿名方法
-		  泛型方法
 
+1 方法构成：
+    返回值
+    参数：
+     普通参数
+     可选参数
+     参数默认值
+2 方法类型：
+    入口方法
+    构造方法
+    实例方法
+    setters和getters
+    静态方法
+    抽象方法
+    私有方法
+    匿名方法
+    泛型方法
 
 #### Flutter 一切皆组件
+
   #StatefullWidget 动态组件-进度条等
   #StatelessWidget 静态组件-text等
   
-  
 #### 一个最简单的 Flutter 应用
+
 ``` js
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
  
 class MyApp extends StatelessWidget {
-	@override
-	Widget build(BuildContext context) {
-		return new MaterialApp(
-			title: 'sunsboy',
-			home: Scaffod(
-				appBar: new AppBar(
-					title: new Text('Welcome Flutter App')
-				),
-				body: new Center(
-					child: new Text(
-						'This is My First Flutter App',
-						style: new TextStyle(
-							fontSize: 30.0,
-							color: Corlors.red
-						)
-					)
-				)
-			)
-		)
-	}
+ @override
+ Widget build(BuildContext context) {
+  return new MaterialApp(
+   title: 'sunsboy',
+   home: Scaffod(
+    appBar: new AppBar(
+     title: new Text('Welcome Flutter App')
+    ),
+    body: new Center(
+     child: new Text(
+      'This is My First Flutter App',
+      style: new TextStyle(
+       fontSize: 30.0,
+       color: Corlors.red
+      )
+     )
+    )
+   )
+  )
+ }
 }
 ```
 
+## TextWidget 文本组件
 
-# TextWidget 文本组件
 - 属性：
-	- TextAlign: 文本对齐属性
-	- maxLines: 文本显示的最大行数
-	- overflow: 文本溢出效果
+  - TextAlign: 文本对齐属性
+  - maxLines: 文本显示的最大行数
+  - overflow: 文本溢出效果
 
 ``` js
 body: Center(
-	child: new Text(
-		'xxxxxxx',
-		textAlign: TextAlign.left,
-		style: new TextStyle(
-			fontSize: 30.0,
-			color: Colors.red
-		)
-	)
+ child: new Text(
+  'xxxxxxx',
+  textAlign: TextAlign.left,
+  style: new TextStyle(
+   fontSize: 30.0,
+   color: Colors.red
+  )
+ )
 )
 ```
 
+## Container 容器组件
 
-# Container 容器组件
 Alignment 9种 对齐方式 ->
 
 通过 EdgeInsets.all(20) 可以统一设置 padding 或者 margin
@@ -249,23 +266,22 @@ Alignment 9种 对齐方式 ->
 
 ``` js
 body: new Container(
-	child: new Text(
-		'xxxxx'
-	),
-	alignment: AlignMent.topRight|topLeft|topCenter|centerLeft|centerCenter|centerRight|bottomLeft|bottomCenter|bottomRight
-	padding: EdgeInsets.all(20)
-	margin: EdgeInsets.fromLTRB(0,100,0,0)
+ child: new Text(
+  'xxxxx'
+ ),
+ alignment: AlignMent.topRight|topLeft|topCenter|centerLeft|centerCenter|centerRight|bottomLeft|bottomCenter|bottomRight
+ padding: EdgeInsets.all(20)
+ margin: EdgeInsets.fromLTRB(0,100,0,0)
 )
 ```
 
+## decoration 修饰器
 
-# decoration 修饰器
 设置容器的边框
 BoxDecoration Widget
 LinearGradient 设置背景渐变
 
-
-# Image Widget 组件，以及几种加载图片方式
+## Image Widget 组件，以及几种加载图片方式
 
 Image.asset() - 加载项目中图片资源
 Image.network() - 加载网络图片资源
@@ -273,36 +289,32 @@ Image.file() - 加载本地图片，拍照时图片预览等
 
 ``` js
 new Image.network(
-	'https://img.mukewang.com/5d9e8eda00017bdc18720764.jpg',
-	scale:1,
-	fit: BoxFit.contain,
-	color: Colors.redAccent,
-	// 图片 和 颜色的混合模式
-	colorBlendMode: BlendMode.colorBurn
+ 'https://img.mukewang.com/5d9e8eda00017bdc18720764.jpg',
+ scale:1,
+ fit: BoxFit.contain,
+ color: Colors.redAccent,
+ // 图片 和 颜色的混合模式
+ colorBlendMode: BlendMode.colorBurn
 )
 ```
 
+## Flutter 图片控件
 
+## ListView 列表组件
 
-# Flutter 图片控件
-
-
-
-
-# ListView 列表组件
 ``` js
 body: new Container(
-	child: new ListView(
-		children: <Widget>[
-			new ListTile(
-				leading: new Icon(Icons.star),
-				title: new Text('我的收藏课程！')
-			),
-			new Image.network(
-				'https://img2.mukewang.com/szimg/5d31765d08c90cba06000338-360-202.jpg'
-			)
-		]
-	)
+ child: new ListView(
+  children: <Widget>[
+   new ListTile(
+    leading: new Icon(Icons.star),
+    title: new Text('我的收藏课程！')
+   ),
+   new Image.network(
+    'https://img2.mukewang.com/szimg/5d31765d08c90cba06000338-360-202.jpg'
+   )
+  ]
+ )
 )
 ```
 
@@ -310,33 +322,32 @@ body: new Container(
 接收 children: <Widget>[...] 组件数组
 ```
 
+## 横向列表, scrollDirection 属性
 
-# 横向列表, scrollDirection 属性
 Axis.horizontal -- 横向滚动
 Axis.vertical -- 纵向滚动
 
-
-# 将其他组件组件 抽离出来 通过自定义组件调用，减少组件的嵌套太深
+## 将其他组件组件 抽离出来 通过自定义组件调用，减少组件的嵌套太深
 
 ``` js
 body: new Container(
-	child: MyListView()
+ child: MyListView()
 )
 
 class MyListView extends StatelessWidget {
  @override
  Widget build(BuildContext context) {
-	 return new ListView(
-		children: <Widget>[
-			new Image.network('xxxx'),
-			new Image.netword('xxxxxx')
-		]
-	 )
+  return new ListView(
+  children: <Widget>[
+   new Image.network('xxxx'),
+   new Image.netword('xxxxxx')
+  ]
+  )
  }
 }
 ```
 
-#### StatefulWidget 以及基础组件～
+### StatefulWidget 以及基础组件～
 
 ``` js
 MaterialApp() // 材料设计组件，通常放在根节点
@@ -350,9 +361,11 @@ PageView()
 ```
 
 ## TextField
+
 [输入框及表单](https://book.flutterchina.club/chapter3/input_and_form.html)
 主要属性：
-```
+
+``` md
 TextEditingController controller
 FocusNode focusNode
 InputDecoration decoration = const InputDecoration(),
@@ -378,35 +391,38 @@ this.cursorColor
 ```
 
 /**
- * controller：编辑框的控制器，通过它可以设置/获取编辑框的内容、选择编辑内容、监听编辑文本改变事件。
+
+- controller：编辑框的控制器，通过它可以设置/获取编辑框的内容、选择编辑内容、监听编辑文本改变事件。
             大多数情况下我们都需要显式提供一个controller来与文本框交互。
-			如果没有提供controller，则TextField内部会自动创建一个
- * */
+   如果没有提供controller，则TextField内部会自动创建一个
+- */
 
 /**
- * focusNode：用于控制TextField是否占有当前键盘的输入焦点。它是我们和键盘交互的一个句柄（handle）
- * */
+
+- focusNode：用于控制TextField是否占有当前键盘的输入焦点。它是我们和键盘交互的一个句柄（handle）
+- */
 
 /**
- * InputDecoration：用于控制TextField的外观显示，如提示文本、背景颜色、边框等
- * */
+
+- InputDecoration：用于控制TextField的外观显示，如提示文本、背景颜色、边框等
+- */
 
 /**
- * keyboardType：用于设置该输入框默认的键盘输入类型，取值：
-	|TextInputType枚举值  |含义													|
-	|text			      |文本输入键盘											|
-	|multiline		      |多行文本，需和maxLines配合使用(设为null或大于1)		|
-	|number			      |数字；会弹出数字键盘									|
-	|phone			      |优化后的电话号码输入键盘；会弹出数字键盘并显示“* #”	    |
-	|datetime		      |优化后的日期输入键盘；Android上会显示“: -”			|
-	|emailAddress	      |优化后的电子邮件地址；会显示“@ .”					|
-	|url			      |优化后的url输入键盘； 会显示“/ .”					|
 
- * */
+- keyboardType：用于设置该输入框默认的键盘输入类型，取值：
+ |TextInputType枚举值  |含义             |
+ |text         |文本输入键盘           |
+ |multiline        |多行文本，需和maxLines配合使用(设为null或大于1)  |
+ |number         |数字；会弹出数字键盘         |
+ |phone         |优化后的电话号码输入键盘；会弹出数字键盘并显示“* #”     |
+ |datetime        |优化后的日期输入键盘；Android上会显示“: -”   |
+ |emailAddress       |优化后的电子邮件地址；会显示“@ .”     |
+ |url         |优化后的url输入键盘； 会显示“/ .”     |
 
+- */
 
+### Flutter 页面声明周期
 
-#### Flutter 页面声明周期
 StatelessWidget 只有两个声明周期方法（createElement 和 build ）
 StatefulWidget 生命周期方法按照时期不同可以分为三组：
 1 初始化时期：
@@ -418,70 +434,73 @@ StatefulWidget 生命周期方法按照时期不同可以分为三组：
   didUpdateWidget
 3 销毁时期
   deactivte
-  dispose	  
-
+  dispose
 
 #### Flutter 应用 生命周期
+
 判断 Flutter App 什么时候进入后台，什么时候进入前台
 widget 的绑定观察器，监听应用的生命周期，语言等信息的变化
 
 #### Flutter 布局开发
+
 布局相关组件
+
 ``` js
 Container(
-	child: Text('xxx')
+ child: Text('xxx')
 )
 
 RenderObjectWidget()
-	SingleChildRenderObejctWidget:
-		Opacity
-		ClipOval
-		ClipRRect
-		PhyicalModel
-		Align Center
-		Padding
-		SizeBox
-		FrationllySizedBox
-	MultiChildRenderObjectWidget:
-		Stack
-		Flex:
-			Column
-			Row
-		Wrap
-		Flow	
+ SingleChildRenderObejctWidget:
+  Opacity
+  ClipOval
+  ClipRRect
+  PhyicalModel
+  Align Center
+  Padding
+  SizeBox
+  FrationllySizedBox
+ MultiChildRenderObjectWidget:
+  Stack
+  Flex:
+   Column
+   Row
+  Wrap
+  Flow 
 ParentDataWidget()
-	Positioned
-	Fiexible
-	Expanded
+ Positioned
+ Fiexible
+ Expanded
 ```
-		
+  
 #### Flutter 路由与导航
+
 如何创建路由和使用路由
 
 ``` js
 MaterialApp(
-	routes: <String, WidgetBuilder> {
-		'pageName': (BuildeContext context) => PageClass
-	} 
+ routes: <String, WidgetBuilder> {
+  'pageName': (BuildeContext context) => PageClass
+ } 
 )
 ```
-
 
 #### Flutter 中如何监听用户的点击事件
+
 ``` js
 GertureDetector(
-	child: Text('监听事件～'),
-	onTap: (e) {
-		print(e)
-	},
-	onDoubleTap: () {
-		
-	}
+ child: Text('监听事件～'),
+ onTap: (e) {
+  print(e)
+ },
+ onDoubleTap: () {
+  
+ }
 )
 ```
 
-
 #### Flutter 中如何使用 本地图片 和 iconfont 字体图标
+
 [Flutter 中添加静态资源](https://www.jianshu.com/p/ec5ffb25451e)
 项目根目录 pubspec.yaml 文件下 添加 要使用的 图片 和 字体
 
@@ -505,11 +524,12 @@ asset 指明哪些图片资源，images 为目录
 第一个 fonts 申明字体 ，第二个 fonts 申明字体资源 ，第三个 fonts 指明字体路径（根目录下 fonts）
 
 使用 本地图片
+
 ``` js
 Image(
-	width: 200,
-	height: 200,
-	image: Assets.image('images/img1.jpg')
+ width: 200,
+ height: 200,
+ image: Assets.image('images/img1.jpg')
 )
 
 Image.asset('images/img2.jpg')
@@ -520,26 +540,25 @@ Icon(IconData(0xe610, fontFamily: 'iconfont'), color: Colors.deepOrange, size: 4
 
 #### Flutter 如何打开网页 和 第三方 App
 
-
 ## Flutter 动画 Animation 开发指南
+
 ### Flutter中有哪些类型的动画？
+
 - 在Flutter中动画分为两类：基于tween或基于物理的。
 - 补间(Tween)动画：在补间动画中，定义了开始点和结束点、时间线以及定义转换时间和速度的曲线。
-	            然后由框架计算如何从开始点过渡到结束点。
+             然后由框架计算如何从开始点过渡到结束点。
 - 基于物理的动画：在基于物理的动画中，运动被模拟为与真实世界的行为相似。
-               例如，当你掷球时，它在何处落地，取决于抛球速度有多快、球有多重、距离地面有多远。 
-			   类似地，将连接在弹簧上的球落下（并弹起）与连接到绳子上的球放下的方式也是不同 
+               例如，当你掷球时，它在何处落地，取决于抛球速度有多快、球有多重、距离地面有多远。
+      类似地，将连接在弹簧上的球落下（并弹起）与连接到绳子上的球放下的方式也是不同
 
-
-
-
-
-
-####--------------------------------------------------------------------------------------------------------
+#### --------------------------------------------------------------------------------------------------------
 
 ## Flutter 插件
+
 ### 如何添加 FLutter 插件？
+
 在项目根目录 pubspec.yaml 文件下
+
 ``` js
 dependencies:
   flutter:
@@ -551,14 +570,14 @@ dependencies:
 
 然后 点击 Packages get 安装 插件
 在底部 Messages 点击查看：
-	packages get
-	Running "flutter pub get" in flutter_router... 2.6s
-	Process finished with exit code 0
-	
+ packages get
+ Running "flutter pub get" in flutter_router... 2.6s
+ Process finished with exit code 0
+
 插件就安装完成了～
 
-
 ## 使用插件（如：url_launcher 插件）
+
 [开发Packages和插件](https://flutterchina.club/developing-packages/)
 [flutter插件官网地址](https://pub.dartlang.org/packages/)
 [Flutter 插件](https://www.jianshu.com/p/b29da33b45cf)
@@ -566,6 +585,7 @@ dependencies:
 [dio](https://pub.dev/packages/dio/install)
 
 ## flutter_swiper的简单使用 和 参数说明
+
 [flutter_swiper](https://github.com/best-flutter/flutter_swiper)
 [flutter_swiper的简单使用](https://www.jianshu.com/p/1bff5c666671)
 
@@ -626,10 +646,12 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-### flutter_swiper 参数说明：
+### flutter_swiper 参数说明
+
 /**
- * 库地址：https://github.com/best-flutter/flutter_swiper/blob/master/README-ZH.md
- * 基本参数
+
+- 库地址：<https://github.com/best-flutter/flutter_swiper/blob/master/README-ZH.md>
+- 基本参数
     参数  默认值     描述
     scrollDirection     Axis.horizontal     滚动方向，设置为Axis.vertical如果需要垂直滚动
     loop    true    无限轮播模式开关
@@ -649,7 +671,6 @@ class _MyHomePageState extends State<MyHomePage> {
     margin  const EdgeInsets.all(10.0)  分页指示器与容器边框的距离
     builder     SwiperPagination.dots   目前已经定义了两个默认的分页指示器样式： SwiperPagination.dots 、 SwiperPagination.fraction，都可以做进一步的自定义.
 
-
     控制按钮
 
     控制按钮组件也是继承自 SwiperPlugin,设置 new SwiperControl() 展示默认控制按钮.
@@ -659,7 +680,6 @@ class _MyHomePageState extends State<MyHomePage> {
     color   Theme.of(context).primaryColor  控制按钮颜色
     size    30.0    控制按钮的大小
     padding     const EdgeInsets.all(5.0)   控制按钮与容器的距离
-
 
     控制器(SwiperController)
 
@@ -676,25 +696,29 @@ class _MyHomePageState extends State<MyHomePage> {
     autoplayDisableOnInteraction    true    当用户拖拽的时候，是否停止自动播放.
  */
 
-# 多种风格的模糊进度指示器 - flutter_spinkit
+## 多种风格的模糊进度指示器 - flutter_spinkit
+
 [flutter_spinkit](https://pub.flutter-io.cn/packages/flutter_spinkit)
 [flutter_spinkit - github](https://github.com/jogboms/flutter_spinkit)
 
+## 插件收录～
 
-# 插件收录～
 url_launcher
 image_picker
 flutter_swiper
 
 ## Flutter 一些问题
-####为什么要将build方法放在State中，而不是放在StatefulWidget中？
+
+## 为什么要将build方法放在State中，而不是放在StatefulWidget中？
+
 [](https://book.flutterchina.club/chapter2/first_flutter_app.html)
 
-
 ## Flutter 兼容 Android X
+
 [Flutter兼容AndroidX](https://blog.csdn.net/hongxue8888/article/details/99712848)
 
 ## 其他问题
+
 [夜神模拟器](https://www.yeshen.com/faq/)
 [电脑VT开启教程](https://www.yeshen.com/faqs/SklVHWleZ)
 [Flutter 热加载](https://flutter.dev/docs/development/tools/hot-reload)
@@ -709,6 +733,7 @@ flutter_swiper
 [无法运行真机](https://www.jianshu.com/p/56593564c926)
 
 ## flutter 运行 -> 安卓真机,无法构建（gradle）问题处理
+
 [flutter android studio运行 gradle构建报错](https://www.cnblogs.com/floor/p/11791705.html)
 [在构建flutter开发环境的时候，android studio 报错](https://www.jianshu.com/p/d2e8c4cc9e56)
 [在构建flutter开发环境的时候，android studio 报错2](https://blog.csdn.net/lanwilliam/article/details/83339306)
@@ -720,6 +745,7 @@ flutter_swiper
 [Flutter项目iOS真机打包闪退](https://www.lizenghai.com/archives/38263.html)
 
 ## 构建时加载包失败
+
 项目/android/build.gradle 修改
 
 ``` js
@@ -728,10 +754,10 @@ buildscript {
     repositories {
         // google()
         // jcenter()
-		// 阿里的镜像服务器加载包资源
-		maven{ url 'https://maven.aliyun.com/repository/google' }
-		maven{ url 'https://maven.aliyun.com/repository/jcenter' }
-		maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+  // 阿里的镜像服务器加载包资源
+  maven{ url 'https://maven.aliyun.com/repository/google' }
+  maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+  maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
     }
 
     dependencies {
@@ -744,14 +770,13 @@ allprojects {
     repositories {
         // google()
         // jcenter()
-		// 阿里的镜像服务器加载包资源
-		maven{ url 'https://maven.aliyun.com/repository/google' }
-		maven{ url 'https://maven.aliyun.com/repository/jcenter' }
-		maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
+  // 阿里的镜像服务器加载包资源
+  maven{ url 'https://maven.aliyun.com/repository/google' }
+  maven{ url 'https://maven.aliyun.com/repository/jcenter' }
+  maven{ url 'http://maven.aliyun.com/nexus/content/groups/public'}
     }
 }
 ```
-
 
 ## 快捷键使用
 
@@ -759,7 +784,8 @@ Anroid Studio 格式化代码: option + command + L （Mac）
 Anroid Studio 格式化代码: ctrl + alt + L （Window）
 关闭单页面: ctrl + F4
 
-#### Flutter 实战项目
+### Flutter 实战项目
+
 [《Flutter 实战》](https://book.flutterchina.club/)
 
 [【强烈推荐】适合Flutter初学者的完整项目](https://blog.csdn.net/mengks1987/article/details/105308855)
