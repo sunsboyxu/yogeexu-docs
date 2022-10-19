@@ -1,4 +1,6 @@
-# Terminal
+# macOS terminal
+
+macOS 系统下，终端的使用和美化等操作
 
 查看某个应用的安装目录
 

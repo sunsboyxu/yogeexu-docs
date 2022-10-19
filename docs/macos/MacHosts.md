@@ -1,5 +1,7 @@
 # Mac Hosts
 
+通过 SwitchHosts 工具可以很好的来修改和管理自己的 host文件配置
+
 ## hosts文件介绍
 
 - [hosts文件介绍](https://baike.baidu.com/item/hosts/10474546)

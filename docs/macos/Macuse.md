@@ -1,5 +1,7 @@
 # Mac doc
 
+macOS 日常使用的一些技巧记录
+
 - [使用手册](https://support.apple.com/zh-cn/guide/mac-help/welcome/10.15/mac)
 - [如何固定桌面排序](https://blog.csdn.net/guang_s/article/details/84333857)
 - [在 Mac 上设置 VPN 连接](https://support.apple.com/zh-cn/guide/mac-help/mchlp2963/10.15/mac/10.15)

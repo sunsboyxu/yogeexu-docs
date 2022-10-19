@@ -1,7 +1,6 @@
 # Homebrew
 
-Homebrew 是一款包管理工具，目前支持 macOS 和 Linux 系统，
-主要有四个部分组成：brew、homebrew-core、homebrew-cask、homebrew-bottles
+Homebrew 是一款包管理工具，目前支持 macOS 和 Linux 系统，主要有四个部分组成：brew、homebrew-core、homebrew-cask、homebrew-bottles
 
 - brew Homebrew源代码仓库
 - homebrew-core Homebrew核心源
