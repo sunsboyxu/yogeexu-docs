@@ -28,3 +28,34 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.navbar-icons::before {
+  content: '';
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.navbar-icons-docs::before {
+  background-image: url(/svg/blog2.svg);
+}
+
+.navbar-icons-blog::before {
+  background-image: url(/svg/blog3.svg);
+}
+
+.navbar-icons-guitar::before {
+  background-image: url(/svg/guitar3.svg);
+}
+
+.navbar-icons-tea::before {
+  background-image: url(/svg/tea3.svg);
+}
+
+.navbar-icons-github::before {
+  background-image: url(/svg/github.svg);
+}

@@ -9,6 +9,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  // console.log(siteConfig, 'siteConfig---')
   return (
     <header className={clsx(styles.heroBanner)} style={{ display: 'flex', alignItems: 'center' }}>
       <div className="container">
@@ -23,8 +24,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description={`${siteConfig.tagline}`}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

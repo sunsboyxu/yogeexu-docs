@@ -8,3 +8,7 @@
 
 - 代码主题 **Atom One Dark Theme**
 - 文件图标 **Ayu**
+
+## 清理 vscode 缓存
+
+- [清理 vscode 缓存](https://letmefly.blog.csdn.net/article/details/126082324)

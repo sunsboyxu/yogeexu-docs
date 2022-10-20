@@ -1,23 +1,31 @@
 /**
  * 预设
- * 使用侧边栏，只需两步
- *  定义一个导出一组侧边栏对象的文件
- *  直接将这个对象传入 @docusaurus/plugin-docs，或者通过 @docusaurus/preset-classic 传入
+ * 
+ * 下面的 'classic', 相当于 '@docusaurus/preset-classic' 这插件
+ * 
+ * docs 使用的是 '@docusaurus/plugin-content-docs'
+ * docs 配置说明：https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-docs#configuration
+ * 
+ * blog 使用的是 '@docusaurus/plugin-content-blog'
+ * blog 配置说明：https://docusaurus.io/zh-CN/docs/api/plugins/@docusaurus/plugin-content-blog#configuration
+ * 
+ * 如果已经安装了 @docusaurus/preset-classic 插件，
+ * 则不需要 '@docusaurus/plugin-content-docs' 和 '@docusaurus/plugin-content-blog'
+ * 
+ * 在 预设中 配置 docs 和 blog 即可
+ * 
+ *  
 */
+
 module.exports = [
   [
-    "@docusaurus/preset-classic",
-    ({
+    "classic", ({
       docs: {
         sidebarPath: require.resolve("./sidebars.js"),
-        editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        routeBasePath: '/'
       },
       blog: {
         path: 'blog',
-        // 一般使用场景：字符串 editUrl
-        // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
-        // 高级使用场景：函数 editUrl
-        editUrl: ({ locale, blogDirPath, blogPath, permalink }) => `https://github.com/facebook/docusaurus/edit/main/website/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogTitle: '博客标题',
         blogDescription: '博客',
@@ -49,6 +57,12 @@ module.exports = [
       theme: {
         customCss: require.resolve("../src/css/custom.css"),
       },
+      sitemap: {
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      },
     }),
-  ],
+  ]
 ]
