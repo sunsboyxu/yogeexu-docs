@@ -1,47 +1,31 @@
 ---
+title: 文档说明
 sidebar_position: 1
 ---
 
-# 文档简介
+欢迎，来到 [yogeexu的博客](https://sunsboyxu.github.io/yogeexu-docs/) 此博客使用 [**Docusaurus 2**](https://docusaurus.io/zh-CN)搭建
 
-Let's discover **Docusaurus in less than 5 minutes**.
+![Docusaurus Plushie](https://docusaurus.io/zh-CN/assets/images/social-card-8dc2413b4f9e86328bf77575e91171d7.png)
 
-## Getting Started
+<!--truncate-->
 
-Get started by **creating a new site**.
+⚡️ Docusaurus 会帮助你在极短时间内搭建漂亮的文档网站。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+💸 自己造轮子是一件苦差事。 现在，你可以专注于内容创作，只需编写 Markdown 文件即可。
 
-### What you'll need
+💥 想深入了解吗？ 来试试包括文档分版、本地化、自定义搜索、个性化主题在内的进阶功能特性吧！
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+💅 看看我们最爱的 Docusaurus 网站来获取灵感，并读读其他人的使用感言吧！
 
-## Generate a new site
+🧐 Docusaurus 是一款静态站点生成器。 可以搭建带有快速客户端导航的单页应用，充分利用了 React，让你的网站具有交互能力。 它提供了开箱即用的文档功能，不过也可用于搭建各种网站（个人网站、产品、博客、营销主页，等等）
 
-Generate a new Docusaurus site using the **classic template**.
+**deploy**
 
-The classic template will automatically be added to your project after you run the command:
+- [部署文档](https://docusaurus.io/zh-CN/docs/deployment)
+- [环境设置](https://docusaurus.io/zh-CN/docs/deployment#environment-settings)
 
-```bash
-npm init docusaurus@latest my-website classic
+使用终端定位到当前项目，执行
+
+``` bash
+cmd /C 'set "GIT_USER=sunsboyxu" && npm run deploy'
 ```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at <http://localhost:3000/>.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

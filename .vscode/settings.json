@@ -6,6 +6,6 @@
   "editor.fontSize": 14,
   "editor.fontFamily": "Consolas,JetBrainsMono Nerd Font",
   "editor.codeActionsOnSave": {
-      "source.fixAll": true
+    "source.fixAll": true
   }
 }

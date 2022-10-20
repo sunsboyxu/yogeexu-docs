@@ -1,4 +1,5 @@
 // 顶部导航
+// navbar 说明文档：https://docusaurus.io/zh-CN/docs/api/themes/configuration#navbar
 module.exports = {
   title: 'sunsboyxu',
   logo: {
@@ -12,7 +13,7 @@ module.exports = {
     className: 'custom-navbar-logo-class',
     style: { border: '1px solid #eee', borderRadius: '50%' },
   },
-  style: 'primary',
+  style: 'dark',
   hideOnScroll: true,
   items: [
     {
