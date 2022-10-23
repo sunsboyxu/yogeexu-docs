@@ -1,4 +1,5 @@
 # mock 数据
+
 const mock = require('mockjs')
 const Random = mock.Random
 
@@ -12,12 +13,14 @@ Mock.setup({
 })
 
 ## 1、数据模板定义
+
 Mock.mock({
-	'属性名|规则': '属性值'
-	'name|rule': 'value'
+ '属性名|规则': '属性值'
+ 'name|rule': 'value'
 })
 
 ## 2、数据占位符定义
+
 - 占位符只是在属性值字符串中占个位置，并不出现在最终的属性值中
 - 用 @ 来标识其后的字符串是占位符，占位符之间空格隔开
 - 占位符是 Mock.Random 中的方法
@@ -33,23 +36,24 @@ Mock.mock({
 const Mock = require('mockjs')
 const Random = Mock.Random
 const data = Mock.mock({
-	'contents|1-20': [{
-		'id|+1': 0,
-		courseType: '音乐课',
-		courseName() {
-			retrun this.courseType + ' '+ Random.natural(1, 10) + '班' 
-		},
-		teacher: '@cname',
-		place: '@courseType 第 @id 教室',
-		studenId: /\d{10}/,
-		studenName: '@cname',
-		classTime: '@date("yyyy-MM-dd HH:mm:ss")'
-	}]
+ 'contents|1-20': [{
+  'id|+1': 0,
+  courseType: '音乐课',
+  courseName() {
+   retrun this.courseType + ' '+ Random.natural(1, 10) + '班' 
+  },
+  teacher: '@cname',
+  place: '@courseType 第 @id 教室',
+  studenId: /\d{10}/,
+  studenName: '@cname',
+  classTime: '@date("yyyy-MM-dd HH:mm:ss")'
+ }]
 })
 return data
 ```
 
 ### 常用占位符
+
 '@bool' // 布尔值，可以传入参数设置频率
 '@string' // 随机字符串
 '@date("yyyy-MM-dd HH:mm:ss")' // 返回日期
@@ -59,15 +63,14 @@ return data
 '@url'
 '@email'
 
-- 在同一个 { }，可以使用 { } 中属性作为占位符 
+- 在同一个 { }，可以使用 { } 中属性作为占位符
 
+## 使用服务端 mock 数据
 
-# 使用服务端 mock 数据
+## 相关教程
 
-# 相关教程
 [mockjs + json-server 模拟后台数据](https://blog.csdn.net/mjzhang1993/article/details/78532909)
 [在vue-cli3中使用mockjs模拟数据](https://blog.csdn.net/lvchunfei123/article/details/109047730)
 [在vue项目中使用mockjs模拟接口数据](https://blog.csdn.net/weixin_44227395/article/details/104842184)
 [Vue 中使用Mock.js生成模拟数据](https://blog.csdn.net/qq_17492249/article/details/98401566)
 [改造vue-cli,使用mockjs搭建mock server](https://juejin.cn/post/6844903590046203918)
-

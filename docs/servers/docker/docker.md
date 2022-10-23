@@ -1,4 +1,5 @@
 # docker 安装
+
 ![docker](/images/servers/docker/docker1.png)
 
 ## docker 相关文档
@@ -8,8 +9,8 @@
 - [docker中文社区](https://www.docker.org.cn/index.html)
 - [dockerinfo](http://www.dockerinfo.net/document)
 
-
 ## docker 学习文档
+
 - [docker 教程-动力节点](http://www.bjpowernode.com/docker/)
 - [docker 教程-菜鸟](https://www.runoob.com/docker/docker-tutorial.html)
 - [docker 系统性入门+进阶实践](https://coding.imooc.com/class/chapter/511.html#Anchor)
@@ -30,12 +31,14 @@ docker 必须部署在 Linux 内核的系统上，如果其他系统想部署 do
 docker desktop 是 docker 在 Windows 10 和 macOS 操作系统上的官方安装方式，这个方法依然属于先在虚拟机中安装 Linux 然后再安装 docker 的方法
 
 ::: warning 环境要求
+
 - 1  windows10 64位 专业版、企业版和教育版，无法用于家庭版
 - 2  windows10 电脑 是否开启虚拟化
 - 3 开启虚拟化后，进行 windows 功能设置（开启 Hyper-V 和 开启 windows 虚拟机监控程序平台），重启系统即可
 :::
 
 ### 1 查看是否开启虚拟化
+
 同时按下 ctrl + alt + delete，打开 -> 任务管理器 -> 性能
 
 ![cpu](/images/servers/docker/cpu.png)
@@ -56,8 +59,6 @@ docker desktop 是 docker 在 Windows 10 和 macOS 操作系统上的官方安�
 
 ![control1](/images/servers/docker/control1.png)
 
-
-
 通过命令来启用 Hyper-V ，请右键开始菜单并以管理员身份运行 PowerShell，执行以下命令
 
 ``` bash
@@ -75,8 +76,8 @@ Hyper-V 是微软开发的虚拟机，类似于 VMWare 或 VirtualBox，仅适�
 
 - [Windows10 上的 Hyper-V 简介](https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/about/)
 
-
 ::: tip 使用虚拟化的原因
+
 - 运行需要早期版本的 Windows 操作系统或非 Windows 操作系统的软件
 - 实验其他操作系统。 通过 Hyper-V，可轻松创建和删除不同的操作系统
 - 使用多个虚拟机在多个操作系统上测试软件,通过 Hyper-V 可以在一部台式机或便携式计算机上运行所有内容,可以将这些虚拟机导出并随后导入到任何其他 Hyper-V 系统中，包括 Azure
@@ -84,10 +85,12 @@ Hyper-V 是微软开发的虚拟机，类似于 VMWare 或 VirtualBox，仅适�
 
 ::: tip Hyper-V 系统要求
 Hyper-V 可用于 64 位 Windows 10 专业版、企业版和教育版。它无法用于家庭版
+
 - [Windows 10 Hyper-V 系统要求](https://docs.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/hyper-v-requirements)
 :::
 
 ### 3 下载 Docker 安装包
+
 - [Docker Desktop for Windows 安装包](https://www.docker.com/get-started/)
 
 ### 4 开启 windows 虚拟机监控程序平台
@@ -122,6 +125,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ```
 
 ::: tip 运行 WSL 2 的要求
+
 - 对于 x64 系统：版本 1903 或更高版本，内部版本为 18362 或更高版本
 - 对于 ARM64 系统：版本 2004 或更高版本，内部版本为 19041 或更高版本
 - 低于 18362 的版本不支持 WSL 2, 使用 Windows Update 助手更新 Windows 版本
@@ -130,17 +134,18 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 重新启动计算机，以完成 WSL 安装并更新到 WSL 2。
 
 ### 下载 Linux 内核更新包
+
 - [适用于 x64 计算机的 WSL2 Linux 内核更新包](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
-
 ### docker 镜像加速
+
 国内从 DockerHub 拉取镜像有时会遇到困难，此时可以配置镜像加速器，
 Docker 官方和国内很多云服务商都提供了国内加速器服务，例如：
 
-- 科大镜像：https://docker.mirrors.ustc.edu.cn/
-- 网易：https://hub-mirror.c.163.com/
-- 阿里云：https://<你的ID>.mirror.aliyuncs.com
-- 七牛云加速器：https://reg-mirror.qiniu.com
+- 科大镜像：<https://docker.mirrors.ustc.edu.cn/>
+- 网易：<https://hub-mirror.c.163.com/>
+- 阿里云：<https://你的ID.mirror.aliyuncs.com>
+- 七牛云加速器：<https://reg-mirror.qiniu.com>
 
 当配置某一个加速器地址之后，若发现拉取不到镜像，请切换到另一个加速器地址。
 国内各大云服务商均提供了 Docker 镜像加速服务，建议根据运行 Docker 的云平台选择对应的镜像加速服务
@@ -156,21 +161,21 @@ Windows 10 的系统，在 Docker 应用， 右上角选择 Settings，打开配
 填写框中，加入 registry-mirrors ，点击 Apply 保存后 Docker 就会重启并应用配置的镜像地址了
 
 ``` bash
-{	
-	// 配置的镜像地址
-	"registry-mirrors": [
-		"https://reg-mirror.qiniu.com"
-	],
-	"builder": {
-		"gc": {
-			"defaultKeepStorage": "20GB",
-			"enabled": true
-		}
-	},
-	"experimental": false,
-	"features": {
-		"buildkit": true
-	}
+{ 
+ // 配置的镜像地址
+ "registry-mirrors": [
+  "https://reg-mirror.qiniu.com"
+ ],
+ "builder": {
+  "gc": {
+   "defaultKeepStorage": "20GB",
+   "enabled": true
+  }
+ },
+ "experimental": false,
+ "features": {
+  "buildkit": true
+ }
 }
 ```
 
@@ -179,10 +184,12 @@ docker 镜像加速配置地址
 ![docker 镜像加速配置地址](/images/servers/docker/jingxiang1.png)
 
 ### MacOS 配置 docker 镜像
+
 在任务栏点击 Docker for mac 应用图标-> Perferences...-> Daemon-> Registrymirrors
-在列表中填写加速器地址 https://reg-mirror.qiniu.com，修改完成之后，点击 Apply&Restart 按钮，Docker 就会重启并应用配置的镜像地址了
+在列表中填写加速器地址 <https://reg-mirror.qiniu.com>，修改完成之后，点击 Apply&Restart 按钮，Docker 就会重启并应用配置的镜像地址了
 
 ### 检查加速器是否生效
+
 检查加速器是否生效配置加速器之后，如果拉取镜像仍然十分缓慢，请手动检查加速器配置是否生效，在命令行执行 docker info，如果从结果中看到了如下内容，说明配置成功
 
 ``` bash
@@ -198,6 +205,3 @@ docker run --name repo alpine/git clone https://github.com/docker/getting-starte
 cd getting-started
 
 ```
-
-
-

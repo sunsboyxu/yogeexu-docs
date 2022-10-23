@@ -1,4 +1,5 @@
 # React
+
 - [react官网](https://reactjs.org/)
 - [react中文网](https://zh-hans.reactjs.org/)
 - [react](https://juejin.im/post/5ededbf6e51d45786716a0ac)
@@ -6,28 +7,35 @@
 - [React 入门教程](http://uprogrammer.cn/react-tutorial-cn/index.html)
 
 ## react 学习文档
+
 [从零搭建webpack4+react+typescript+eslint脚手架(一)](https://www.jianshu.com/p/3867422f9b3d)
 [ts-react-boilerplate](https://github.com/mecoepcoo/ts-react-boilerplate)
 
 ## 环境搭建
+
 - [create-react-app中文](https://zh-hans.reactjs.org/docs/create-a-new-react-app.html#create-react-app)
 - [create-react-app](https://github.com/facebook/create-react-app)
 
 ## create-react-app
+
 - [create-react-app](https://create-react-app.dev/)
 
 ## npm 创建项目
+
 ``` bash
 // 不推荐全局安装 create-react-app
 npm install create-react-app -g
 create-react-app react-app1
 ```
+
 ## npx 创建项目
+
 ``` bash
 npx create-react-app react-app1 // 项目名称
 ```
 
 ## yarn 创建项目
+
 ``` bash
 yarn create react-app react-app1 // 项目名称
 cd react-app1
@@ -36,6 +44,7 @@ yarn run inject // 暴露配置相
 ```
 
 ## 基于当前 create-react-app 降级到 react16
+
 ``` bash
 cd react-app1
 yarn add react@16.12.0 react-dom@16.12.0
@@ -44,7 +53,8 @@ npm install react@16.12.0 react-dom@16.12.0 -S
 ```
 
 ## 更改目录结构
-```
+
+``` md
 react-app1
 ├── README.md
 ├── package.json
@@ -84,6 +94,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 ## JSX 语法
+
 - [深入 JSX](https://zh-hans.reactjs.org/docs/jsx-in-depth.html)
 
 - JSX是⼀种JavaScript的语法扩展，其格式⽐较像模版语⾔，但事实上完全是在JavaScript内部实现的
@@ -94,6 +105,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 实际上，JSX 仅仅只是 React.createElement(component, props, ...children) 函数的语法糖
 
 ### JSX 基本语法
+
 ``` js
 // src/views/JSXPage.js
 import React, { Component } from 'react'
@@ -165,9 +177,10 @@ export default JSXPage
 ### JSX 深入
 
 ### JSX 的编译
+
 ``` js
 <MyButton color='orange' width='150px'>
-	测试按钮
+ 测试按钮
 </MyButton>
 ```
 
@@ -176,9 +189,9 @@ export default JSXPage
 ``` js
 // React.createElement(component, props, ...children)
 React.createElement(
-	MyButton,
-	{color: 'orange', width: '150px'},
-	'测试按钮'
+ MyButton,
+ {color: 'orange', width: '150px'},
+ '测试按钮'
 )
 ```
 
@@ -187,29 +200,34 @@ React.createElement(
 ``` js
 <div className="list" />
 ```
+
 上面代码会编译成
+
 ``` js
 React.createElement(
-	'div',
-	{className: 'list'}
+ 'div',
+ {className: 'list'}
 )
 ```
 
 ``` js
 function helloJSX() {
-	return <div>hello JSX</div>
+ return <div>hello JSX</div>
 }
 ```
+
 上面代码会编译成
+
 ``` js
 function helloJSX() {
-	return React.createElement('div', null, 'hello JSX')
+ return React.createElement('div', null, 'hello JSX')
 }
 ```
 
 ### 指定 React 元素类型
+
 JSX 标签的第一部分指定了 React 元素的类型，大写字母开头的 JSX 标签意味着它们是 React 组件。
-这些标签会被编译为对命名变量的直接引用，所以，当你使用 JSX 如：<MyButton /> 表达式时，MyButton 必须包含在作用域内
+这些标签会被编译为对命名变量的直接引用，所以，当你使用 JSX 如：&lt;MyButton /&gt; 表达式时，MyButton 必须包含在作用域内
 
 ``` js
 // src/comoponents/MyButton.js
@@ -235,6 +253,7 @@ export default MyButton
 ```
 
 ### React 必须在作用域内
+
 由于 JSX 会编译为 React.createElement 调用形式，所以 React 库也必须包含在 JSX 代码作用域内
 
 ``` js
@@ -269,12 +288,13 @@ export default JSXPage2
 ```
 
 ### JSX 类型中使用点语法
-在 JSX 中，可以使用点语法来引用一个 React 组件，当在一个模块中导出许多 React 组件时，这会非常方便
 
+在 JSX 中，可以使用点语法来引用一个 React 组件，当在一个模块中导出许多 React 组件时，这会非常方便
 
 ### React.createElement
 
 ### React.createRef
+
 - [](https://zh-hans.reactjs.org/docs/accessibility.html#mouse-and-pointer-events)
 - [Refs 转发](https://zh-hans.reactjs.org/docs/forwarding-refs.html)
 - [Refs and the DOM](https://zh-hans.reactjs.org/docs/refs-and-the-dom.html)
@@ -284,9 +304,11 @@ Ref 转发是一项将 ref 自动地通过组件传递到其一子组件的技�
 ### React.forwardRef
 
 ### React.createContext
+
 - [Context](https://zh-hans.reactjs.org/docs/context.html)
 
 ### React.lazy
+
 - [React.lazy](https://zh-hans.reactjs.org/docs/code-splitting.html#reactlazy)
 React.lazy 函数能让你像渲染常规组件一样处理动态引入（的组件），
 将会在组件首次渲染时，自动导入包含 Lazy1 组件的包
@@ -315,6 +337,7 @@ export default ReactLazyPage
 ```
 
 ### fallback 属性
+
 接受任何在组件加载过程中你想展示的 React 元素，
 可以将 Suspense 组件置于懒加载组件之上的任何位置，
 可以用一个 Suspense 组件包裹多个懒加载组件
@@ -323,8 +346,8 @@ React.lazy 目前只支持默认导出（default exports），
 如果你想被引入的模块使用命名导出（named exports），你可以创建一个中间模块，来重新导出为默认模块，
 这能保证 tree shaking 不会出错，并且不必引入不需要的组件
 
-
 ### 配置基于路由的代码分割
+
 ``` js
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -344,8 +367,8 @@ const App = () => (
 );
 ```
 
-
 ## 相关实战项目
+
 - [](https://juejin.cn/post/7115209048605065246)
 - [](https://github.com/Youngzx88/starbucks)
 - [react新手demo——TodoList](https://www.jianshu.com/p/211ecf8ed34e)

@@ -1,10 +1,13 @@
 # vue 插件使用
 
 ## 1 vue-i18n
+
 Vue I18n 是 Vue.js 的国际化插件。它可以轻松地将一些本地化功能集成到你的 Vue.js 应用程序中
+
 - [vue-i18n](https://kazupon.github.io/vue-i18n/zh/)
 
 ### vue-i18n 安装
+
 <CodeGroup>
 <CodeGroupItem title="npm方式" active>
 
@@ -23,36 +26,37 @@ yarn add vue-i18n@8.9.0
 </CodeGroup>
 
 ### vue-i18n 初始化
+
 - 在项目 src 目录下，新建 src/i18n 目录，新建 index.js
 - src/i18n 目录下，新建 zh-CN.js 和 en-US.js
 
 ``` js
 // // src/i18n/zh-CN.js
 export default {
-	btn: {
-		submit: '提交'
-	},
-	form: {
-		username: '用户名'
-	},
-	placeholder: {
-		username: '请输入用户名'
-	}
+ btn: {
+  submit: '提交'
+ },
+ form: {
+  username: '用户名'
+ },
+ placeholder: {
+  username: '请输入用户名'
+ }
 }
 ```
 
 ``` js
 // // src/i18n/en-US.js
 export default {
-	btn: {
-		submit: 'Submit'
-	},
-	form: {
-		username: 'Username'
-	},
-	placeholder: {
-		username: 'Username is required'
-	}
+ btn: {
+  submit: 'Submit'
+ },
+ form: {
+  username: 'Username'
+ },
+ placeholder: {
+  username: 'Username is required'
+ }
 }
 ```
 
@@ -66,14 +70,15 @@ import en from './en-US'
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
-	locale: 'zh',
-	messages: { zh, en }
+ locale: 'zh',
+ messages: { zh, en }
 }) 
 
 export default i18n
 ```
 
 ### 引用 i18n
+
 ``` js
 // src/main.js
 import Vue from 'vue'
@@ -91,15 +96,16 @@ new Vue({
 ```
 
 ### 页面使用 i18n
+
 ``` html
 <template>
 <div>
-	<el-form>
-		<el-form-item :label="$t('form.username')">
-			<el-input :placeholder="$t('placeholder.username')"/>
-		</el-form-item>
-	</el-form>
-	<el-button type="primary">{{$t('btn.submit')}}</el-button>
+ <el-form>
+  <el-form-item :label="$t('form.username')">
+   <el-input :placeholder="$t('placeholder.username')"/>
+  </el-form-item>
+ </el-form>
+ <el-button type="primary">{{$t('btn.submit')}}</el-button>
 </div>
 </template>
 ```
@@ -107,6 +113,7 @@ new Vue({
 ## 2 富文本插件
 
 ### 2-1 vue 使用 UEditor
+
 UEditor 并不支持通过 npm 的方式来安装，vue-ueditor-wrap 也只是一个 Vue 组件，
 组件本身并不是 UEditor 的 Vue 版。了解 UEditor 基本使用，请参考 UEditor 官网
 在vue中使用 UEditor 需要前后端配合
@@ -125,6 +132,7 @@ yarn add vue-ueditor-wrap@2.x
 ```
 
 ### 下载 UEditor 资源包
+
 [vue-ueditor-wrap 下载 UEditor 资源包](https://hc199421.gitee.io/vue-ueditor-wrap/#/home)，选择对应的服务器版本
 说明：不同语言的 UEditor，前端部分，并无区别，只是包含了对应语言的 服务端 示例代码。UEditor 官方并没有提供 Node.js 版的示例代码，有需求的同学可以参考
 [ueditor-koa-server](https://github.com/HaoChuan9421/ueditor-koa-server)
@@ -132,76 +140,78 @@ yarn add vue-ueditor-wrap@2.x
 [静态资源](https://cli.vuejs.org/zh/guide/html-and-static-assets.html#public-%E6%96%87%E4%BB%B6%E5%A4%B9) 目录下，
 或者服务器静态资源目录，或者 阿里oss等
 
-```
+``` md
 项目目录
 public
-	UEditor
-		... UEditor 资源包文件
-	favicon.ico
-	index.html	
+ UEditor
+  ... UEditor 资源包文件
+ favicon.ico
+ index.html 
 src
-	article.vue
-	...
-	main.js
+ article.vue
+ ...
+ main.js
 ```
 
 ### 页面使用
+
 ``` html
 <template>
-	<div class="form-wrap">
-		<h3>发表文章</h3>
-		<el-form
-			ref="refForm"
-			:model="formModel"
-			:rules="formRules"
-			label-width="100px"
-			label-position="left"
-		>
-			<el-form-item class="isc-form-item-border" prop="title" label="栏目标题">
-				<el-input class="isc-input-border" v-model="formModel.title" placeholder="请输入栏目标题" />
-			</el-form-item>
-			<vue-ueditor-wrap class="isc-ueditor" v-model="formModel.content"
-					editor-id="isc-ueditor-article"
-					:config="editorConfig"/>
-			<el-form-item>
-				<el-row type="flex" justify="center">
-					<el-button class="isc-btn" @click="handlePublish">立即发布</el-button>
-				</el-row>
-			</el-form-item>
-		</el-form>
-	</div>
+ <div class="form-wrap">
+  <h3>发表文章</h3>
+  <el-form
+   ref="refForm"
+   :model="formModel"
+   :rules="formRules"
+   label-width="100px"
+   label-position="left"
+  >
+   <el-form-item class="isc-form-item-border" prop="title" label="栏目标题">
+    <el-input class="isc-input-border" v-model="formModel.title" placeholder="请输入栏目标题" />
+   </el-form-item>
+   <vue-ueditor-wrap class="isc-ueditor" v-model="formModel.content"
+     editor-id="isc-ueditor-article"
+     :config="editorConfig"/>
+   <el-form-item>
+    <el-row type="flex" justify="center">
+     <el-button class="isc-btn" @click="handlePublish">立即发布</el-button>
+    </el-row>
+   </el-form-item>
+  </el-form>
+ </div>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				formModel: {
-					title: '',
-					content: '',
-				},
-				formRules: {
-					title: [{ required: true, message: '请输入栏目标题', trigger: 'blur' }],
-					content: [{ required: true, message: '请填写文章内容', trigger: 'change' }],
-				},
-				editorConfig: {
-					// UEditor 静态资源路径（本地调试路径）
-					// UEDITOR_HOME_URL: '/UEditor/',
-					// UEditor 静态资源路径（阿里oss路径），服务器静态资源路径类似
-					UEDITOR_HOME_URL: 'https://ali.os.com/resource/UEditor/'
-					// 服务端接口
-					serverUrl: 'http://xxx.com/api/upload'
-				}
-			}
-		}
-	}
+ export default {
+  data() {
+   return {
+    formModel: {
+     title: '',
+     content: '',
+    },
+    formRules: {
+     title: [{ required: true, message: '请输入栏目标题', trigger: 'blur' }],
+     content: [{ required: true, message: '请填写文章内容', trigger: 'change' }],
+    },
+    editorConfig: {
+     // UEditor 静态资源路径（本地调试路径）
+     // UEDITOR_HOME_URL: '/UEditor/',
+     // UEditor 静态资源路径（阿里oss路径），服务器静态资源路径类似
+     UEDITOR_HOME_URL: 'https://ali.os.com/resource/UEditor/'
+     // 服务端接口
+     serverUrl: 'http://xxx.com/api/upload'
+    }
+   }
+  }
+ }
 </script>
 
 ```
 
 ### 使用 图片上传等功能说明
-如果需要使用 图片上传的功能，页面加载时，会自动向 服务端接口地址：http://xxx.com/api/upload，发送一个 get 请求，
-请求参数有为：http://xxx.com/api/upload?action=config&callback=bd__editor__aay9ux, 后端根据请求参数 action=upload,配置一段 json 文件，
+
+如果需要使用 图片上传的功能，页面加载时，会自动向 服务端接口地址：<http://xxx.com/api/upload>，发送一个 get 请求，
+请求参数有为：<http://xxx.com/api/upload?action=config&callback=bd__editor__aay9ux>, 后端根据请求参数 action=upload,配置一段 json 文件，
 或者 读取一个 .json文件，stringify 下，放入 传给后端的 callback，然后一起返回给 前端
 接口返回 bd__editor__aay9ux({ ... })
 
@@ -212,7 +222,6 @@ callback 函数是自动生成的
 post请求用于上传图片，图片名称的字段在 imageFieldName：'后端自已上传文件的字段名称' 中声明的，
 该请求会把：如 上传图片 action=uploadimage 上传视频 action=uploadvideo
 放在请求 url 中，数据放在 请求 body 中
-
 
 ``` js
 // 接口返回 string 类型 bd__editor__aay9ux({ ... }) 即可
@@ -391,7 +400,6 @@ bd__editor__aay9ux({
 })
 ```
 
-
 ### 后端 config.json 说明
 
 ``` json
@@ -407,19 +415,19 @@ bd__editor__aay9ux({
     "imageInsertAlign": "none", /* 插入的图片浮动方式 */
     "imageUrlPrefix": "", /* 图片访问路径前缀 */
     "imagePathFormat": "/ueditor/php/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}", /* 上传保存路径,可以自定义保存路径和文件名格式 */
-											/* {filename} 会替换成原文件名,配置这项需要注意中文乱码问题 */
-											/* {rand:6} 会替换成随机数,后面的数字是随机数的位数 */
-											/* {time} 会替换成时间戳 */
-											/* {yyyy} 会替换成四位年份 */
-											/* {yy} 会替换成两位年份 */
-											/* {mm} 会替换成两位月份 */
-											/* {dd} 会替换成两位日期 */
-											/* {hh} 会替换成两位小时 */
-											/* {ii} 会替换成两位分钟 */
-											/* {ss} 会替换成两位秒 */
-											/* 非法字符 \ : * ? " < > | */
-											/* 具请体看线上文档: fex.baidu.com/ueditor/#use-format_upload_filename */
-									
+           /* {filename} 会替换成原文件名,配置这项需要注意中文乱码问题 */
+           /* {rand:6} 会替换成随机数,后面的数字是随机数的位数 */
+           /* {time} 会替换成时间戳 */
+           /* {yyyy} 会替换成四位年份 */
+           /* {yy} 会替换成两位年份 */
+           /* {mm} 会替换成两位月份 */
+           /* {dd} 会替换成两位日期 */
+           /* {hh} 会替换成两位小时 */
+           /* {ii} 会替换成两位分钟 */
+           /* {ss} 会替换成两位秒 */
+           /* 非法字符 \ : * ? " < > | */
+           /* 具请体看线上文档: fex.baidu.com/ueditor/#use-format_upload_filename */
+         
     /* 涂鸦图片上传配置项 */
     "scrawlActionName": "uploadscrawl", /* 执行上传涂鸦的action名称 */
     "scrawlFieldName": "upfile", /* 提交的图片表单名称 */
@@ -491,8 +499,8 @@ bd__editor__aay9ux({
 }
 ```
 
-
 ## 3 轮播插件
+
 vue-awesome-swiper项目将被弃用，取而代之的是[Swiper Vue 组件](https://swiperjs.com/vue)，
 这是一个 TypeScript 友好的项目，它是 [Swiper](https://swiperjs.com/) 提供的最新官方版本。
 为了更好的稳定性，请尽快迁移。
@@ -507,91 +515,95 @@ vue-awesome-swiper发布了最新版本v5.0.0用于（桥）过渡。
 ### 3-1 swiper 轮播插件
 
 ::: tip swiper 配置 vue-awesome-swiper 的版本说明
-- Swiper 5-6 配合 [vue-awesome-swiper@4.1.1](https://github.com/surmon-china/vue-awesome-swiper/tree/v4.1.1) 
+
+- Swiper 5-6 配合 [vue-awesome-swiper@4.1.1](https://github.com/surmon-china/vue-awesome-swiper/tree/v4.1.1)
 - Swiper 4.x 配置 [vue-awesome-swiper@3.1.3](https://github.com/surmon-china/vue-awesome-swiper/tree/v3.1.3)
 - Swiper 3.x 配合 [vue-awesome-swiper@2.6.7](https://github.com/surmon-china/vue-awesome-swiper/tree/v2.6.7)
 :::
 
 ### swiper@5.4.5 + vue-awesome-swiper@4.1.1
+
 安装 swiper 和 vue-awesome-swiper
+
 ``` bash
 yarn add swiper@5.4.5 vue-awesome-swiper@4.1.1 -S
 ```
 
 页面使用
+
 ``` html
 <template>
-	<div class="swiper-wrap" style="height: 393px">
-		<swiper
-			ref="refSwiper"
-			v-if="swiperList.length"
-			:options="swiperOptions"
-			:auto-update="true"
-			:auto-destroy="true"
-			:delete-instance-on-destroy="true"
-			:cleanup-styles-on-destroy="true"
-			@slideChangeTransitionEnd="swiperChange('refSwiper', 'activeIndex')">
-			<swiper-slide v-for="item in swiperList" :key="item.id">
-				<div class="isc-swiper-item">
-					<template v-if="item.url">
-						<a :href="item.url" target="_blank">
-							<img :src="item.coverImage | formatUploadImage" alt="" />
-						</a>
-					</template>
-					<template v-else>
-						<img :src="item.coverImage | formatUploadImage" alt="" @click="goDetail(item.id)"/>
-					</template>
-				</div>
-			</swiper-slide>
-			<div class="swiper-button-prev" slot="button-prev"></div>
-			<div class="swiper-button-next" slot="button-next"></div>
-			<!-- <div class="swiper-pagination" slot='pagination'></div> -->
-		</swiper>
-		<div class="swiper-title-1" v-if="swiperList[activeIndex].title">
-			<div class="txt-one-line">
-				{{ swiperList[activeIndex].title }}
-			</div>
-		</div>
-		<div class="swiper-pagination isc-swiper-pagination-1"></div>
-	</div>
+ <div class="swiper-wrap" style="height: 393px">
+  <swiper
+   ref="refSwiper"
+   v-if="swiperList.length"
+   :options="swiperOptions"
+   :auto-update="true"
+   :auto-destroy="true"
+   :delete-instance-on-destroy="true"
+   :cleanup-styles-on-destroy="true"
+   @slideChangeTransitionEnd="swiperChange('refSwiper', 'activeIndex')">
+   <swiper-slide v-for="item in swiperList" :key="item.id">
+    <div class="isc-swiper-item">
+     <template v-if="item.url">
+      <a :href="item.url" target="_blank">
+       <img :src="item.coverImage | formatUploadImage" alt="" />
+      </a>
+     </template>
+     <template v-else>
+      <img :src="item.coverImage | formatUploadImage" alt="" @click="goDetail(item.id)"/>
+     </template>
+    </div>
+   </swiper-slide>
+   <div class="swiper-button-prev" slot="button-prev"></div>
+   <div class="swiper-button-next" slot="button-next"></div>
+   <!-- <div class="swiper-pagination" slot='pagination'></div> -->
+  </swiper>
+  <div class="swiper-title-1" v-if="swiperList[activeIndex].title">
+   <div class="txt-one-line">
+    {{ swiperList[activeIndex].title }}
+   </div>
+  </div>
+  <div class="swiper-pagination isc-swiper-pagination-1"></div>
+ </div>
 </template>
 
 <script>
-	import { swiper, swiperSlide } from 'vue-awesome-swiper'
-	import 'swiper/css/swiper.min.css'
-	export default {
-		components: {
-			swiper,
-			swiperSlide
-		},
-		data() {
-			return {
-				activeIndex: 0,
-				swiperList: [],
-				swiperOptions: Object.freeze({
-					autoplay: {
-						delay: 3000
-					},
-					loop: true,
-					navigation: {
-						nextEl: '.swiper-button-next',
-						prevEl: '.swiper-button-prev'
-					},
-					pagination: {
-						el: '.swiper-pagination',
-						type: 'bullets',
-						clickable: true
-					}
-				}),
-			}
-		},
-		methods: {
-			swiperChange(refName, dataName) {
-				// 开启 loop: true，就获取 realIndex
-				this[dataName] = this.$refs[refName].swiper.realIndex
-			},
-		}
-	}
+ import { swiper, swiperSlide } from 'vue-awesome-swiper'
+ import 'swiper/css/swiper.min.css'
+ export default {
+  components: {
+   swiper,
+   swiperSlide
+  },
+  data() {
+   return {
+    activeIndex: 0,
+    swiperList: [],
+    swiperOptions: Object.freeze({
+     autoplay: {
+      delay: 3000
+     },
+     loop: true,
+     navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+     },
+     pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+     }
+    }),
+   }
+  },
+  methods: {
+   swiperChange(refName, dataName) {
+    // 开启 loop: true，就获取 realIndex
+    this[dataName] = this.$refs[refName].swiper.realIndex
+   },
+  }
+ }
 </script>
 ```
 
@@ -603,9 +615,9 @@ yarn add swiper@5.4.5 vue-awesome-swiper@4.1.1 -S
   overflow: hidden;
   height: 100%;
   position: relative;
-	&.swiper-wrap-no-hidden {
-		overflow: visible;
-	}
+ &.swiper-wrap-no-hidden {
+  overflow: visible;
+ }
   .swiper-container {
     height: 100%;
     overflow: hidden;
@@ -623,7 +635,7 @@ yarn add swiper@5.4.5 vue-awesome-swiper@4.1.1 -S
       color: #fff;
     }
   }
-	.swiper-title-1 {
+ .swiper-title-1 {
     position: absolute;
     width: 100%;
     height: 40px;
@@ -639,28 +651,28 @@ yarn add swiper@5.4.5 vue-awesome-swiper@4.1.1 -S
       width: 68%;
     }
   }
-	.swiper-title-2 {
+ .swiper-title-2 {
     width: 100%;
     height: 40px;
     display: flex;
     align-items: center;
-		justify-content: center;
+  justify-content: center;
   }
-	.swiper-pagination {
-		&.isc-swiper-pagination-1 {
-			z-index: 10;
-			text-align: right;
-			width: 100%;
-			height: 40px;
-			bottom: 0;
-			right: 0;
-			padding-right: 20px;
-			line-height: 40px;
-		}
-		&.isc-swiper-pagination-2 {
-			position: relative;
-		}
-		.swiper-pagination-bullet {
+ .swiper-pagination {
+  &.isc-swiper-pagination-1 {
+   z-index: 10;
+   text-align: right;
+   width: 100%;
+   height: 40px;
+   bottom: 0;
+   right: 0;
+   padding-right: 20px;
+   line-height: 40px;
+  }
+  &.isc-swiper-pagination-2 {
+   position: relative;
+  }
+  .swiper-pagination-bullet {
       background: #fff;
       opacity: 1;
       & + .swiper-pagination-bullet {
@@ -670,14 +682,14 @@ yarn add swiper@5.4.5 vue-awesome-swiper@4.1.1 -S
     .swiper-pagination-bullet-active {
       background: #48a8f0;
     }
-	} 
+ } 
 }
 ```
-
 
 ### swiper@3.4.2
 
 ## 图片裁剪
+
 - [vue图片裁剪](https://www.jianshu.com/p/81eac24fcc38)
 - [vue-cropper](https://github.com/xyxiao001/vue-cropper)
 - [图片裁剪组件 vue-cropper + element-ui上传](https://blog.csdn.net/xjf106/article/details/100155373)
@@ -687,14 +699,18 @@ yarn add swiper@5.4.5 vue-awesome-swiper@4.1.1 -S
 - [Vue图片裁剪上传组件](https://www.jianshu.com/p/a2c7cdf8f541)
 
 ## 表格插件
+
 - [Vue+LuckSheet 前端应用在线报表](https://www.jianshu.com/p/bda785731c76)
 
 ## 抽奖插件
+
 - [lucky-canvas抽奖插件](https://100px.net/)
 
 ## 公告、无缝滚动
+
 - [vue-seamless-scroll](https://github.com/chenxuan0000/vue-seamless-scroll)
 - [vue-seamless-scroll文档](https://chenxuan0000.github.io/vue-seamless-scroll/zh/)
 
 ## 表单
+
 - [表单校验器](https://github.com/yiminghe/async-validator)

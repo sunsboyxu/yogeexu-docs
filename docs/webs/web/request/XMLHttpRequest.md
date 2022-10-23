@@ -1,13 +1,8 @@
-## XMLHttpRequest 介绍
-<<<<<<< HEAD
+# XMLHttpRequest 介绍
 
 [![1.png](https://pic.jitudisk.com/public/2022/06/28/f1abc4fe64a55.png)](https://pic.jitudisk.com/public/2022/06/28/f1abc4fe64a55.png)
-=======
 
-[![1.png](https://pic.jitudisk.com/public/2022/06/28/f1abc4fe64a55.png)](https://pic.jitudisk.com/public/2022/06/28/f1abc4fe64a55.png)
->>>>>>> 23adf04bac914d83134eb970c2aef4b6fdf55a19
-
-![](https://mmbiz.qpic.cn/mmbiz_png/crZicD08ZoNcbvX53FsuAfjFDhdTtHkFOAvnnb5jDhicu27RHW3icKdJffqiaBgXMVxiaZqTibYvlJ8RJZVr4sjWBPZQ/0?wx_fmt=png)
+![XMLHttpRequest](https://mmbiz.qpic.cn/mmbiz_png/crZicD08ZoNcbvX53FsuAfjFDhdTtHkFOAvnnb5jDhicu27RHW3icKdJffqiaBgXMVxiaZqTibYvlJ8RJZVr4sjWBPZQ/0?wx_fmt=png)
 
 XMLHttpRequest（XHR）对象用于与服务器交互, 通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据
 这允许网页在不影响用户操作的情况下，更新页面的局部内容，XMLHttpRequest 可以用于获取任何类型的数据，而不仅仅是 XML
@@ -25,20 +20,22 @@ const xhr = new XMLHttpRequest()
 xhr.open('GET', url, true) // true 表示 异步请求
 
 xhr.onload = function(res) {
-	console.log(res)
+ console.log(res)
 }
 
 xhr.send(null)
 ```
 
-### XMLHttpRequest 的同步和异步
+## XMLHttpRequest 的同步和异步
+
 XMLHttpRequest 支持同步和异步请求，这点比较重要
 但是，一般来说，出于性能原因，异步请求应优先于同步请求，同步请求阻止代码的执行，这会导致屏幕上出现 '冻结' 和 无响应 的用户体验
-- 具体查看：https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
+
+- 具体查看：<https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests>
 - [XMLHttpRequest-同步和异步请求](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
-
 ### XMLHttpRequest 属性介绍
+
 - readyState
 - response
 - responseType
@@ -57,7 +54,9 @@ XMLHttpRequest 支持同步和异步请求，这点比较重要
 - msCaching
 
 ### xhr 只读属性
+
 **readyState** 属性说明
+
 ``` js
 xhr.readyState
 /* 返回一个 XMLHttpRequest 代理当前所处的状态。一个 XHR 代理总是处于下列状态中的一个
@@ -65,7 +64,9 @@ xhr.readyState
 */
 
 ```
+
 UNSENT | OPENED | LOADING | HEADERS_RECEIVED | UDONE 在 XMLHttpReuqest 的原型上可以查看到
+
 ``` js
 console.log(XMLHttpReuqest, 'XMLHttpReuqest--')
 console.log(XMLHttpReuqest.prototype, 'XMLHttpReuqest-prototype-')
@@ -78,6 +79,7 @@ const xhr = new XMLHttpRequest()
 console.log(xhr, 'xhr--')
 console.log(xhr.UNSENT) // 0
 ```
+
 **readyState** 状态参考及说明
 状态码 | 状态 | 描述
 | - | - | - |
@@ -88,6 +90,7 @@ console.log(xhr.UNSENT) // 0
 4 | DONE | 请求完成，返回全部的数据
 
 **response** 属性说明
+
 ``` js
 xhr.responese
 /* 返回响应的正文
@@ -95,35 +98,38 @@ xhr.responese
 具体返回哪种类型取决于 responseType 的定义，如 下载文件时：xhr.responseType='blob'
 注意：
     responseType 的设置，要在调用 xhr.open() 初始化请求之后调用
-	并且要在调用 xhr.send() 发送请求到服务器之前调用
+ 并且要在调用 xhr.send() 发送请求到服务器之前调用
 --------------------------------------------------------------------------------
 如果请求 尚未完成 或 未成功，则取值是 null
 当 读取文本 数据时，如果将 responseType 的值设置成 "text" 或空字符串（""）
 当请求状态 readyState 处于 3 LOADING 时，response 包含到目前为止该请求已经取得的内容
 当请求状态 readyState 变成 4 DONE 时就会获取 response，
-可以在 onreadystatechange方法中，将其传递给 callback(xhr.response) 回调函数	
-*/		
+可以在 onreadystatechange方法中，将其传递给 callback(xhr.response) 回调函数 
+*/  
 ```
+
 ``` js
 const url = 'https://xxx.com/xxx.html'
 function callback(res) {
-	console.log(res)
+ console.log(res)
 }
 function getContent(callback) {
-	const xhr = new XMLHttpRequest()
-	xhr.open('GET', url)
-	xhr.onreadystatechange = function() {
-		if(xhr.readyState === 4) {
-			callback && callback(xhr.response)
-		}
-	}
-	xhr.send()
+ const xhr = new XMLHttpRequest()
+ xhr.open('GET', url)
+ xhr.onreadystatechange = function() {
+  if(xhr.readyState === 4) {
+   callback && callback(xhr.response)
+  }
+ }
+ xhr.send()
 }
 getContent(callback)
 ```
 
 **responseText** 属性说明
+
 - [DOMString说明](https://developer.mozilla.org/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String_6fa58bba0570d663099f0ae7ae8883ab)
+
 ``` js
 xhr.responseText
 /* 取值：DOMString
@@ -135,7 +141,9 @@ xhr.responseText
 当 请求状态 reayState，变为 4 - DONE 时，且 status - 200时，responseText 是后端返回的全部数据
 */
 ```
+
 **responseURL** 属性说明
+
 ``` js
 xhr.responseURL
 /*返回请求响应的 序列化 URL
@@ -163,8 +171,11 @@ Document 中包含从 XMLHttpRequest 中收到的 HTML 节点或解析后的 XML
 也可能是在没有收到任何数据或数据类型错误的情况下返回的 null
 */
 ```
+
 **status** 属性说明
+
 - [HTTP 响应状态码](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)
+
 ``` js
 xhr.status
 /* 返回了 XMLHttpRequest 请求响应中的数字状态码
@@ -175,6 +186,7 @@ status 200 代表一个成功的请求
 如果服务器响应中没有明确指定 status 码，XMLHttpRequest.status 将会默认为 200
 */
 ```
+
 ``` js
 const url = 'https://xxx.com/api/list'
 const xhr = new XMLHttpRequest()
@@ -197,6 +209,7 @@ xhr.send(null)
 ```
 
 **statusText** 属性说明
+
 ``` js
 xhr.statusText
 /*返回了XMLHttpRequest 请求中，由服务器返回的一个 DOMString 类型的文本信息
@@ -214,7 +227,7 @@ const xhr = new XMLHttpRequest()
 console.log('请求状态 readyState: 0-UNSENT', xhr.statusText)
 
 xhr.open('GET', url, true);
-	console.log('请求状态 readyState: 1-OPENED', xhr.statusText)
+ console.log('请求状态 readyState: 1-OPENED', xhr.statusText)
 xhr.onprogress = function () {
   console.log('请求状态 readyState: 3-LOADING', xhr.statusText)
 }
@@ -234,10 +247,10 @@ xhr.send(null);
 ```
 
 **upload** 属性说明
+
 - [XMLHttpRequestEventTarget](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequestEventTarget)
 
 XMLHttpRequestEventTarget 是用于描述事件处理程序的接口，你可以在一个用于处理 XMLHttpRequest 请求事件的对象中使用该事件处理程序，如 onload、ontimeout
-
 
 ``` js
 xhr.upload
@@ -248,21 +261,23 @@ XMLHttpRequestUpload 是不透明的，但是作为一个 XMLHttpRequestEventTar
 可以通过对其绑定事件来追踪它的进度，如 onprogress
 */
 ```
+
 ### **xhr.upload** 对象上事件监听器
 
 事件名称 | 事件描述
 | - | - |
-onloadstart |	获取开始
+onloadstart | 获取开始
 onprogress | 数据传输进行中
 onabort | 获取操作终止
-onerror	| 获取失败
+onerror | 获取失败
 onload | 获取成功
 ontimeout | 获取操作在用户规定的时间内未完成
-onloadend	| 获取完成（不论成功与否）
+onloadend | 获取完成（不论成功与否）
 
 ### xhr 可定义属性
 
 **timeout** 属性说明
+
 - [在异步请求中使用 timeout](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/timeout)
 
 ``` js
@@ -281,6 +296,7 @@ xhr.timeout = 5000
 ```
 
 ### 全局文档环境(document environment)
+
 - [document-environment的 HTML 规范](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment)
 当 JavaScript 所处的全局环境为 window 或 iframe 时，这种环境被称为全局文档环境
 全局的文档环境处于所有环境的顶层，即没有更外层的环境
@@ -291,24 +307,26 @@ console.log(xhr)
 xhr.open('GET', './source/test-180M.zip', true)
 xhr.responseType = 'blob'
 xhr.addEventListener('readystatechange', () => {
-	console.log('请求状态发生变化~')
-	console.log(xhr)
+ console.log('请求状态发生变化~')
+ console.log(xhr)
 })
 xhr.addEventListener('timeout', () => {
-	console.log('网络请求超时~')
-	console.log(xhr)
-	console.log('-------------------')
-	console.log(alert('网络请求超时'))
+ console.log('网络请求超时~')
+ console.log(xhr)
+ console.log('-------------------')
+ console.log(alert('网络请求超时'))
 })
 xhr.addEventListener('load', () => {
-	console.log('请求完成：xhr-', xhr)
+ console.log('请求完成：xhr-', xhr)
 })
 xhr.timeout = 200
 xhr.send(null)
 ```
 
 **responseType** 属性说明
+
 - [responseType参考](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/responseType)
+
 ``` js
 xhr.responseType = 'blob'
 /* 响应类型 是一个枚举字符串值，用于指定响应中包含的数据类型
@@ -317,6 +335,7 @@ xhr.responseType = 'blob'
 ```
 
 **withCredentials** 属性说明
+
 ``` js
 xhr.withCredentials
 /* Boolean 类型，默认值：false
@@ -335,6 +354,7 @@ xhr.withCredentials
 ### 非标准属性
 
 **channel** 属性说明
+
 ``` js
 xhr.channel
 /* 创建请求时 channel 是一个被对象使用的 nsIChannel
@@ -343,36 +363,40 @@ xhr.channel
 ```
 
 **mozAnon** 属性说明
+
 ``` js
  xhr.mozAnon
 /* 布尔类型，如果这个变量为真，则这次请求将不携带 Cookies 或头部认证信息来发送 */
 ```
 
 **mozBackgroundRequest** 属性说明
+
 ``` js
 xhr.mozBackgroundRequest
 /* 布尔对象，表示 object 是否为后台的服务请求
 如果为 true，则不会将任何加载组与请求关联，并且不会向用户显示安全对话框
 请求失败时通常会显示安全对话框（例如身份验证或错误证书通知）
 !!!注意：
-	Web 内容无法使用此方法。它需要提升权限才能访问
-	该属性必须在调用 open() 之前设置 */	
+ Web 内容无法使用此方法。它需要提升权限才能访问
+ 该属性必须在调用 open() 之前设置 */ 
 ```
 
 **mozSystem** 属性说明
+
 ``` js
 xhr.mozSystem
 /* 布尔类型，如果它被设置为 true，那么在请求时就不会强制要求执行同源策略（Same Origin Policy）*/
 ```
 
 **msCaching** 属性说明
+
 ``` js
 xhr.msCaching
 /* 指定使用 XMLHttpRequest 下载的流数据是否缓存到磁盘
 注意:
-	此功能是非标准的，不在标准轨道上
-	不要在面向 Web 的生产站点上使用它：它不适用于每个用户
-	实现之间也可能存在很大的不兼容性，并且行为可能会在未来发生变化 */
+ 此功能是非标准的，不在标准轨道上
+ 不要在面向 Web 的生产站点上使用它：它不适用于每个用户
+ 实现之间也可能存在很大的不兼容性，并且行为可能会在未来发生变化 */
 ```
 
 ### xhr 方法说明
@@ -381,7 +405,8 @@ xhr.msCaching
 const xhr = new XMLHttpRequest()
 ```
 
-__**xhr.open()**__ 方法说明
+**xhr.open**方法说明
+
 ``` js
 xhr.open()
 /*初始化一个请求。该方法要从 javascript 代码使用
@@ -389,19 +414,21 @@ xhr.open()
 为已激活的请求调用 xhr.open()，或者 xhr.open() | openRequest() 已被调用，相当于调用abort()
 */
 ```
+
 语法：xhr.open(method, url, async, user, password)
 
 参数说明：
 
-__参数__   | 参数说明
+**参数**   | 参数说明
 :-: | :-
 method | 要使用的 HTTP 方法，比如 GET、POST、PUT、DELETE、等。对于非 HTTP(S) URL 被忽略
 url | 发送请求的 URL
 _async(可选)_ | 可选的布尔参数，默认为 true，表示是否异步执行操作，如果 true，已完成事务的通知可供事件监听器使用，如果 multipart 属性为 true 则这个必须为 true，否则将引发异常，如果值为 false，xhr.send() 方法直到收到答复前不会返回
-__user(可选)__ | 可选用户名，可用于认证；默认为 null
+**user(可选)** | 可选用户名，可用于认证；默认为 null
 password(可选) | 可选的密码，可用于认证，默认为 null
 
 **xhr.abort()** 方法说明
+
 ``` js
 xhr.abort()
 /* 如果该请求已被发出，使用 xhr.abort() 方法将终止该请求
@@ -414,21 +441,22 @@ xhr.abort()
 let xhr;
 let btnLogin = document.getElementById('btn-login')
 btnLogin.addEventListener('click', () => {
-	xhr ? xhr.abort() : loginApi
+ xhr ? xhr.abort() : loginApi
 })
 
 function loginApi() {
-	const xhr = new XMLHttpRequest()
-	xhr.open('GET','http://xxx.com/api/login', true)
-	xhr.onloadend = function() {
-		xhr = null
-	}
-	xhr.send(null)
-	return xhr
+ const xhr = new XMLHttpRequest()
+ xhr.open('GET','http://xxx.com/api/login', true)
+ xhr.onloadend = function() {
+  xhr = null
+ }
+ xhr.send(null)
+ return xhr
 }
 ```
 
 **xhr.send()** 方法说明
+
 - [XMLHttpRequest.send()](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/send)
 
 ``` js
@@ -442,6 +470,7 @@ xhr.send() 方法接受一个可选的参数，其作为请求主体；如果请
 不要使用一个简单的 ArrayBuffer 对象作为参数，ArrayBuffer 已经不再是 AJAX 规范的一部分，请改用 ArrayBufferView
 */
 ```
+
 语法：
 XMLHttpRequest.send(body)
 
@@ -449,9 +478,10 @@ XMLHttpRequest.send(body)
 
 参数 | 参数说明
 | -- | - |
-body数据请求体 | 在 XHR 请求中要发送的数据体，可以是：1 可以为 Document, 在这种情况下，它在发送之前被序列化 2 为 XMLHttpRequestBodyInit，可以是 Blob, BufferSource, FormData, URLSearchParams, 或者 USVString 对象 
+body数据请求体 | 在 XHR 请求中要发送的数据体，可以是：1 可以为 Document, 在这种情况下，它在发送之前被序列化 2 为 XMLHttpRequestBodyInit，可以是 Blob, BufferSource, FormData, URLSearchParams, 或者 USVString 对象
 
 **xhr.setRequestHeader()** 方法说明
+
 - [禁止修改的请求头](https://developer.mozilla.org/zh-CN/docs/Glossary/Forbidden_header_name)
 - [禁止修改的响应头](https://developer.mozilla.org/zh-CN/docs/Glossary/Forbidden_response_header_name)
 
@@ -470,6 +500,7 @@ xhr.setRequestHeader()
 如：post 请求中 header 携带 token
 */
 ```
+
 语法：
 xhr.setRequestHeader(header, value)
 
@@ -478,8 +509,8 @@ xhr.setRequestHeader(header, value)
 header | 属性的名称
 value | 属性值
 
-
 **xhr.getResponseHeader()** 方法说明
+
 ``` js
 xhr.getResponseHeader()
 /*返回包含指定响应头文本的字符串
@@ -487,10 +518,13 @@ xhr.getResponseHeader()
 getResponseHeader() 方法以 UTF 编码返回值。搜索的报文名是不区分大小写的
 */
 ```
+
 语法：
+
 ``` js
 var useHeader = xhr.getResponseHeader(name)
 ```
+
 参数 | 参数说明
 | - | - |
 name | 字符串，表示要返回的报文名称
@@ -505,7 +539,7 @@ xhr.open("GET", "somefile.txt", true)
 
 xhr.onreadystatechange = function() {
   if(this.readyState == this.HEADERS_RECEIVED) { // 如果 readyState 表示响应头已返回
-		// 获取请求，响应头的 Content-Type
+  // 获取请求，响应头的 Content-Type
     const contentType = xhr.getResponseHeader("Content-Type")
     if(contentType != allowHeader) { // 设置的预期值
       xhr.abort() // 终止请求
@@ -517,6 +551,7 @@ xhr.send()
 ```
 
 **xhr.getAllResponseHeaders()** 方法说明
+
 ``` js
 xhr.getAllResponseHeaders()
 /*返回所有的响应头
@@ -532,7 +567,6 @@ xhr.getAllResponseHeaders()
 ``` js
 /*
 // 返回的 headers
-<<<<<<< HEAD
 accept-ranges: bytes\r\n
 cache-control: public, max-age=0\r\n
 connection: keep-alive\r\n
@@ -549,57 +583,27 @@ x-timestamp: 1656381777073\r\n
 const xhr = new XMLHttpRequest()
 xhr.open('GET', './source/test-10M.zip', true)
 xhr.addEventListener('load', () => {
-	const headersMap = {}
-	const allHeaders = xhr.getAllResponseHeaders()
-	console.log(allHeaders)
-	const headersArr = allHeaders.trim().split(/[\r\n]+/)
-	console.log(headersArr)
-	headersArr.forEach(item => {
-		const connectStr = ': '
-		const parts = item.split(connectStr)
-		const header = parts.shift() // 删除数组第一项，返回第一项的值，会改变原数组
-		headersMap[header] = parts.join('')
-	})
-	console.log(headersMap)
-	console.log('Content-Type:' + headersMap['content-type'])
+ const headersMap = {}
+ const allHeaders = xhr.getAllResponseHeaders()
+ console.log(allHeaders)
+ const headersArr = allHeaders.trim().split(/[\r\n]+/)
+ console.log(headersArr)
+ headersArr.forEach(item => {
+  const connectStr = ': '
+  const parts = item.split(connectStr)
+  const header = parts.shift() // 删除数组第一项，返回第一项的值，会改变原数组
+  headersMap[header] = parts.join('')
+ })
+ console.log(headersMap)
+ console.log('Content-Type:' + headersMap['content-type'])
 })
-=======
-accept-ranges: bytes\r\n
-cache-control: public, max-age=0\r\n
-connection: keep-alive\r\n
-content-length: 91493962\r\n
-content-type: application/zip\r\n
-date: Tue, 28 Jun 2022 02:02:57 GMT\r\n
-etag: W/"574164a-17c9d0f4e79"\r\n
-keep-alive: timeout=5\r\n
-last-modified: Wed, 20 Oct 2021 09:36:38 GMT\r\n
-x-powered-by: Express\r\n
-x-sent: true\r\n
-x-timestamp: 1656381777073\r\n
-*/
-const xhr = new XMLHttpRequest()
-xhr.open('GET', './source/test-10M.zip', true)
-xhr.addEventListener('load', () => {
-	const headersMap = {}
-	const allHeaders = xhr.getAllResponseHeaders()
-	console.log(allHeaders)
-	const headersArr = allHeaders.trim().split(/[\r\n]+/)
-	console.log(headersArr)
-	headersArr.forEach(item => {
-		const connectStr = ': '
-		const parts = item.split(connectStr)
-		const header = parts.shift() // 删除数组第一项，返回第一项的值，会改变原数组
-		headersMap[header] = parts.join('')
-	})
-	console.log(headersMap)
-	console.log('Content-Type:' + headersMap['content-type'])
-})
->>>>>>> 23adf04bac914d83134eb970c2aef4b6fdf55a19
 xhr.send()
 ```
 
 **xhr.overrideMimeType()** 方法说明
+
 - [MIME Type参照表](https://www.iana.org/assignments/media-types/media-types.xhtml)
+
 ``` js
 xhr.overrideMimeType(mimeType)
 /*指定一个 MIME 类型用于替代服务器指定的类型，使服务端响应信息中传输的数据按照该指定 MIME 类型处理
@@ -621,6 +625,7 @@ mimeType | 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型
 
 **xhr.msCachingEnabled()** 方法说明
 这个是一个 非标准属性方法，不要在站点上使用它
+
 ``` js
 xhr.msCachingEnabled()
 /*获取 XMLHttpRequest 的当前缓存状态
@@ -632,6 +637,7 @@ xhr.msCachingEnabled()
 ```
 
 ### 事件处理器
+
 作为 XMLHttpRequest 实例的属性之一，所有浏览器都支持 onreadystatechange，
 可以使用 xhr.onload 进行事件的监听，也可以使用供标准的监听器 xhr.addEventListener('load', fn, false) 来监听
 
@@ -670,4 +676,3 @@ xhr.send(null)
 ```
 
 当一个 XMLHttpRequest 请求被 abort() 方法取消时，其对应的 readystatechange 事件不会被触发
-

@@ -92,7 +92,7 @@ const app = new Vue({
   ...App
 })
 app.$mount()
-``` 
+```
 
 ## 页面使用 i18n
 

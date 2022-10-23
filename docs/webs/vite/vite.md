@@ -14,7 +14,7 @@
 - [script setup](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md)
 - [vite.config.ts文件常用配置](https://www.jianshu.com/p/6a3695d8f7fe)
 - [Vite的常用配置vite.config.js](https://github.com/staven630/vite-config)
- 
+
 ## vite 初始化项目
 
 <CodeGroup>
@@ -37,45 +37,52 @@ yarn create @vitejs/app 项目名称
 yarn create vite-app 项目名称
 
 ```
+
 会让你选择 vue 或者 vue-ts react等
 </CodeGroupItem>
 
 </CodeGroup>
 
 ::: danger vite-app 这个包有问题
+
 ``` bash
 // 这个的包有问题
 yarn create vite-app 项目名称
 ```
+
 :::
 
 ## vite 插件使用
+
 - [vite常用插件](https://zhuanlan.zhihu.com/p/375971479)
 
 ### 按需加载
+
 npm install vite-plugin-babel-import --save-dev
- - vite-config.js
+
+- vite-config.js
+
 ``` js
 import { defineConfig } from 'vite'
 import vitePluginBabelImport from 'vite-plugin-babel-import'
 export default defineConfig({
-	plugins:[
-		vitePluginBabelImport([{
-			libraryName: 'element-plus',
-			librayDirectory: 'es',
-			style(name) {
-				return `element-plus/lib/theme-chalk/${name}.css`;
-			}
-		}])
-	] 
+ plugins:[
+  vitePluginBabelImport([{
+   libraryName: 'element-plus',
+   librayDirectory: 'es',
+   style(name) {
+    return `element-plus/lib/theme-chalk/${name}.css`;
+   }
+  }])
+ ] 
 })
 ```
 
 - vite-plugin-babel-import
 - [打包上次oss] vite-plugin-assets-uploader
 
-
 ## 实战教程
+
 - [muteki-vant-vite](https://gitee.com/WeiziPlus/muteki-vite)
 - [Vite2 项目工程化和原理，一次搞定！](https://mp.weixin.qq.com/s/wSfgGmTRNZITegWzT3v_mw)
 - [实战 | Vite2.0搭建Vue3移动端项目](https://mp.weixin.qq.com/s/j2g69KtJHEVIyg_8O32WsQ)

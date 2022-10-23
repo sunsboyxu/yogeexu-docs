@@ -57,7 +57,7 @@ export default function HomepageFeatures() {
           ))}
         </div>
         <div className={styles.buttons} style={{ display: 'flex', justifyContent: 'center', marginTop: '10rem' }}>
-          <Link className="button button--primary button--lg" to="/docs/intro" style={{ color: 'white' }}>
+          <Link className="button button--primary button--lg" to="/intro" style={{ color: 'white' }}>
             阅读文档
           </Link>
         </div>

@@ -1,11 +1,15 @@
 # 插件安装
+
 - Auto Import
 - JS JSX Snippets
 - React/Redux/react-router Snippets // 查看插件 Usage 会有 快速导入 简写
 
-# 自定义 React 代码片段
+## 自定义 React 代码片段
+
 首选项 -> 用户片段 -> 输入 javascript.json / javascriptreact.json 选择
+
 ## 配置快速创建代码命令
+
 ``` json
 {
   // 日志输出
@@ -29,7 +33,7 @@
       "\t\t)",
       "\t}",
       "}",
-			"",
+   "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "创建 React Class 组件"
@@ -48,7 +52,7 @@
       "\t\t\t</div>",
       "\t\t)",
       "}",
-			"",
+   "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "创建 React Function 组件"
@@ -66,7 +70,7 @@
       "\t\t\t</div>",
       "\t\t)",
       "}",
-			"",
+   "",
       "export default ${1:${TM_FILENAME_BASE}}"
     ],
     "description": "创建 React Function Hooks 组件"

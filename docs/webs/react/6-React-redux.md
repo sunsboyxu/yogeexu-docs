@@ -3,16 +3,19 @@
 - [react-redux](https://www.redux.org.cn/docs/react-redux/)
 
 ## React-redux 提供了2个 api
+
 - Provider 为后代组件提供store
 - connect 为组件提供数据和变更⽅法
 
 ## 安装
+
 ``` bash
 yarn add react-redux
 ```
 
 目录结构
-```
+
+``` md
  react-app2
  ├── README.md
  ├── package.json
@@ -43,7 +46,9 @@ yarn add react-redux
 ```
 
 ## mapStateToProps 将 state 映射到 props
+
 在 src/views/Cart.js 页面使用 react-redux connect
+
 ``` js
 import React, { Component } from 'react'
 import Layout from '../../components/Layout'
@@ -86,7 +91,9 @@ export default connect(
 ```
 
 ## 多个 dispatch 方法，自定义 映射方法
+
 在 src/views/User.js 页面使用 react-redux connect
+
 ``` js
 import React, { Component } from 'react'
 import Layout from '../../components/Layout'
@@ -154,7 +161,7 @@ const mapDispatchToProps = {
 }
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+ mapStateToProps,
+ mapDispatchToProps
 )(User)
 ```

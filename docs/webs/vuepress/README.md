@@ -3,6 +3,11 @@
 - [vuepress中文网](https://v2.vuepress.vuejs.org/zh)
 - [vuepress支持的图标](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
+## vuepress 相关主题
+
+- [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v2/zh/)
+- [基于Algolia Docsearch实现vuepress2网站全文搜索](https://zhuanlan.zhihu.com/p/560633533)
+
 ## 初始化项目
 
 ``` js

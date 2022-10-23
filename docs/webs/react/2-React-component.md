@@ -1,10 +1,12 @@
 # React 组件
+
 - [组件 & Props](https://zh-hans.reactjs.org/docs/components-and-props.html)
 
 组件，从概念上类似于 JavaScript 函数，它接受任意的⼊参（即 “props”），并返回⽤于描述⻚⾯展示内容的 React 元素
 组件有两种形式：Class 组件 和 function组件
 
 ## Class 组件
+
 Class 组件，通常拥有状态和⽣命周期，继承于 Component，实现 render ⽅法
 
 ``` js
@@ -50,8 +52,8 @@ export default class ClassComp1 extends Component {
 }
 ```
 
-
 ## Function 组件
+
 - 函数组件通常⽆状态，仅关注内容展示，返回渲染结果即可
 - 从React16.8开始引⼊了 hooks，函数组件也能够拥有状态
 
@@ -90,59 +92,59 @@ export default FunComp1
 ``` js
 import React, { Component } from 'react'
 class App extends Component {
-	render() {
-		return (
-			<Fragment>
-				<h3>Fragment page</h3>
-				<p>Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点</p>
-				<ChildComp></ChildComp>
-			</Fragment>
-		)
-	}
+ render() {
+  return (
+   <Fragment>
+    <h3>Fragment page</h3>
+    <p>Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点</p>
+    <ChildComp></ChildComp>
+   </Fragment>
+  )
+ }
 }
 ```
 
 ``` js
 import React, { Component } from 'react'
 class App extends Component {
-	render() {
-		return (
-			<>
-				<h3>Fragment page</h3>
-				<p>Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点</p>
-				<ChildComp></ChildComp>
-			</>
-		)
-	}
+ render() {
+  return (
+   <>
+    <h3>Fragment page</h3>
+    <p>Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点</p>
+    <ChildComp></ChildComp>
+   </>
+  )
+ }
 }
 ```
 
 ``` js
 import React, { Component } from 'react'
 class App extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {}
-	}
-	render() {
-		const { list } = this.props
-		return (
-			<dl>
-				{list.map(item => (
-					// key
-					<React.Fragment key={item.id}>
-						<dt>{item.title}</dt>
-						<dd>{item.description}</dd>
-					</React.Fragment>
-				))}
-			</dl>
-		)
-	}
+ constructor(props) {
+  super(props)
+  this.state = {}
+ }
+ render() {
+  const { list } = this.props
+  return (
+   <dl>
+    {list.map(item => (
+     // key
+     <React.Fragment key={item.id}>
+      <dt>{item.title}</dt>
+      <dd>{item.description}</dd>
+     </React.Fragment>
+    ))}
+   </dl>
+  )
+ }
 }
 ```
-
 
 ## 组件复合 - Composition
+
 - [组合 vs 继承](https://zh-hans.reactjs.org/docs/composition-vs-inheritance.html)
 
 复合组件给与你⾜够的敏捷去定义⾃定义组件的外观和⾏为，这种⽅式更明确和安全。如果组件间有公
@@ -311,9 +313,9 @@ class Home extends Component {
           {/* <div>
             this is home page
           </div> */}
-					{/* 类似 vue 的 slot */}
+     {/* 类似 vue 的 slot */}
           {
-						{ content: (
+      { content: (
               <div>
                 this is home page
               </div> 
@@ -323,7 +325,7 @@ class Home extends Component {
               console.log(this)
               console.log('btnClick')
             }}
-					}
+     }
         </Layout>
       </div>
     )
@@ -411,6 +413,7 @@ ul,li {
 ```
 
 ## PureComponent
+
 - [PureComponent](https://zh-hans.reactjs.org/docs/react-api.html#reactpurecomponent)
 
 React.PureComponent 与 React.Component 很相似,
@@ -424,17 +427,13 @@ React.PureComponent 中的 shouldComponentUpdate() 仅作对象的浅层比较�
 此外，React.PureComponent 中的 shouldComponentUpdate() 将跳过所有子组件树的 prop 更新。因此，请确保所有子组件也都是“纯”的组件
 
 PureComponentPage 有一个名为 shouldComponentUpdate() 的方法。
-扩展 React.PureComponent 时不应使用 shouldComponentUpdate。 
+扩展 React.PureComponent 时不应使用 shouldComponentUpdate。
 如果使用 shouldComponentUpdate，请扩展 React.Component
 
-
-
-
-
 ## Context
+
 - [Context](https://zh-hans.reactjs.org/docs/context.html)
 - [Context/Provider/Consumer传参使用](https://blog.csdn.net/deng1456694385/article/details/98601308)
-
 
 Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法
 
@@ -443,6 +442,7 @@ Context 提供了一个无需为每层组件手动添加 props，就能在组件
 Context 提供了一种在组件之间共享此类值的方式，而不必显式地通过组件树的逐层传递 props
 
 ### 何时使用 Context
+
 Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据，例如当前认证的用户、主题或首选语言，
 举个例子，在下面的代码中，我们通过一个 “theme” 属性手动调整一个按钮组件的样式
 
@@ -503,14 +503,17 @@ export default ContextPage
 ```
 
 ### 使用 Context 之前的考虑
+
 Context 主要应用场景在于很多不同层级的组件需要访问同样一些的数据，请谨慎使用，因为这会使得组件的复用性变差
 
 ### Context Api
 
 ### React.createContext
+
 ``` js
 const MyContext = React.createContext(defaultValue);
 ```
+
 创建一个 Context 对象，
 当 React 渲染一个订阅了这个 Context 对象的组件，这个组件会从组件树中离自身最近的那个匹配的 Provider 中读取到当前的 context 值，
 只有当组件所处的树中没有匹配到 Provider 时，其 defaultValue 参数才会生效，
@@ -518,9 +521,10 @@ const MyContext = React.createContext(defaultValue);
 注意：将 undefined 传递给 Provider 的 value 时，消费组件的 defaultValue 不会生效
 
 ### Context.Provider
+
 ``` js
 <MyContext.Provider value={ '某个值' }>
-	<ParentComp></ParentComp>
+ <ParentComp></ParentComp>
 </MyContext.Provider>
 ```
 
@@ -533,60 +537,63 @@ Provider 接收一个 value 属性，传递给消费组件，
 从 Provider 到其内部 consumer 组件（包括 .contextType 和 useContext）的传播不受制于 shouldComponentUpdate 函数，
 因此当 consumer 组件在其祖先组件跳过更新的情况下也能更新
 
-
 ### Class.contextType
+
 挂载在 Class 上的 contextType 属性可以赋值为由 React.createContext() 创建的 Context 对象，
 此属性可以让你使用 this.context 来获取最近 Context 上的值，
 可以在任何生命周期中访问到它，包括 render 函数中
 可以使用 static 这个类属性来初始化你的 contextType
 
 在任何生命周期中访问到它，包括 render 函数中
+
 ``` js
 class ContextPage extends React.Component {
-	// 在任何生命周期中访问到它，包括 render 函数中
-	componentDidMount() {
-		console.log('componentDidMount - context:', this.context)
-	}
-	componentDidUpdate() {
-		console.log('componentDidUpdate - context:', this.context)
-	}
-	componentWillUnmount() {
-		console.log('componentWillUnmount - context:', this.context)
-	}
-	render() {
-		console.log('render - context:', this.context)
-		return (
-			<div>{ this.context }</div>
-		)
-	} 
+ // 在任何生命周期中访问到它，包括 render 函数中
+ componentDidMount() {
+  console.log('componentDidMount - context:', this.context)
+ }
+ componentDidUpdate() {
+  console.log('componentDidUpdate - context:', this.context)
+ }
+ componentWillUnmount() {
+  console.log('componentWillUnmount - context:', this.context)
+ }
+ render() {
+  console.log('render - context:', this.context)
+  return (
+   <div>{ this.context }</div>
+  )
+ } 
 }
 ContextPage.context = MyContext 
 ```
 
 使用 static 这个类属性来初始化你的 contextType
+
 ``` js
 class ContextPage extends React.Component {
-	// 使用 static 这个类属性来初始化你的 contextType
-	static contextType = MyContext
-	componentDidMount() {
-		console.log('componentDidMount - context:', this.context)
-	}
-	componentDidUpdate() {
-		console.log('componentDidUpdate - context:', this.context)
-	}
-	componentWillUnmount() {
-		console.log('componentWillUnmount - context:', this.context)
-	}
-	render() {
-		console.log('render - context:', this.context)
-		return (
-			<div>{ this.context }</div>
-		)
-	} 
+ // 使用 static 这个类属性来初始化你的 contextType
+ static contextType = MyContext
+ componentDidMount() {
+  console.log('componentDidMount - context:', this.context)
+ }
+ componentDidUpdate() {
+  console.log('componentDidUpdate - context:', this.context)
+ }
+ componentWillUnmount() {
+  console.log('componentWillUnmount - context:', this.context)
+ }
+ render() {
+  console.log('render - context:', this.context)
+  return (
+   <div>{ this.context }</div>
+  )
+ } 
 } 
 ```
 
 ### Context.Consumer
+
 ``` js
 // 语法
 <MyContext.Consumer>
@@ -633,25 +640,27 @@ ThemeContext.displayName = 'themeContextDisplayName'
 ```
 
 ### 动态 Context
+
 在 项目目录/src/context 下，新建 ThemeContext.js
 
 ``` js
 // src/context/ThemeContext.js
 import React from 'react'
 export const themes = {
-	light: {
-		color: '#fff',
-		background: 'orange'
-	},
-	dark: {
-		color: '#fff',
-		background: '#000'
-	}
+ light: {
+  color: '#fff',
+  background: 'orange'
+ },
+ dark: {
+  color: '#fff',
+  background: '#000'
+ }
 }
 export const ThemeContext = React.createContext(themes.light)
 ```
 
 新建 ContextDynamicPage.js 页面
+
 ``` js
 import React, { Component } from 'react'
 import { ThemeContext, themes } from '../context/ThemeContext'
@@ -669,8 +678,8 @@ class ContextDynamicPage extends Component {
       theme: themes.light
     }
   }
-	
-	// 切换主题
+ 
+ // 切换主题
   toggleTheme = () => {
     // setState 使用函数，接受上一次的 state,进行比较
     this.setState(state =>({
@@ -737,6 +746,7 @@ export default ContextDynamicPage
 ```
 
 ### 在嵌套组件中更新 Context
+
 ``` js
 // src/context/ThemeContext2.js
 import React from "react"
@@ -757,6 +767,7 @@ export const ThemeContext2 = React.createContext({
   changeTheme: () => {}
 })
 ```
+
 ``` js
 // src/views/ContextConsumerUpdatePage.js
 import React, { Component, Fragment } from 'react'
@@ -864,6 +875,7 @@ export default ContextConsumerUpdatePage
 ```
 
 ### 多个 Context
+
 如果两个或者更多的 context 值经常被一起使用，那你可能要考虑一下另外创建你自己的渲染组件，以提供这些值
 
 ``` js
@@ -934,6 +946,7 @@ export default ContextMultiplePage
 ```
 
 ### Context 注意事项
+
 因为 context 会根据引用标识来决定何时进行渲染（本质上是 value 属性值的浅比较），
 所以这里可能存在一些陷阱，当 provider 的父组件进行重渲染时，可能会在 consumers 组件中触发意外的渲染
 
@@ -972,14 +985,15 @@ class App extends React.Component {
 }
 ```
 
-
 ## createPortal
 
 ``` js
 // 语法
 createPortal(child, container)
 ```
+
 弹窗类组件实现，添加如 body 后，依赖 react-dom 库
+
 ``` js
 import React, { Component } from 'react';
 import { createPortal } from 'react-dom'
@@ -1012,6 +1026,7 @@ export default Dialog;
 ```
 
 ## 高阶组件-HOC
+
 - [高阶组件-HOC](https://zh-hans.reactjs.org/docs/higher-order-components.html)
 
 为了提高组件复用率，可测试性，就要保证组件功能单一性，但是若要满足复杂需求就要扩展功能单一的组件，
@@ -1063,7 +1078,6 @@ class HocCompPage1 extends Component {
 
 export default HocCompPage1
 ```
-
 
 未使用 高阶组件 HOC 处理的页面
 
@@ -1187,6 +1201,7 @@ export default HocCompPage2
 ```
 
 使用 高阶组件 HOC 处理的页面
+
 ``` js
 import React, { Component } from 'react'
 
@@ -1328,5 +1343,3 @@ class HocCompPage3 extends Component {
 
 export default HocCompPage3
 ```
-
-

@@ -1,11 +1,13 @@
 # vue api
 
 ## 全局配置
+
 - [全局配置](https://v2.cn.vuejs.org/v2/api/#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE)
 
 Vue.config 是一个对象，包含 Vue 的全局配置，可以在 启动应用之前修改下列属性 property
 
 在 Vue 源码最初的定义
+
 ``` js
 var config = {
     /**
@@ -92,6 +94,7 @@ console.log(Vue.config, 'Vue.config--')
 ```
 
 打印结果
+
 ``` json
 async: true
 devtools: false
@@ -104,35 +107,35 @@ isUnknownElement: ƒ isUnknownElement(tag)
 keyCodes: Proxy {}
 mustUseProp: ƒ (tag, type, attr)
 optionMergeStrategies: {
-	activated: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeCreate: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeDestroy: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeMount: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeRouteEnter: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeRouteLeave: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeRouteUpdate: ƒ mergeLifecycleHook(parentVal, childVal)
-	beforeUpdate: ƒ mergeLifecycleHook(parentVal, childVal)
-	components: ƒ mergeAssets(parentVal, childVal, vm, key)
-	computed: ƒ (parentVal, childVal, vm, key)
-	created: ƒ mergeLifecycleHook(parentVal, childVal)
-	data: ƒ (parentVal, childVal, vm)
-	deactivated: ƒ mergeLifecycleHook(parentVal, childVal)
-	destroyed: ƒ mergeLifecycleHook(parentVal, childVal)
-	directives: ƒ mergeAssets(parentVal, childVal, vm, key)
-	el: ƒ (parent, child, vm, key)
-	errorCaptured: ƒ mergeLifecycleHook(parentVal, childVal)
-	filters: ƒ mergeAssets(parentVal, childVal, vm, key)
-	inject: ƒ (parentVal, childVal, vm, key)
-	methods: ƒ (parentVal, childVal, vm, key)
-	mounted: ƒ mergeLifecycleHook(parentVal, childVal)
-	props: ƒ (parentVal, childVal, vm, key)
-	propsData: ƒ (parent, child, vm, key)
-	provide: ƒ mergeDataOrFn(parentVal, childVal, vm)
-	renderTracked: ƒ mergeLifecycleHook(parentVal, childVal)
-	renderTriggered: ƒ mergeLifecycleHook(parentVal, childVal)
-	serverPrefetch: ƒ mergeLifecycleHook(parentVal, childVal)
-	updated: ƒ mergeLifecycleHook(parentVal, childVal)
-	watch: ƒ (parentVal, childVal, vm, key)
+ activated: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeCreate: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeDestroy: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeMount: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeRouteEnter: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeRouteLeave: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeRouteUpdate: ƒ mergeLifecycleHook(parentVal, childVal)
+ beforeUpdate: ƒ mergeLifecycleHook(parentVal, childVal)
+ components: ƒ mergeAssets(parentVal, childVal, vm, key)
+ computed: ƒ (parentVal, childVal, vm, key)
+ created: ƒ mergeLifecycleHook(parentVal, childVal)
+ data: ƒ (parentVal, childVal, vm)
+ deactivated: ƒ mergeLifecycleHook(parentVal, childVal)
+ destroyed: ƒ mergeLifecycleHook(parentVal, childVal)
+ directives: ƒ mergeAssets(parentVal, childVal, vm, key)
+ el: ƒ (parent, child, vm, key)
+ errorCaptured: ƒ mergeLifecycleHook(parentVal, childVal)
+ filters: ƒ mergeAssets(parentVal, childVal, vm, key)
+ inject: ƒ (parentVal, childVal, vm, key)
+ methods: ƒ (parentVal, childVal, vm, key)
+ mounted: ƒ mergeLifecycleHook(parentVal, childVal)
+ props: ƒ (parentVal, childVal, vm, key)
+ propsData: ƒ (parent, child, vm, key)
+ provide: ƒ mergeDataOrFn(parentVal, childVal, vm)
+ renderTracked: ƒ mergeLifecycleHook(parentVal, childVal)
+ renderTriggered: ƒ mergeLifecycleHook(parentVal, childVal)
+ serverPrefetch: ƒ mergeLifecycleHook(parentVal, childVal)
+ updated: ƒ mergeLifecycleHook(parentVal, childVal)
+ watch: ƒ (parentVal, childVal, vm, key)
 }
 parsePlatformTagName: ƒ (_)
 performance: false
@@ -140,27 +143,26 @@ productionTip: true
 silent: true
 warnHandler: ƒ (msg, vm, trace)
 _lifecycleHooks: Array(14)
-	0: "beforeCreate"
-	1: "created"
-	2: "beforeMount"
-	3: "mounted"
-	4: "beforeUpdate"
-	5: "updated"
-	6: "beforeDestroy"
-	7: "destroyed"
-	8: "activated"
-	9: "deactivated"
-	10: "errorCaptured"
-	11: "serverPrefetch"
-	12: "renderTracked"
-	13: "renderTriggered"
-	length: 14
-	[[Prototype]]: Array(0)
-	[[Prototype]]: Object
+ 0: "beforeCreate"
+ 1: "created"
+ 2: "beforeMount"
+ 3: "mounted"
+ 4: "beforeUpdate"
+ 5: "updated"
+ 6: "beforeDestroy"
+ 7: "destroyed"
+ 8: "activated"
+ 9: "deactivated"
+ 10: "errorCaptured"
+ 11: "serverPrefetch"
+ 12: "renderTracked"
+ 13: "renderTriggered"
+ length: 14
+ [[Prototype]]: Array(0)
+ [[Prototype]]: Object
 ```
 
 从打印的结果可以看到 Vue 全局配置信息，如：_lifecycleHooks，从而得知 Vue 中的生命周期有 14个
-
 
 属性 | 类型 | 默认值 | 属性说明
 -|-|-|-
@@ -175,13 +177,16 @@ errorHandler | Function | undefined | 指定组件的渲染和观察期间未捕
 warnHandler | Function | undefined | 2.4.0 新增，为 Vue 的运行时警告赋予一个自定义处理函数
 
 ### Vue.config.silent
+
 是否 显示/隐藏，Vue 所有的日志与警告
+
 ``` js
 // main.js
 Vue.config.silent = false
 ```
 
 ### Vue.config.devtools
+
 配置是否允许 vue-devtools 检查代码，
 开发版本默认为 true，
 生产版本默认为 false，
@@ -195,6 +200,7 @@ Vue.config.devtools = true
 ```
 
 ### Vue.config.productionTip
+
 2.2.0 新增，设置为 false 以阻止 vue 在启动时生成生产提示
 
 ``` js
@@ -202,6 +208,7 @@ Vue.config.productionTip = true
 ```
 
 ### Vue.config.performance
+
 - [Performance](https://developer.mozilla.org/zh-CN/docs/Web/API/Performance)
 - 2.2.0 新增，自 2.3.0开始，默认值：false
 
@@ -213,7 +220,8 @@ Vue.config.performance = true
 ```
 
 ### Vue.config.ignoredElements
-- 类型：Array<string | RegExp>
+
+- 类型：Array &lt;string | RegExp&gt;
 
 须使 Vue 忽略在 Vue 之外的自定义元素 (e.g. 使用了 Web Components APIs)，
 否则，它会假设你忘记注册全局组件或者拼错了组件名称，从而抛出一个关于 Unknown custom element 的警告，
@@ -221,52 +229,55 @@ Vue.config.performance = true
 
 ``` js
 Vue.config.ignoredElments = [
-	'my-custom-component',
-	'another-custom-component',
-	// 使用 RegExp 忽略 所有 icon- 开头的元素，仅 2.5+ 支持
-	/^icon-/
+ 'my-custom-component',
+ 'another-custom-component',
+ // 使用 RegExp 忽略 所有 icon- 开头的元素，仅 2.5+ 支持
+ /^icon-/
 ]
 ```
 
 ### Vue.config.keyCodes
+
 - 类型：{ [key: string]: number | Array&lt;number&rt; }
 
 给 v-on 自定义键位别名，自定义的别名，采用 烤肉串式（kebab-case）并引号括起来，驼峰式（camelCase）无效，
 
 ``` js
 Vue.config.keyCodes = {
-	up: [38, 87],
-	f1: 112,
-	'my-input-search': 13,
-	// myInputSearch: 13 不规范的
+ up: [38, 87],
+ f1: 112,
+ 'my-input-search': 13,
+ // myInputSearch: 13 不规范的
 }
 ```
 
 ``` html
 <template>
-	<div>
-		<input type="text" placeholder="请输入搜索关键字" @keyup.my-input-search="handleSearch">
-	</div>
+ <div>
+  <input type="text" placeholder="请输入搜索关键字" @keyup.my-input-search="handleSearch">
+ </div>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {}
-		},
-		methods: {
-			handleSearch(e) {
-				alert('按下了回车键！')
-			}
-		}
-	}
+ export default {
+  data() {
+   return {}
+  },
+  methods: {
+   handleSearch(e) {
+    alert('按下了回车键！')
+   }
+  }
+ }
 </script>
 ```
 
 ::: tip
+
 - [vue valid-v-on](https://eslint.vuejs.org/rules/valid-v-on.html)
 
 使用 自定义键位别名，在项目使用 eslint 可能会出现报错，需要对 .eslintrc.js 的 rules 选项 进行修改
+
 ``` js
 // .eslintrc.js
 module.exports = {
@@ -290,25 +301,27 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'no-throw-literal': 'off',
     eqeqeq: 'off',
-		// vue v-on:click 等 规则校验
-		// 'vue/valid-v-on': 'off', // 关闭 vue v-on 的校验
-		// 'vue/valid-v-on': ['warn'],
-		'vue/valid-v-on': ['error', {
-			modifiers: ['my-input-search'] // 具体的 自定义键名
-		}]
+  // vue v-on:click 等 规则校验
+  // 'vue/valid-v-on': 'off', // 关闭 vue v-on 的校验
+  // 'vue/valid-v-on': ['warn'],
+  'vue/valid-v-on': ['error', {
+   modifiers: ['my-input-search'] // 具体的 自定义键名
+  }]
   }
 }
 ```
+
 :::
 
-
 ### Vue.config.optionsMergeStrategies
+
 - 类型：{ [key: string]: Function }
 - [自定义选项合并策略](https://v2.cn.vuejs.org/v2/guide/mixins.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%80%89%E9%A1%B9%E5%90%88%E5%B9%B6%E7%AD%96%E7%95%A5)
 
 自定义合并策略的选项，合并策略选项分别接收在父实例和子实例上定义的该选项的值作为第一个和第二个参数，Vue 实例上下文被作为第三个参数传入
 
 ### Vue.config.errorHandler
+
 指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和 Vue 实例
 
 - 从 2.2.0 起，这个钩子也会捕获组件生命周期钩子里的错误。同样的，当这个钩子是 undefined 时，被捕获的错误会通过 console.error 输出而避免应用崩溃
@@ -317,23 +330,21 @@ module.exports = {
 
 ``` js
 Vue.config.errorHandler = function (err, vm, info) {
-	console.log(err)
-	// info 是 Vue 特定的错误信息，比如错误所在的生命周期钩子，只在 2.2.0+ 可用
+ console.log(err)
+ // info 是 Vue 特定的错误信息，比如错误所在的生命周期钩子，只在 2.2.0+ 可用
 }
 ```
 
 ### Vue.config.warnHandler
+
 2.4.0 新增，为 Vue的运行时警告赋予一个自定义处理函数，注意只会在开发环境下生效，生产环境下它会被忽略
 
 ``` js
 Vue.config.warnHandler = function(msg, vm, trace) {
-	console.log(msg)
-	// trace 为组件的继承关系追踪
+ console.log(msg)
+ // trace 为组件的继承关系追踪
 }
 ```
-
-
-
 
 ## 全局 Api
 
@@ -343,7 +354,7 @@ Vue.config.warnHandler = function(msg, vm, trace) {
 -|-|-
 extend | options | 使用基础 Vue 构造器，创建一个“子类”，参数是一个包含组件选项的对象  
 component | id, [definition] | 注册或获取全局组件。注册还会自动使用给定的 id 设置组件的名称
-nextTick | [callback, context] | 在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM 
+nextTick | [callback, context] | 在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM
 set | target, propertyName/index, value | 向响应式对象中添加一个 property，并确保这个新 property 同样是响应式的，且触发视图更新
 delete | target, propertyName/index, value | 删除对象的 property，如果对象是响应式的，确保删除能触发更新视图
 directive | id, [definition] | 注册全局自定义指令或获取全局指令
@@ -355,6 +366,7 @@ observable | object | 2.6.0 新增，让一个对象可响应。Vue 内部会用
 version | string | 提供字符串形式的 Vue 安装版本号。这对社区的插件和组件来说非常有用，你可以根据不同的版本号采取不同的策略
 
 ### Vue.extend(options)
+
 组件构建器，使用基础 Vue 构造器，创建一个 “子类”，参数是一个包含 组件选项 的对象，
 Vue.extend 方法就是 Vue 的一个用于继承组件的方法，通过 Vue.extend 方法继承引入的组件，继承后会返回一个vue子类，使用时实例化即可
 
@@ -363,32 +375,34 @@ Vue.extend 方法就是 Vue 的一个用于继承组件的方法，通过 Vue.ex
 - [巧妙使用Vue.extend继承组件实现el-table双击可编辑](https://juejin.cn/post/7108542695387168799)
 - [学完即用之Vue.extend+$mount改造dialog实践](https://juejin.cn/post/6959449865470345252)
 
-
 基本使用
+
 ``` html
 <div id='app2'></div>
 ```
 
 ``` js
 const App2 = Vue.extend({
-	template: `<p>{{ msg }}</p>`,
-	data() {
-		return {
-			msg: '正在使用 Vue.extend'
-		}
-	}
+ template: `<p>{{ msg }}</p>`,
+ data() {
+  return {
+   msg: '正在使用 Vue.extend'
+  }
+ }
 })
 
 new App2().$mount('#app2')
 ```
 
 ### 实现一个全屏加载提示
+
 实现一个全屏加载提示，生成的组件加载到 vue 目标元素之外
 
 - 在 src 目录下，新建 plugins 目录，并新建 fullLoading 目录，
 - 在 fullLoading 目录下新建 fullLoading.vue 和 index.js
 
 fullLoading/fullLoading.vue 文件
+
 ``` html
 // src/plugins/fullLoading/fullLoading.vue
 <template>
@@ -453,6 +467,7 @@ export default {
 ```
 
 fullLoading/index.js 文件
+
 ``` js
 // src/plugins/fullLoading/index.js
 import FullLoadingTemp from './fullLoading.vue'
@@ -480,7 +495,7 @@ export default {
     function hideFullLoading() {
       vm.showFullLoading = false
     }
-		// 原型挂载，其他地方方便使用
+  // 原型挂载，其他地方方便使用
     Vue.prototype.$showFullLoading = showFullLoading
     Vue.prototype.$hideFullLoading = hideFullLoading
   }
@@ -488,6 +503,7 @@ export default {
 ```
 
 页面使用 封装的 fullLoading
+
 ``` html
 <template>
   <div>
@@ -515,7 +531,6 @@ export default {
 }
 </script>
 ```
-
 
 ### Vue.component(id, [definition])
 
@@ -578,7 +593,7 @@ export default {
       this.message = '更新新的数据'
       console.log(this.$el.textContent) // 数据未发生变化
       this.$nextTick(() => {
-				// 数据已变化
+    // 数据已变化
         console.log(this.$el.textContent)
       })
     }
@@ -587,8 +602,8 @@ export default {
 </script>
 ```
 
-
 ### Vue.set
+
 - [深入响应式原理](https://v2.cn.vuejs.org/v2/guide/reactivity.html)
 
 向响应式对象中添加一个 property，并确保这个新 property 同样是响应式的，且触发视图更新。
@@ -599,12 +614,15 @@ export default {
 // 语法
 Vue.set(target, propertyName/index, value)
 ```
+
 #### 参数
+
 - target - Object | Array
 - propertyName/index - string | number
 - value - any
 
 ### 案列分析一
+
 有个动态的表单，v-model 字段后台控制，存在初始值的赋值
 
 ### Vue.delete
@@ -618,10 +636,13 @@ Vue.set(target, propertyName/index, value)
 在组件内可以使用 this.$delete(target, propertyName/index)
 
 语法
+
 ``` js
 Vue.delete(target, propertyName/index)
 ```
-#### 参数
+
+参数
+
 - target - Object | Array
 - propertyName/index - string | number
 
@@ -657,8 +678,8 @@ export default {
 </script>
 ```
 
-
 ### Vue.directive(id, [definition])
+
 - [自定义指令](https://v2.cn.vuejs.org/v2/guide/custom-directive.html)
 注册全局自定义指令或获取全局指令，[本博客的自定义指令记录](./vue-skills.md)，
 当参数 [definition] 为 函数试时，bind 和 update 钩子函数会触发，
@@ -666,43 +687,46 @@ export default {
 注意，在自定义指令中 this 是 undefined，可以通过 vnode 的 context 上下文来访问 $data 数据
 
 #### 语法
+
 ``` js
 Vue.directive(id, [definition])
 ```
 
-#### 参数
+参数
+
 - id { string }
 - [definition] { Function | Object }
 
 ``` js
 // 对象形式
 Vue.directive('focus', {
-	bind: (el, bingding, vnode, oldVnode) { },
-	inserted: (el, bingding, vnode) { 
-		el.focus()
-	},
-	update: (el, bingding, vnode) { },
-	componentUpdated: (el, bingding, vnode) { },
-	unbind: (el, bingding, vnode) { },
+ bind: (el, bingding, vnode, oldVnode) { },
+ inserted: (el, bingding, vnode) { 
+  el.focus()
+ },
+ update: (el, bingding, vnode) { },
+ componentUpdated: (el, bingding, vnode) { },
+ unbind: (el, bingding, vnode) { },
 })
 
 // 函数形式
 Vue.directive('focus', (el, binding, vnode) => {
-	el.focus()
+ el.focus()
 })
 ```
 
 ``` html
 <template>
-	<div>
-		<input placeholder='请输入用户名' v-focus>	
-	</div>
+ <div>
+  <input placeholder='请输入用户名' v-focus> 
+ </div>
 </template>
 ```
 
-
 #### 自定义指令的 钩子函数
+
 一个自定义指令定义对象可以提供如下几个钩子函数 (均为可选)
+
 - bind: 只调用一次，指令第一次绑定到元素时调用，在这里可以进行一次性的初始化设置
 - inserted: 被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)
 - update: 所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新
@@ -711,49 +735,51 @@ Vue.directive('focus', (el, binding, vnode) => {
 
 ``` js
 Vue.directive('focus', {
-	// 只调用一次，指令第一次绑定到元素时调用，在这里可以进行一次性的初始化设置
-	bind: (el, binding, vnode) {
-		console.log('bind')
-	},
-	// 被绑定元素插入父节点时调用
-	inserted: (el, binding, vnode) => {
-		console.log('inserted')
-	},
-	// 所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前
-	update: (el, binding, vnode) => {
-		console.log('update')
-	},
-	// 指令所在组件的 VNode 及其子 VNode 全部更新后调用
-	componentUpdated: (el, binding, vnode) => {
-		console.log('componentUpdated')
-	},
-	// 只调用一次，指令与元素解绑时调用
-	unbind: (el, binding, vnode) => {
-		console.log('unbind')
-	}
+ // 只调用一次，指令第一次绑定到元素时调用，在这里可以进行一次性的初始化设置
+ bind: (el, binding, vnode) {
+  console.log('bind')
+ },
+ // 被绑定元素插入父节点时调用
+ inserted: (el, binding, vnode) => {
+  console.log('inserted')
+ },
+ // 所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前
+ update: (el, binding, vnode) => {
+  console.log('update')
+ },
+ // 指令所在组件的 VNode 及其子 VNode 全部更新后调用
+ componentUpdated: (el, binding, vnode) => {
+  console.log('componentUpdated')
+ },
+ // 只调用一次，指令与元素解绑时调用
+ unbind: (el, binding, vnode) => {
+  console.log('unbind')
+ }
 })
 ```
 
 ``` js
 // [definition] 函数
 Vue.directive('focus', (el, binding, vnode) => {
-	el.focus()
-	// bind: (el, binding, vnode) { }
-	// update: (el, binding, vnode) { }
+ el.focus()
+ // bind: (el, binding, vnode) { }
+ // update: (el, binding, vnode) { }
 })
 ```
 
 #### 自定义指令 钩子函数的参数
+
 自定义指令 钩子函数 会被传入以下参数
+
 - el: 指令所绑定的元素，可以用来直接操作 DOM
 - binding: 一个对象，包含以下 property:
-	- name: 指令名，不包括 v- 前缀
-	- rawName: 指令名，包括 v- 前缀
-	- value: 指令的绑定值，例如：v-focus="2" 中，绑定值为 2
-	- oldValue: 指令绑定的前一个值，仅在 update 和 componentUpdated 钩子中可用。无论值是否改变都可用
-	- experssion: 字符串形式的指令表达式，例如 v-focus="1 + 1" 中，表达式为 "1 + 1"
-	- arg: 传给指令的参数，可选。例如 v-focus:top='1+1' 中，参数为 'top'
-	- modifiers: 一个包含修饰符的对象，可选。例如 v-focus:top.up.down='1+1' 中，修饰符对象为 { foo: true, bar: true }
+  - name: 指令名，不包括 v- 前缀
+  - rawName: 指令名，包括 v- 前缀
+  - value: 指令的绑定值，例如：v-focus="2" 中，绑定值为 2
+  - oldValue: 指令绑定的前一个值，仅在 update 和 componentUpdated 钩子中可用。无论值是否改变都可用
+  - experssion: 字符串形式的指令表达式，例如 v-focus="1 + 1" 中，表达式为 "1 + 1"
+  - arg: 传给指令的参数，可选。例如 v-focus:top='1+1' 中，参数为 'top'
+  - modifiers: 一个包含修饰符的对象，可选。例如 v-focus:top.up.down='1+1' 中，修饰符对象为 { foo: true, bar: true }
 - vnode: Vue 编译生成的虚拟节点
 - oldVnode: 上一个虚拟节点，仅在 update 和 componentUpdated 钩子中可用
 
@@ -765,7 +791,7 @@ Vue.directive('demo', {
     var s = JSON.stringify
     el.innerHTML =
       'name: '       + s(binding.name) + '<br>' +
-			'rawName: '    + s(binding.rawName) + '<br>' +
+   'rawName: '    + s(binding.rawName) + '<br>' +
       'value: '      + s(binding.value) + '<br>' +
       'expression: ' + s(binding.expression) + '<br>' +
       'argument: '   + s(binding.arg) + '<br>' +
@@ -777,16 +803,16 @@ Vue.directive('demo', {
 
 ``` html
 <template>
-	<div v-demo:foo.a.b="message"></div>
+ <div v-demo:foo.a.b="message"></div>
 </template>
 
 <script>
 export default {
-	data() {
-		return {
-			message: 'hello directive!!!'
-		}
-	}
+ data() {
+  return {
+   message: 'hello directive!!!'
+  }
+ }
 }
 </script>
 ```
@@ -799,7 +825,7 @@ export default {
 // src/plugins/directives/index.js
 // 定义自定义集合
 const directivesObj = {
-	// 自动获取焦点
+ // 自动获取焦点
   focus: {
     // 只调用一次，指令第一次绑定到元素时调用，在这里可以进行一次初始化设置
     bind: (el, binding, vnode, oldVnode) => {
@@ -814,7 +840,7 @@ const directivesObj = {
       console.log('bind-el', el)
       console.log('bind-binding', binding)
       console.log('bind-vnode', vnode)
-			el.focus()
+   el.focus()
     },
     // 所在组件的 VNode 更新时调用，但是可能发生在其子 VNode 更新之前
     update: (el, binding, vnode, oldVnode) => {
@@ -842,54 +868,55 @@ export default {
 ```
 
 #### 项目使用自定义指令一
+
 使用 element-ui 表单组件，并且将 el-input 的展现形式，修改成 Material Design 风格，通过 css :placeholder-shown 属性 来控制 label 的显示和隐藏
 
 ``` js
 // src/plugins/directives/index.js
 // 定义自定义集合
 const directivesObj = {
-	// 自动获取焦点
+ // 自动获取焦点
   focus: {
     // 被绑定元素插入父节点时
     inserted: (el, binding, vnode, oldVnode) => {
-			el.focus()
+   el.focus()
     }
   },
-	'label-material': {
-		bind: (el, binding, vnode, oldVnode) => {
-			// 获取 指令传递的数据
-			const props = binding.value
+ 'label-material': {
+  bind: (el, binding, vnode, oldVnode) => {
+   // 获取 指令传递的数据
+   const props = binding.value
 
-			// 根据 传给指令的参数 定义类型
-			const type = binding.arg ? binding.arg : 'input'
+   // 根据 传给指令的参数 定义类型
+   const type = binding.arg ? binding.arg : 'input'
 
-			// 动态创建 要插入的元素 label 元素
-			const label = document.createElement('label')
-			label.className = 'isc-label'
-			label.innerHTML = `${props.labelText}${props.required ? '<span class="isc-label-required">*</span>' : ''}`
+   // 动态创建 要插入的元素 label 元素
+   const label = document.createElement('label')
+   label.className = 'isc-label'
+   label.innerHTML = `${props.labelText}${props.required ? '<span class="isc-label-required">*</span>' : ''}`
 
-			// 插入 label 元素
-			switch (type) {
-				case 'input':
-					el.append(label)
-					break
-				case 'select':
-					el.childNodes[1].insertBefore(label, el.childNodes[1].childNodes[3])
-					break
-			}
+   // 插入 label 元素
+   switch (type) {
+    case 'input':
+     el.append(label)
+     break
+    case 'select':
+     el.childNodes[1].insertBefore(label, el.childNodes[1].childNodes[3])
+     break
+   }
 
-			// 查看 el-input 自定义指令绑定的元素
-			// <div data-v-13fa088b="" class="isc-input el-input">
-			//   <!---->
-			//   <input type="text" autocomplete="off" placeholder="请输入用户名" class="el-input__inner">
-			//   <!---->
-			//   <!---->
-			//   <!---->
-			//   <!---->
-			// </div>
-			// 通过 css :placeholder-shown 属性 来控制 label 的显示和隐藏	
-		}
-	}
+   // 查看 el-input 自定义指令绑定的元素
+   // <div data-v-13fa088b="" class="isc-input el-input">
+   //   <!---->
+   //   <input type="text" autocomplete="off" placeholder="请输入用户名" class="el-input__inner">
+   //   <!---->
+   //   <!---->
+   //   <!---->
+   //   <!---->
+   // </div>
+   // 通过 css :placeholder-shown 属性 来控制 label 的显示和隐藏 
+  }
+ }
 }
 
 // 导出 自定义插件
@@ -903,99 +930,100 @@ export default {
 ```
 
 页面使用
+
 ``` html
 <template>
-	<div>
-		<el-form ref="refForm" class="isc-form" :model="formModel" :rules="formRules">
-			<el-form-item class="isc-hide-error" prop="username">
-				<el-input
-					class="isc-input"
-					v-model="formModel.username"
-					v-label-material="{ labelText: '用户姓名', required: true }"
-					placeholder="请输入用户名"
-				></el-input>
-			</el-form-item>
-			<el-form-item class="isc-hide-error" prop="test">
-				<el-input
-					class="isc-input"
-					v-model="formModel.test"
-					v-label-material="{
-						labelText: '测试内容禁止填写',
-						required: false,
-					}"
-					placeholder="请输入测试内容"
-					disabled
-				></el-input>
-			</el-form-item>
-			<el-form-item class="isc-hide-error" prop="mobile">
-				<el-input
-					class="isc-input"
-					v-model="formModel.mobile"
-					v-label-material="{ labelText: '手机号码', required: true }"
-					placeholder="请输入手机号码"
-				></el-input>
-			</el-form-item>
-			<el-form-item class="isc-hide-error" prop="area">
-				<el-select
-					class="isc-select"
-					v-mode="formModel.area"
-					style="width: 100%"
-					v-label-material:select="{ labelText: '所在地区', required: true }"
-					placeholder="请选择所在地区"
-				>
-					<el-option label="所在地区一" value="1"></el-option>
-					<el-option label="所在地区二" value="3"></el-option>
-					<el-option label="所在地区三" value="4"></el-option>
-				</el-select>
-			</el-form-item>
-			<el-form-item class="isc-hide-error" prop="remark">
-				<el-input
-					class="isc-input"
-					type="textarea"
-					:rows="6"
-					v-model="formModel.remark"
-					v-label-material="{ labelText: '您宝贵的意见', required: true }"
-					placeholder="请输入您宝贵的意见！"
-				></el-input>
-			</el-form-item>
-		</el-form>
-		<el-row type="flex" justify="center">
-			<el-button type="primary" style="margin-top: 40px" @click="handleSubmit">立即提交</el-button>
-		</el-row>
-	</div>
+ <div>
+  <el-form ref="refForm" class="isc-form" :model="formModel" :rules="formRules">
+   <el-form-item class="isc-hide-error" prop="username">
+    <el-input
+     class="isc-input"
+     v-model="formModel.username"
+     v-label-material="{ labelText: '用户姓名', required: true }"
+     placeholder="请输入用户名"
+    ></el-input>
+   </el-form-item>
+   <el-form-item class="isc-hide-error" prop="test">
+    <el-input
+     class="isc-input"
+     v-model="formModel.test"
+     v-label-material="{
+      labelText: '测试内容禁止填写',
+      required: false,
+     }"
+     placeholder="请输入测试内容"
+     disabled
+    ></el-input>
+   </el-form-item>
+   <el-form-item class="isc-hide-error" prop="mobile">
+    <el-input
+     class="isc-input"
+     v-model="formModel.mobile"
+     v-label-material="{ labelText: '手机号码', required: true }"
+     placeholder="请输入手机号码"
+    ></el-input>
+   </el-form-item>
+   <el-form-item class="isc-hide-error" prop="area">
+    <el-select
+     class="isc-select"
+     v-mode="formModel.area"
+     style="width: 100%"
+     v-label-material:select="{ labelText: '所在地区', required: true }"
+     placeholder="请选择所在地区"
+    >
+     <el-option label="所在地区一" value="1"></el-option>
+     <el-option label="所在地区二" value="3"></el-option>
+     <el-option label="所在地区三" value="4"></el-option>
+    </el-select>
+   </el-form-item>
+   <el-form-item class="isc-hide-error" prop="remark">
+    <el-input
+     class="isc-input"
+     type="textarea"
+     :rows="6"
+     v-model="formModel.remark"
+     v-label-material="{ labelText: '您宝贵的意见', required: true }"
+     placeholder="请输入您宝贵的意见！"
+    ></el-input>
+   </el-form-item>
+  </el-form>
+  <el-row type="flex" justify="center">
+   <el-button type="primary" style="margin-top: 40px" @click="handleSubmit">立即提交</el-button>
+  </el-row>
+ </div>
 </template>
 
 <script>
-	export default {
-	  name: 'VueDirective',
-	  data() {
-	    return {
-	      formModel: {
-	        username: '',
-	        mobile: '',
-	        area: '',
-	        remark: '',
-	        test: '我是默认的测试数据'
-	      },
-	      formRules: {
-	        username: [{ required: true, message: '用户名必填' }],
-	        mobile: [{ required: true, message: '手机号码必填' }],
-	        area: [{ required: true, message: '手机号码必填' }],
-	        remark: [{ required: true, message: '您宝贵的意见' }]
-	      }
-	    }
-	  },
-	  methods: {
-			// 点击校验表单
-	    handleSubmit() {
-	      this.$refs.refForm.validate(valid => {
-	        if (valid) {
-	          console.log(666)
-	        }
-	      })
-	    }
-	  }
-	}
+ export default {
+   name: 'VueDirective',
+   data() {
+     return {
+       formModel: {
+         username: '',
+         mobile: '',
+         area: '',
+         remark: '',
+         test: '我是默认的测试数据'
+       },
+       formRules: {
+         username: [{ required: true, message: '用户名必填' }],
+         mobile: [{ required: true, message: '手机号码必填' }],
+         area: [{ required: true, message: '手机号码必填' }],
+         remark: [{ required: true, message: '您宝贵的意见' }]
+       }
+     }
+   },
+   methods: {
+   // 点击校验表单
+     handleSubmit() {
+       this.$refs.refForm.validate(valid => {
+         if (valid) {
+           console.log(666)
+         }
+       })
+     }
+   }
+ }
 </script>
 ```
 
@@ -1182,6 +1210,7 @@ new Vue({
 ````
 
 #### 分析
+
 Vue.directive('focus', { ... })，代码执行时，会调用 Vue 中的 函数 function initAssetRegisters(Vue) {},
 在 浏览器中，打开控制面板(F12)，找到 Vue.directive('focus', { ... }) ，打上断点，重新刷新页面，当断点打成功时，
 按 F9 让程序往下执行，Vue 处理 全局注册定义指令 调用的是，函数 initAssetRegisters(Vue)，由此联想，如：Vue.component(id, [definition])、
@@ -1227,26 +1256,26 @@ bind 和 update 钩子，执行的传递进来的函数，如果 [definition] �
 
 ``` js
 <script>
-	// 打印 查看 Prototype
-	export default {
-		mounted() {
-			console.log(this.$options, '$options--')
-		}
-	}
+ // 打印 查看 Prototype
+ export default {
+  mounted() {
+   console.log(this.$options, '$options--')
+  }
+ }
 </script>
 ```
 
-
-
-
 ### Vue.filter
+
 - [过滤器](https://v2.cn.vuejs.org/v2/guide/filters.html)
 
 参数
+
 - id { string }
 - [definition] { Function | Object }
 
 自定义过滤器说明
+
 ``` html
 - Vue.js 允许你自定义过滤器，可被用于一些常见的文本格式化
 - 过滤器应该被添加在 JavaScript 表达式的尾部，由 “管道” | 符号 指示
@@ -1258,15 +1287,17 @@ bind 和 update 钩子，执行的传递进来的函数，如果 [definition] �
 ```
 
 语法
+
 ``` js
 Vue.filter(id, [definition])
 Vue.filter('formatPrice', function(val) {
-	console.log(val)
-	return '￥ ' + val + ' 元'
+ console.log(val)
+ return '￥ ' + val + ' 元'
 }) 
 ```
 
 页面使用 过滤器
+
 ``` js
 <!-- 在双花括号中 -->
 <div>{{ totalPrice | formatDate }}</div>
@@ -1274,11 +1305,14 @@ Vue.filter('formatPrice', function(val) {
 <!-- 在 `v-bind` 中 -->
 <div v-bind:totalPrice="totalPrice | formatPrice"></div>
 ```
+
 ### 过滤器的统一管理
+
 将项目中需要使用的全局过滤器，统一存放，并一次性自动的注册过滤器，方便代码的维护或拓展
 在项目 src 目录下建立 plugins 目录，plugins 目录下新建 filters 目录，并在 filters 目录 下新建 index.js
 
 全局过滤器集
+
 ``` js
 // src/plugins/filters/index.js
 import moment from 'moment'
@@ -1288,16 +1322,16 @@ export const fomatPrice = val => '￥ ' + val + '元'
 
 // 时间格式化
 export const formatDate = val => {
-	const date = new Date(val)
-	const y = date.getFullYear()
-	const m = date.getMonth() + 1
-	const d = date.getDate()
-	return `${y}年${m}月${d}日`
+ const date = new Date(val)
+ const y = date.getFullYear()
+ const m = date.getMonth() + 1
+ const d = date.getDate()
+ return `${y}年${m}月${d}日`
 }
 
 // 配合 momentjs 进行时间格式化
 export const formatDate2 = (val, format='YYYY-MM-dd hh:mm:sss') => {
-	return moment(new Date(val).format(format))
+ return moment(new Date(val).format(format))
 }
 ```
 
@@ -1314,7 +1348,7 @@ import './styles/reset-element.scss'
 import * as filters from '@/plugins/filters'
 
 Object.keys(filters).forEach(filterId => {
-	Vue.filter(filterId, filters[filterId])
+ Vue.filter(filterId, filters[filterId])
 })
 
 const vm = new Vue({
@@ -1324,9 +1358,10 @@ const vm = new Vue({
 }).$mount('#app')
 ```
 
-
 ### Vue.use
+
 参数
+
 - {Object | Function} plugin
 
 - 安装 Vue.js 插件
@@ -1341,10 +1376,10 @@ const vm = new Vue({
 // 插件 myPlugin 的编写
 // src/plugins/myPlugin.js
 export default {
-	install: (Vue) => {
-		console.log(Vue, 'vue')
-		console.log('安装我的插件')
-	}
+ install: (Vue) => {
+  console.log(Vue, 'vue')
+  console.log('安装我的插件')
+ }
 }
 ```
 
@@ -1365,9 +1400,9 @@ import MyPlugin from './plugins/myPlugin'
 Vue.use(MyPlugin)
 
 new Vue({
-	router,
-	store,
-	render: h => h(App)
+ router,
+ store,
+ render: h => h(App)
 }).$mount('#app')
 ```
 
@@ -1376,6 +1411,7 @@ new Vue({
 - [全局混入](https://v2.cn.vuejs.org/v2/api/?#Vue-mixin)
 
 参数
+
 - {Object}  mixin
 
 全局注册一个混入，使用时格外小心！一旦使用全局混入，它将影响每一个之后创建的 Vue 实例。
@@ -1385,19 +1421,19 @@ new Vue({
 
 ``` js
 Vue.mixin({
-	created() {
-		const mixinOptions = this.$options.mixinOptions
-		if(mixinOptions) {
-			console.log('mixinOptions', mixinOptions)
-		}
-	}
+ created() {
+  const mixinOptions = this.$options.mixinOptions
+  if(mixinOptions) {
+   console.log('mixinOptions', mixinOptions)
+  }
+ }
 })
 
 new Vue({
-	mixinOptions: {
-		currentTime: +new Date(),
-		username: 'sunsboyxu'
-	}
+ mixinOptions: {
+  currentTime: +new Date(),
+  username: 'sunsboyxu'
+ }
 })
 ```
 
@@ -1508,7 +1544,6 @@ vueRouter.install = function(Vue, opts) {
 export default vueRouter
 ```
 
-
 ### Vue.compile
 
 - [渲染函数 & JSX](https://v2.cn.vuejs.org/v2/guide/render-function.html)
@@ -1516,6 +1551,7 @@ export default vueRouter
 - [Vue.compile概述](https://www.cnblogs.com/dhsz/p/7685056.html)
 
 参数
+
 - {Object} template
 
 将一个模板字符串编译成 render 函数。只在完整版时可用。
@@ -1572,24 +1608,26 @@ export default {
 ```
 
 页面使用该组件
+
 ``` html
 <template>
-	<div class='container'>
-		<h1-h6-title :level='1'>Vue.compile-h1</h1-h6-title>
-	</div>
+ <div class='container'>
+  <h1-h6-title :level='1'>Vue.compile-h1</h1-h6-title>
+ </div>
 </template>
 
 <script>
-	import H1H6Title from '@/components/h1-h6-title.vue'
-	export default {
-		components: {
-			H1H6Title
-		}
-	}
+ import H1H6Title from '@/components/h1-h6-title.vue'
+ export default {
+  components: {
+   H1H6Title
+  }
+ }
 </script>
 ```
 
 使用 render 函数重写上面的例子
+
 ``` html
 <template>
   <div>
@@ -1639,17 +1677,17 @@ h1H6Title3 是将 h1H6Title2 代码单独抽离放到了 src/components/h1-h3-ti
 // src/components/h1-h3-title.vue
 <script>
 export default {
-	render: function(h) {
-		return h(`h${this.level}`, this.$slots.default)
-	},
-	props: {
-		level: {
-			type: Number,
-			default() {
-				return 1
-			}
-		}
-	}
+ render: function(h) {
+  return h(`h${this.level}`, this.$slots.default)
+ },
+ props: {
+  level: {
+   type: Number,
+   default() {
+    return 1
+   }
+  }
+ }
 }
 </script>
 ```
@@ -1660,6 +1698,7 @@ export default {
 - [深入响应式原理](https://v2.cn.vuejs.org/v2/guide/reactivity.html)
 
 参数
+
 - {Object} object
 
 2.6.0 新增！！！，让一个对象可响应。Vue 内部会用它来处理 data 函数返回的对象，
@@ -1672,7 +1711,7 @@ export default {
 ``` js
 // src/main.js
 const myState = Vue.observable({
-	count: 0
+ count: 0
 })
 Vue.prototype.$myState = myState
 ```
@@ -1713,8 +1752,6 @@ export default {
 </style>
 ```
 
-
-
-
 ### Vue.version
+
 提供字符串形式的 Vue 安装版本号。这对社区的插件和组件来说非常有用，你可以根据不同的版本号采取不同的策略

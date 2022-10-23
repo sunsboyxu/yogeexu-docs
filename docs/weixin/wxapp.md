@@ -17,39 +17,48 @@
 - [微信小程序 canvas绘制Base64数据图片](https://www.jianshu.com/p/844a8faea9c1)
 
 ## 开发框架
+
 - [vuemini](https://vuemini.org/)
 - [vue-mini github](https://github.com/vue-mini/vue-mini)
 
 ## 小程序项目 npm 支持
+
 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
 
 ## 自定义组件
+
 - [自定义组件说明](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)
 - [Component](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html)
 - [自定义组件 behaviors](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/behaviors.html)
-- [自定义组件 behaviors 计算属性 computed 支持 ](https://github.com/wechat-miniprogram/computed)
+- [自定义组件 behaviors 计算属性 computed 支持](https://github.com/wechat-miniprogram/computed)
 - [组件生命周期](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/lifetimes.html)
 
 ## 订阅消息
+
 [订阅消息](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/subscribe-message/wx.requestSubscribeMessage.html)
 [订阅消息设置](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/setting/SubscriptionsSetting.html)
 [发送订阅消息](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/subscribe-message/subscribeMessage.send.html)
 
 ## 插件
+
 [插件介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/)
 
 ## 开发插件
+
 [开发插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html)
 
 ## 使用插件
+
 [使用插件](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html)
 
 ### 如何添加第三方插件
+
 ::: tip 添加第三方插件
 小程序后台 -> 设置 —> 第三方设置 -> 插件管理 -> 添加插件
 :::
 
 ### wxParser（富文本插件）
+
 - rich-text: 你的富文本字符串
 - bind:tapImg: 监听图片点击事件，通过 e.detail.src 可拿到图片地址
 - bind:tapLink: 监听链接点击事件
@@ -63,6 +72,7 @@
   }
 }
 ```
+
 ``` json
 // index.json 申明插件
 {
@@ -71,12 +81,14 @@
   }
 }
 ```
+
 ``` html
 // index.wxml 使用插件
 <wxparser rich-text="{{richText}}" />
 ```
 
 ## 高德地图获取骑行距离
+
 [微信小程序插件的快速入门指南](https://lbs.amap.com/api/wx/gettingstarted)
 [路径规划](https://lbs.amap.com/api/javascript-api/reference/route-search)
 [路线规划](https://lbs.amap.com/api/jsapi-v2/guide/services/navigation)
@@ -84,8 +96,10 @@
 [](https://www.jianshu.com/p/72f4e5401d40)
 
 ## 小程序相关博客
+
 - [萌村村花杨小花](https://blog.csdn.net/ysq0317/category_7767463.html)
 
 ## 自定义支付键盘
+
 [程序实现类似微信提现-自定义键盘](https://blog.csdn.net/clli_Chain/article/details/120065731)
 [](https://blog.csdn.net/GG_com/article/details/103623541)

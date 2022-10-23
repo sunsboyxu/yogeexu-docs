@@ -17,6 +17,9 @@
 - [7Wate's Wiki](https://wiki.7wate.com/)
 - [7Wate's Wiki code](https://github.com/7Wate/wiki)
 - [404Lab Wiki](https://wiki.404lab.top/)
+- [峰华前端工程师](https://zxuqian.cn/)
+- [峰华前端工程师 github](https://github.com/zxuqian/zxuqian.cn)
+- [1024nav](https://www.1024nav.com/)
 
 ## 教程博客
 

@@ -8,6 +8,7 @@ vue create vue-docker-demo
 cd vue-docker-demo
 yarn serve
 ```
+
 ![vue-docker-demo](/images/servers/docker/vue-docker-demo2.png)
 
 运行 vue-docker-demo 项目
@@ -31,6 +32,7 @@ docker-desktop 版本：v4.9.1
 // 安装最新版 nginx 镜像
 docker pull nginx:latest
 ```
+
 :::
 
 ## 4 运行：vue-nginx 的容器
@@ -39,7 +41,7 @@ docker pull nginx:latest
 
 ``` bash
 docker run                 // 创建容器实例
-docker images 					   // 查看所有镜像
+docker images         // 查看所有镜像
 docker container           // 查看当前正在运行的容器
 docker container ls --all  // 查看所有容器
 docker rmi 镜像名称         // 删除指定名称镜像             
@@ -76,7 +78,6 @@ docker restart 容器名称    //  重启容器
 docker stop 容器名称 或者 容器id
 ```
 
-
 运行：vue-nginx 的容器
 
 ``` bash
@@ -103,6 +104,7 @@ yarn build
 ```
 
 ## 6 自定义构建镜像
+
 自定义构建镜像的时候，基于 Dockerfile 来构建，在项目根目录 新建 docker 文件夹 和 Dockerfile 部署配置文件，注意 Dockerfile 首字母大写
 
 ### Dockerfile 部署配置文件说明
@@ -119,23 +121,15 @@ COPY dist/ /usr/share/nginx/html/vue
 COPY default.conf /etc/nginx/conf.d/default.conf 
 ```
 
-
 ## 创建 nginx conf 配置文件
 
 在 docker 文件夹下创建 Nginx 文件夹，该文件夹下新建文件 default.conf
 
-
 ### 构建名为 vue-docker-demo 的镜像
+
 ``` bash
 // 注意：最后的 . 
 docker build -f docker/Dockerfile -t vue-docker-demo .
 ```
 
-
-
-
 ## 7 运行容器
-
-
-
-

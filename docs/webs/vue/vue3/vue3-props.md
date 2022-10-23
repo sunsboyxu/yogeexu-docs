@@ -1,6 +1,7 @@
 # vue 组件通信
 
 ## mitt
+
 - [](http://bbs.itying.com/topic/5fbb23c92afeb47d24964422)
 - [](http://www.5imoban.net/jiaocheng/bootstrap/2021/0317/4746.html)
 - [](https://www.jb51.net/article/211403.htm)

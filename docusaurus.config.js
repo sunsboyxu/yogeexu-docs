@@ -22,5 +22,11 @@ module.exports = {
     locales: ['zh-Hans'], // ['en', 'zh-Hans']
   },
   presets,
-  themeConfig
+  themeConfig,
+  stylesheets: [{
+    href: 'https://cdn.jsdelivr.net/npm/@docsearch/css@3'
+  }],
+  scripts: [{
+    src: 'https://cdn.jsdelivr.net/npm/@docsearch/js@3'
+  }]
 }

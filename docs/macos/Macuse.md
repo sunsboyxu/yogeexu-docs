@@ -117,14 +117,14 @@ open ~/.base_profile
 
 ### 修改环境变量的三种方式
 
-<code>.bash_profile</code> 和 <code>.zshrc</code> 的修改方式相同，这里以修改 <code>.bash_profile</code> 为示范，
-如果之前有环境变量配置在 <code>.bash_profile</code> 中，现在将默认的 shell 切换成 zsh 了，
-在 <code>.zshrc</code> 中加上 <code>source ~/.bash_profile</code>，即可，最后在终端刷新下 <code>.zshrc</code> 的配置
-终端输入：<code>soruce ~/.zshrc</code>
+**.bash_profile** 和 **.zshrc** 的修改方式相同，这里以修改 **.bash_profile** 为示范，
+如果之前有环境变量配置在 **.bash_profile** 中，现在将默认的 shell 切换成 zsh 了，
+在 **.zshrc** 中加上 **source ~/.bash_profile**，即可，最后在终端刷新下 **.zshrc** 的配置
+终端输入：**soruce ~/.zshrc**
 
-在 <code>.bash_profile</code> 配置某个，<code>环境变量</code> 后在当前的终端窗口是有效的，
-当关闭终端窗口和打开一个新终端失效，<code>.bash_profile</code> 中修改环境变量只对当前窗口有效，而且需要 <code>source ~/.bash_profile</code> 才能使用
-<code>.zshrc</code> 则相当于 windows 的开机启动的环境变量，可以将环境配置到 <code>.zshrc</code> 中去，没有该文件就新建一个，<code>touch ~/.zshrc</code>
+在 **.bash_profile** 配置某个，**环境变量** 后在当前的终端窗口是有效的，
+当关闭终端窗口和打开一个新终端失效，**.bash_profile** 中修改环境变量只对当前窗口有效，而且需要 **source ~/.bash_profile** 才能使用
+**.zshrc** 则相当于 windows 的开机启动的环境变量，可以将环境配置到 **.zshrc** 中去，没有该文件就新建一个，**touch ~/.zshrc**
 
 ``` bash
 # 加载 .bash_profile 的配置
@@ -133,7 +133,7 @@ source ~/.bash_profile
 # ... 其他的配置
 ```
 
-1 终端直接输入，<code>修改环境变量</code>
+1 终端直接输入，**修改环境变量**
 
 ``` js
 // 在终端中，输入，如
@@ -143,7 +143,7 @@ ehco 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-2 vim 方式，<code>修改环境变量</code>
+2 vim 方式，**修改环境变量**
 
 ``` js
 // 在终端中，通过 vim 打开 ~/.bash_profile，打开后 按下 s键，进行编辑
@@ -184,7 +184,7 @@ vim ~/.bash_profile // 继续编辑
 source ~/.bash_profile // 刷新配置文件
 ```
 
-3 打开文件，<code>修改环境变量</code>
+3 打开文件，**修改环境变量**
 
 ``` js
 // 终端中，输入
@@ -211,7 +211,7 @@ mongod --dbpath=/usr/local/mongodb/data/db
 alias mongodbServer='mongod --dbpath=/usr/local/mongodb/data/db'
 ```
 
-<code>:wq!</code> 保存后，刷新配置 <code>source ~/.bash_profile</code> 终端输入，配置的快速启动命令
+**:wq!** 保存后，刷新配置 **source ~/.bash_profile** 终端输入，配置的快速启动命令
 
 ``` bash
 mongodserver

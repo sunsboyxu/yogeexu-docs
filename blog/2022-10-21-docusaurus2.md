@@ -334,6 +334,3 @@ title 相当于 #
 ## 开启文档搜索功能
 
 - [搜索功能](https://docusaurus.io/zh-CN/docs/search)
-- [Algolia](https://docsearch.algolia.com/)
-- [Algolia crawler](https://crawler.algolia.com/)
-- [Algolia搜索功能申请](https://docsearch.algolia.com/apply)

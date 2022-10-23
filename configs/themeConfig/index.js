@@ -6,15 +6,19 @@
 const colorMode = require('./colorMode')
 const navbar = require('./navbar')
 const prism = require('./prism')
-const algolia = require('./algolia')
-
+// const algolia = require('./algolia')
+const metadata = require('./metadata')
 module.exports = {
   image: 'img/docusaurus.png',
-  metadata: [{ name: 'twitter:card', content: 'summary' }],
+  metadata,
   colorMode,
   navbar,
   prism,
-  algolia,
+  algolia: {
+    appId: 'EYS7HSXOMK',
+    apiKey: 'f8a56d4fce55074682e5f8fc82506865',
+    indexName: 'prod_docusaurus2',
+  },
   footer: {},
   // announcementBar: {
   //   id: 'top-tips',

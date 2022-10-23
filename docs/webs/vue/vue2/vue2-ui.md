@@ -1,15 +1,18 @@
 # UI 框架
 
 ## element-ui
+
 - [element-2.14.1](https://element.eleme.cn/2.14/#/zh-CN)
 - [element-2.15.7](https://element.eleme.cn/2.15/#/zh-CN)
 
 ### 安装
+
 ``` bash
 yarn add element-ui -S
 ```
 
 ### 完整引入
+
 ``` bash
 import Vue from 'vue'
 import App from './App.vue'
@@ -30,15 +33,19 @@ new Vue({
 ```
 
 ### 按需加载组件
+
 借助 babel-plugin-component，我们可以只引入需要的组件，以达到减小项目体积的目的
 
 #### 1 安装 babel-plugin-component
+
 ``` bash
 yarn add babel-plugin-component -D
 ```
 
 #### 2 配置 babel plugins
+
 项目根目录 babel.config.js
+
 ``` js
 // babel.config.js
 module.exports = {
@@ -48,17 +55,17 @@ module.exports = {
   plugins: [
     ['component',
       {
-				// element-ui 的按需加载
+    // element-ui 的按需加载
         libraryName: 'element-ui', 
         styleLibraryName: 'theme-chalk'
       }
     ],
     ['import', 
-			{ // vant 的按需加载,对应的插件是 babel-auto-import
-				libraryName: 'vant',
-				libraryDirectory: 'es',
-				style: true
-			}, 'vant']
+   { // vant 的按需加载,对应的插件是 babel-auto-import
+    libraryName: 'vant',
+    libraryDirectory: 'es',
+    style: true
+   }, 'vant']
   ]
 }
 ```
@@ -80,68 +87,70 @@ module.exports = {
 ```
 
 ### 3 按需导入组件，并且注册
+
 在项目 src 目录下，新建 plugins 目录，并且新建 setupElement.js
+
 ``` js
 // /src/plugins/setupElement.js
 import { 
-	Icon,
-	Button,
-	Row,
-	Col,
-	Form,
-	FormItem,
-	Input,
-	Select,
-	Option,
-	OptionGroup,
-	Autocomplete,
-	Loading,
-	Dialog,
-	Breadcrumb,
-	BreadcrumbItem,
-	Pagination,
-	Dropdown,
-	DropdownMenu,
-	DropdownItem,
-	Scrollbar,
-	Upload,
-	Progress
+ Icon,
+ Button,
+ Row,
+ Col,
+ Form,
+ FormItem,
+ Input,
+ Select,
+ Option,
+ OptionGroup,
+ Autocomplete,
+ Loading,
+ Dialog,
+ Breadcrumb,
+ BreadcrumbItem,
+ Pagination,
+ Dropdown,
+ DropdownMenu,
+ DropdownItem,
+ Scrollbar,
+ Upload,
+ Progress
 } from 'element-ui'
 
 const elementComps = [
   Icon,
-	Button,
-	Row,
-	Col,
-	Form,
-	FormItem,
-	Input,
-	Select,
-	Option,
-	OptionGroup,
-	Autocomplete,
-	Loading,
-	Dialog,
-	Breadcrumb,
-	BreadcrumbItem,
-	Pagination,
-	Dropdown,
-	DropdownMenu,
-	DropdownItem,
-	Scrollbar,
-	Upload,
-	Progress
+ Button,
+ Row,
+ Col,
+ Form,
+ FormItem,
+ Input,
+ Select,
+ Option,
+ OptionGroup,
+ Autocomplete,
+ Loading,
+ Dialog,
+ Breadcrumb,
+ BreadcrumbItem,
+ Pagination,
+ Dropdown,
+ DropdownMenu,
+ DropdownItem,
+ Scrollbar,
+ Upload,
+ Progress
 ]
 
 export default {
   install: (Vue) => {
-		// 统一设置 元素的大小尺寸
-		// Vue.prototype.$ELEMENT = { size: 'small', zIndex: 10}
+  // 统一设置 元素的大小尺寸
+  // Vue.prototype.$ELEMENT = { size: 'small', zIndex: 10}
     elementComps.forEach(comp => {
-			// 方式一
+   // 方式一
       // Button.name
       // Vue.component(comp.name, comp)
-			// 方式二
+   // 方式二
       Vue.use(comp)
     })
   }
@@ -152,9 +161,10 @@ export default {
 
 :::
 
-
 #### 4 在 main.js 引用 plugins 下的 setupElement
+
 // /src/main.js
+
 ``` js
 import Vue from 'vue'
 import App from './App.vue'
@@ -180,29 +190,31 @@ new Vue({
 ```
 
 ## 按需加载问题
+
 - element-ui 按需加载，样式失效
 项目根目录 babel.config.js
+
 ``` js
 // babel.config.js
 module.exports = {
   presets: [
     '@vue/cli-plugin-babel/preset',
-		["@babel/preset-env", { "modules": false }]
+  ["@babel/preset-env", { "modules": false }]
   ],
   plugins: [
     ['component',
       {
-				// element-ui 的按需加载
+    // element-ui 的按需加载
         libraryName: 'element-ui', 
         styleLibraryName: 'theme-chalk'
       }
     ],
     ['import', 
-			{ // vant 的按需加载,对应的插件是 babel-auto-import
-				libraryName: 'vant',
-				libraryDirectory: 'es',
-				style: true
-			}, 'vant']
+   { // vant 的按需加载,对应的插件是 babel-auto-import
+    libraryName: 'vant',
+    libraryDirectory: 'es',
+    style: true
+   }, 'vant']
   ]
 }
 
@@ -242,8 +254,8 @@ export default i18n
 ```
 
 ## el-dialog 二次封装
-[eldialog 二次封装成组件](http://t.zoukankan.com/lwlblog-p-15711555.html)
 
+[eldialog 二次封装成组件](http://t.zoukankan.com/lwlblog-p-15711555.html)
 
 ## 使用隐藏的组件 el-scrollbar
 
@@ -265,13 +277,13 @@ Vue.use(Scrollbar)
         :label="item.label"
         :name="item.name"
       >
-				<!-- 将 component 放在 el-tab-pane slot 中，多次触发组件重新渲染 -->
-				<!-- <keep-alive include="VueSet">
-				  <component :is="comps[currentTab]"></component>
-				</keep-alive> -->
-			</el-tab-pane>
+    <!-- 将 component 放在 el-tab-pane slot 中，多次触发组件重新渲染 -->
+    <!-- <keep-alive include="VueSet">
+      <component :is="comps[currentTab]"></component>
+    </keep-alive> -->
+   </el-tab-pane>
     </el-tabs>
-		<!-- 将内容提出 -->
+  <!-- 将内容提出 -->
     <div class="tabs-content">
       <keep-alive include="VueSet">
         <component :is="comps[currentTab]"></component>
@@ -297,7 +309,7 @@ export default {
       tabs: [
         {
           label: 'Vue.extend',
-					name: 'VueExtend'
+     name: 'VueExtend'
         },
         {
           label: 'Vue.component',
@@ -335,8 +347,8 @@ export default {
 ```
 
 ## Material Design 风格
+
 [Vuetify](https://vuetifyjs.com/zh-Hans/)
 [Quasarchs](http://www.quasarchs.com/vue-components/input/)
 [material-components](https://material-components.github.io/material-components-web-catalog/#/)
 [text-field](https://material-components.github.io/material-components-web-catalog/#/component/text-field)
-
