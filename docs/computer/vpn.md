@@ -5,6 +5,7 @@
 - [节点列表](https://9.234456.xyz/abc.html)
 - [fastlink](http://byfastlink.xyz/auth/login)
 - [nodefree](https://github.com/Fukki-Z/nodefree)
+- [nodefree](https://nodefree.org/)
 - [淘 Apple ID](https://mac.taoappleid.com/)
 - [](https://how2down.com/vpn.html)
 
