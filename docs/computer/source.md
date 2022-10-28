@@ -4,11 +4,11 @@
 - [10个不为人知但功能强大的黑科技网站](https://www.jianshu.com/p/f9dcfdd542e5)
 - [运营工具大全](https://xiaomark.com/tool)
 - [墨滴](https://mdnice.com/)
-- [](https://dao.momen.vip/)
+- [墨导航](https://dao.momen.vip/)
 - [点点范文网](http://caibaojian.com/)
 - [2022最新Google镜像网站](http://www.ygbks.com/1719.html)
 - [常用开源软件国内镜像源网站](http://www.ygbks.com/3365.html)
-- [](http://www.ygbks.com/3389.html)
+- [公网IP地址查询网站汇总](http://www.ygbks.com/3389.html)
 
 ## 浏览器插件
 

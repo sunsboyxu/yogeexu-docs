@@ -34,7 +34,7 @@ window11 系统默认会自动安装 windows terminal 的，
 
 [![2.png](https://i.postimg.cc/9F2NPD3M/2.png)](https://postimg.cc/t7r5pC4Q)
 
-打开 windows terminal 设置后可以终端的 启动、样式、快捷键、配置的默认等进行设置，这里选择 打开 左下角的 <code>打开 JSON 文件</code>，点击后
+打开 windows terminal 设置后可以终端的 启动、样式、快捷键、配置的默认等进行设置，这里选择 打开 左下角的 ***打开 JSON 文件***，点击后
 默认会使用 编辑器帮你打开
 
 ![打开设置](/images/windows/terminal/3.png)
@@ -70,7 +70,7 @@ C:\Users\sunsb\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\Lo
 
 ![默认值](/images/windows/terminal/5.png)
 
-配置 终端 <code>亚克力</code> 效果
+配置 终端 ***亚克力*** 效果
 
 ``` json
 {
@@ -120,9 +120,9 @@ C:\Users\sunsb\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\Lo
 
 使用 [oh-my-posh官网](https://ohmyposh.dev/) 来进一步的美化终端，打开 oh-my-posh 查看 安装命令，这里采用了 winget 的方式安装了
 
-#### oh-my-posh官网
+### oh-my-posh官网
 
-<https://ohmyposh.dev>
+- [oh-my-posh文档](https://ohmyposh.dev)
 
 ![默认值](/images/windows/terminal/9.png)
 
@@ -166,7 +166,7 @@ set-ExecutionPolicy RemoteSigned
 
 ```
 
-执行命令安装 JanDeDobbeleer.OhMyPosh 安装命令
+### 执行命令安装 JanDeDobbeleer.OhMyPosh 安装命令
 
 ``` bash
 // OhMyPosh 安装命令
@@ -192,7 +192,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本，可以将配
 可以添加命令、别名、函数、变量、管理单元、模块和 PowerShell 驱动器，
 还可以将其他特定于会话的元素添加到您的配置文件中，以便在每个会话中都可以使用它们，而无需导入或重新创建它们。
 
-PowerShell 控制台支持以下基本配置文件，配置文件按优先顺序列出，第一个配置文件，如：<code>Microsoft.VSCode_profile.ps1</code> 具有最高优先级
+PowerShell 控制台支持以下基本配置文件，配置文件按优先顺序列出，第一个配置文件，如：***Microsoft.VSCode_profile.ps1*** 具有最高优先级
 
 PowerShell 支持用户和主机程序的多个配置文件，它不会为您创建配置文件
 
@@ -214,10 +214,10 @@ $Home\Documents\PowerShell\Microsoft.VSCode_profile.ps1
 
 ![默认值](/images/windows/terminal/15.png)
 
-注意 PowerShell 配置文件 Profiles 不是自动创建的，有可能这个路径 <code>C:\Users\sunsb\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1</code> 是存在，
+注意 PowerShell 配置文件 Profiles 不是自动创建的，有可能这个路径 ***C:\Users\sunsb\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1*** 是存在，
 打开电脑对应的目录 C:\Users\sunsb\Documents 却找不到 WindowsPowerShell 目录 和 Microsoft.PowerShell_profile.ps1 文件
 
-可以使用命令 <code>Test-Path $PROFILE</code> 查看当前是否存在 PowerShell 配置文件
+可以使用命令 ***Test-Path $PROFILE*** 查看当前是否存在 PowerShell 配置文件
 
 ``` js
 // 查看当前是否存在 PowerShell 配置文件
@@ -240,7 +240,7 @@ set-ExecutionPolicy RemoteSigned
 
 ![默认值](/images/windows/terminal/16.png)
 
-有个小技巧，在 <code>C:\Users\sunsb\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1</code> 编辑几个函数，如想使用 vscode 打开该文件的函数，和使用nodepad++ 打开该文件的函数
+有个小技巧，在 ***C:\Users\sunsb\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1*** 编辑几个函数，如想使用 vscode 打开该文件的函数，和使用nodepad++ 打开该文件的函数
 
 ``` bash
 # Microsoft.PowerShell_profile.ps1
@@ -379,7 +379,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/jandedobbeleer.omp.json" | 
 
 ### 其他主题更换
 
-- 在终端使用命令 <code>get-Poshthemes</code> 查看本地 oh-my-posh 的所有主题，并且会出现其他出题的样式
+- 在终端使用命令 ***get-Poshthemes*** 查看本地 oh-my-posh 的所有主题，并且会出现其他出题的样式
 - 在 oh-my-posh 官网查看 [oh-my-posh 主题](https://ohmyposh.dev/docs/themes)
 - 打开 D:/OhMyPosh/themes/ 复制 .json 前面的替换即可
 

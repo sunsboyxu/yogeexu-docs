@@ -8,30 +8,6 @@
 - [git提交代码五部曲](https://jingyan.baidu.com/article/359911f5a4fe4b57fe03060d.html)
 - [Git安装教程-Windows11安装](https://blog.csdn.net/weixin_42425618/article/details/123501071)
 
-## 相关问题处理
-
-HTTP/2 stream 1 was not closed cleanly before end of the underlying stream
-
-``` bash
-git config --global http.version HTTP/1.1 
-```
-
-fatal: refusing to merge unrelated histories
-致命的：拒绝合并不相关的历史
-
-``` bash
-git pull origin main --allow-unrelated-histories
-```
-
-- [git 安装 出现 443](https://github.com/hawtim/blog/issues/10)
-
-``` bash
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-```
-
-## git config
-
 ## Gogs
 
 - [Gogs 是一款极易搭建的自助 Git 服务](https://github.com/gogs)
@@ -165,7 +141,7 @@ git diff --name-only --diff-filter=U
 
 ## 远程地址发生变化，将项目迁移到别的项目时
 
-``` bash
+```
 git remote set-url origin https://git.xxx.com.cn/abc/新路径/xxx.git
 ```
 
@@ -322,6 +298,31 @@ git push -u origin master
 ```
 
 ## 问题处理
+
+- [git 安装 出现 443](https://github.com/hawtim/blog/issues/10)
+
+### fatal: refusing to merge unrelated histories
+
+- 致命的：拒绝合并不相关的历史
+
+``` bash
+git pull origin main --allow-unrelated-histories
+```
+
+## remote: Permission to xxxxx.git denied to xxx. fatal: unable to acce
+
+- [解决git push 中remote: Permission to xxxxx.git denied to xxx. fatal: unable to acce](https://blog.csdn.net/xiaoxiao48/article/details/105247965)
+
+## 如何解决OpenSSL SSL_read: Connection was reset, errno 10054
+
+- [OpenSSL SSL_read: Connection was reset, errno 10054](https://cloud.tencent.com/developer/article/2015652)
+- [OpenSSL SSL_read: Connection was reset, errno 10054](https://blog.csdn.net/m0_51269961/article/details/123709195)
+- [OpenSSL SSL_read: Connection was reset, errno 10054的解决方法](https://blog.csdn.net/wjh1840226173/article/details/124355167)
+
+``` bash
+# 解除ssl验证
+git config --global http.sslVerify "false"
+```
 
 ## 相关文档
 
