@@ -197,6 +197,12 @@ export PATH=/usr/local/mongodb/bin:$PATH
 source ~/.bash_profile
 ```
 
+### 重载zsh配置
+
+``` bash
+exec zsh
+```
+
 #### 配置别名
 
 如：配置 mongodb 快速启动

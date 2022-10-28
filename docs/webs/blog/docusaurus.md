@@ -337,3 +337,4 @@ title 相当于 #
 - [Algolia](https://docsearch.algolia.com/)
 - [Algolia crawler](https://crawler.algolia.com/)
 - [Algolia搜索功能申请](https://docsearch.algolia.com/apply)
+- [相关无法登录问题](https://discourse.algolia.com/t/cost-of-netlify-algolia-plugin/12277)

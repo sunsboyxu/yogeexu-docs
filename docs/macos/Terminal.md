@@ -1,6 +1,6 @@
 # macOS terminal
 
-macOS 系统下，终端的使用和美化等操作
+macOS 系统下，终端的使用和美化等操作，推荐使用 iterm2 + oh-my-posh
 
 查看某个应用的安装目录
 
@@ -27,6 +27,78 @@ zsh --version
 
 解压下载的 iterm2 压缩包 -> 将 iTerm.app 拖到 应用程序 中即可
 
+## oh-my-posh
+
+- [oh-my-posh](https://ohmyposh.dev/)
+- [oh-my-posh 全平台终端提示符个性化工具](https://sspai.com/post/69911)
+- [使用 oh-my-posh 美化终端](https://wxhboy.cn/2022/04/16/%E4%BD%BF%E7%94%A8ohmyposh%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF/)
+
+### 通过 homebrew 来安装 oh-my-posh
+
+``` bash
+# 先查看下 oh-my-posh
+brew search oh-my-posh
+
+# 通过 homebrew 安装 oh-my-posh
+brew tap JanDeDobbeleer/oh-my-posh && brew install oh-my-posh
+```
+
+### 环境变量配置，以及初始化 oh-my-posh 主题
+
+- [自定义 oh-my-posh 配置](https://ohmyposh.dev/docs/installation/customize)
+- [oh-my-posh 主题](https://ohmyposh.dev/docs/themes)
+
+修改 ～/.zshrc 文件
+
+``` bash
+# oh-my-posh 主题配置
+
+# 使用默认的主题配置
+# eval "$(oh-my-posh init zsh)"
+
+# 使用自定义主题配置
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json)"
+```
+
+在环境变量中添加完后，重载 zsh
+
+``` bash
+source ~/.zshrc
+exec zsh
+```
+
+### 手动 Nerd 字体下载 和 安装
+
+- [OhMyPosh Fonts](https://ohmyposh.dev/docs/installation/fonts)
+- [Nerd Fonts](https://www.nerdfonts.com/)
+- [Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads)
+
+在 [Nerd Fonts Downloads](https://www.nerdfonts.com/font-downloads) 中选择自己喜欢的字体下载，解压后，
+移动到 /Users/用户名/Library/Fonts（用户目录/资源库/Fonts） 目录下
+
+目录说明：资源库（Library）是个隐藏目录，shift + command + . 可快速显示 隐藏的目录和文件
+
+或者 在 mac 电脑上，全局搜索(快捷键 command + 空格)：输入 字体，点击 字体册.app
+
+### 通过 homebrew 安装 Nerd 字体
+
+``` bash
+// 安装命令
+brew tap homebrew/cask-fonts && brew install --cask font-字体名称-nerd-font
+```
+
+以安装 Mononoki Nerd Font 为例，字体包的格式为：font-字体名-nerd-font
+
+``` bash
+# 先搜索下该字体
+brew search font-mononoki-nerd-font
+
+brew tap homebrew/cask-fonts
+
+# homebrew 安装 Mononoki Nerd Font
+brew install --cask font-mononoki-nerd-font
+```
+
 ## oh-my-zsh
 
 - [ohmyz官网](https://ohmyz.sh/)
@@ -47,31 +119,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 uninstall_oh-my-zsh
 # 输入 y 即可
 ```
-
-## oh-my-posh
-
-- [oh-my-posh](https://ohmyposh.dev/)
-- [Oh My Posh 全平台终端提示符个性化工具](https://sspai.com/post/69911)
-- [使用ohmyposh美化终端](https://wxhboy.cn/2022/04/16/%E4%BD%BF%E7%94%A8ohmyposh%E7%BE%8E%E5%8C%96%E7%BB%88%E7%AB%AF/)
-
-``` bash
-// 安装 oh-my-posh
-brew tap JanDeDobbeleer/oh-my-posh && brew install oh-my-posh
-```
-
-### 环境变量设置，以及 初始化 oh-my-posh 主题
-
-``` bash
-export eval '$(oh-my-posh --init zsh --shell --config /usr/local/Cellar/oh-my-posh/12.1.0/themes/jandedobbeleer.omp.json)'
-source ~/.zshrc
-```
-
-### Nert 字体下载，和安装
-
-将下载的字体，移动到 /Users/用户名/Library/Fonts（用户目录/资源库/Fonts） 目录下，
-目录：资源库（Library）是个隐藏目录，shift + command + . 快速显示隐藏的目录和文件
-
-或者 在 mac 电脑上，全局搜索(快捷键 command + 空格)：输入 字体，点击 字体册.app
 
 ## Powershell
 
