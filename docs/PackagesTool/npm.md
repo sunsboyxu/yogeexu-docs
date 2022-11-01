@@ -1,6 +1,6 @@
 # npm
 
-``` bash
+``` js
 // 查看 npm config 详情
 npm config ls -l
 
