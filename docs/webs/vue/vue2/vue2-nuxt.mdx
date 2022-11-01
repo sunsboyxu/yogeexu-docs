@@ -1,0 +1,64 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Nuxt
+
+- [nuxtjs 中文网](https://www.nuxtjs.cn/)
+- [nuxtjs 官网](https://nuxtjs.org/)
+
+## 安装项目
+
+<Tabs>
+<TabItem value="yarn" label="yarn">
+
+```bash
+yarn create nuxt-app 项目名称
+```
+
+</TabItem>
+<TabItem label="npx" value="npx">
+
+```npx
+npx create-nuxt-app 项目名称
+```
+
+</TabItem>
+<TabItem label='npm' value='npm'>
+
+```bash
+npm init
+```
+
+</TabItem>
+</Tabs>
+
+根据提示选择一些配置，如：eslint + prettier 等
+
+当前使用的 nuxt 版本：2.15.8
+
+```md title=项目目录结构
+nuxt-app1
+├── .editorconfig
+├── .eslintcache
+├── .eslintrc.js
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── README.md
+├── components
+| ├── NuxtLogo.vue
+| └── Tutorial.vue
+├── jsconfig.json
+├── nuxt.config.js
+├── package.json
+├── pages
+| └── index.vue
+├── plugins
+| └── element-ui.js
+├── static
+| └── favicon.ico
+├── store
+| └── README.md
+├── stylelint.config.js
+└── yarn.lock
+```
