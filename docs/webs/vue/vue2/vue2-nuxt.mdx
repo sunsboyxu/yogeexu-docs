@@ -8,8 +8,21 @@ import TabItem from "@theme/TabItem";
 
 ## 安装项目
 
+- [create-nuxt-app](https://github.com/nuxt/create-nuxt-app)
+
+当前使用的 nuxt 版本：2.15.8 ，根据提示进行配置选择：
+
+- 1 在集成的服务器端框架之间进行选择
+- 2 选择喜欢的 UI 框架
+- 3 选择喜欢的测试框架
+- 4 选择 Nuxt 模式 (Universal or SPA)
+- 5 添加 axios module 以轻松地将 HTTP 请求发送到应用程序中
+- 6 添加 EsLint、Prettier、StyleLint 等，保存时进行代码规范和错误检查、格式化代码
+
 <Tabs>
 <TabItem value="yarn" label="yarn">
+
+使用 yarn 安装项目
 
 ```bash
 yarn create nuxt-app 项目名称
@@ -17,6 +30,8 @@ yarn create nuxt-app 项目名称
 
 </TabItem>
 <TabItem label="npx" value="npx">
+
+使用 npx 安装项目（npx 在 npm >=5.2.0 默认安装了）
 
 ```npx
 npx create-nuxt-app 项目名称
@@ -32,9 +47,9 @@ npm init
 </TabItem>
 </Tabs>
 
-根据提示选择一些配置，如：eslint + prettier 等
+## 目录结构
 
-当前使用的 nuxt 版本：2.15.8
+创建一个 nuxt-app1 的 nuxt 项目
 
 ```md title=项目目录结构
 nuxt-app1
@@ -62,3 +77,9 @@ nuxt-app1
 ├── stylelint.config.js
 └── yarn.lock
 ```
+
+## 路由
+
+- [nuxt 路由](https://www.nuxtjs.cn/guide/routing)
+
+Nuxt.js 会依据 pages 目录中的所有 \*.vue 文件生成应用的路由配置

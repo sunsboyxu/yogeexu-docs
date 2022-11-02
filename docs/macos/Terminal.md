@@ -27,6 +27,10 @@ zsh --version
 
 解压下载的 iterm2 压缩包 -> 将 iTerm.app 拖到 应用程序 中即可
 
+### item2 相关
+
+- [iterm2下载太慢_解决zsh启动速度慢的优化方法](https://blog.csdn.net/weixin_31293841/article/details/113023261)
+
 ## oh-my-posh
 
 - [oh-my-posh](https://ohmyposh.dev/)

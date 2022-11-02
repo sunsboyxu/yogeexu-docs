@@ -27,6 +27,7 @@ tcb -v
 - [微信云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 - [在公众号中使用云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/web.html)
 - [云开发入门](https://developers.weixin.qq.com/community/business/course/00022011ec0a287dd32b4ddce5180d)
+- [付费说明](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/billing/postpayment.html)
 
 ## 小程序云开发
 

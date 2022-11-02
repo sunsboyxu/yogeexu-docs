@@ -1,24 +1,25 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Vue3
 
-## vue3 相关文档
-
-- [vue3官方文档](https://vuejs.org/)
-- [vue3新版中文文档](https://staging-cn.vuejs.org/)
+- [vue3 官方文档](https://vuejs.org/)
+- [vue3 新版中文文档](https://staging-cn.vuejs.org/)
 - [Vue 3 迁移指南](https://v3-migration.vuejs.org/)
 - [Vue3 Api](https://cn.vuejs.org/api/)
-<https://www.bilibili.com/video/BV1St4y1A71B/?vd_source=25757068558276aa3a3b5e068ec0182b>
+- [了解 Typescript 在 vue3 项目中的优势](https://www.bilibili.com/video/BV1St4y1A71B)
 
-## vue3学习
+## vue3 学习
 
 - [Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架](https://www.jianshu.com/p/063188d494ed)
-- [vite+Vue3+ts搭建通用后台管理系统](https://mp.weixin.qq.com/s/6xsfxH70VjPtbwJWZ7mmbg)
+- [vite+Vue3+ts 搭建通用后台管理系统](https://mp.weixin.qq.com/s/6xsfxH70VjPtbwJWZ7mmbg)
 - [Vue3.x 我们在路上](https://www.jianshu.com/nb/48165352)
 - [版本常用差异对比](https://www.jianshu.com/p/f6a2c95c18ba)
 - [vue 3.0 笔记](https://www.jianshu.com/p/d31fa552e501)
-- [基于Vue3+TypeScript+ Vue-Cli4.0构建手机端模板脚手架](https://www.jianshu.com/p/adb0983830f6)
+- [基于 Vue3+TypeScript+ Vue-Cli4.0 构建手机端模板脚手架](https://www.jianshu.com/p/adb0983830f6)
 - [vue3-h5-template](https://github.com/ynzy/vue3-h5-template)
 - [Vue3 Vite SSR Typescript Eslint](https://www.jianshu.com/p/35ce77218bd2)
-- [vue3+ts项目：.eslintrc.js](https://www.jianshu.com/p/b10273d4293d)
+- [vue3+ts 项目：.eslintrc.js](https://www.jianshu.com/p/b10273d4293d)
 - [](https://www.jianshu.com/p/289919a35070)
 - [](https://www.jianshu.com/p/13c405104ed8)
 - [](https://www.jianshu.com/p/b8545d49fc69)
@@ -41,57 +42,58 @@
 
 ### 全局安装
 
-``` bash
+```bash
 // 全局安装 vue3
 npm install -g @vue/cli
 ```
 
 ### 更新 vue3
 
-``` bash
+```bash
 // 更新 @vue/cli
 npm install -g @vue/cli to update
 ```
 
 ### 兼容 vue2.0 安装
 
-``` bash
+```bash
 npm install -g @vue/cli-init
 ```
 
 ### 创建 vue 项目
 
-<CodeGroup>
-<CodeGroupItem title="命令创建项目" active>
+<Tabs>
+<TabItem label="命令创建项目" value='cli'>
 
-``` bash
+通过命令创建项目，会进行选择配置的选择
+
+```bash
 vue create vue3-app1
 ```
 
-通过命令创建项目，会进行选择配置的选择
-</CodeGroupItem>
-<CodeGroupItem title="可视化创建项目">
+</TabItem>
+<TabItem label="可视化创建项目" value='ui'>
 
-``` bash
-// vue 
+```bash
+// vue
 vue ui
 ```
 
-</CodeGroupItem>
-</CodeGroup>
+</TabItem>
+</Tabs>
 
 ## 2 vue-cli 如何默认使用 yarn
 
 ### Mac 系统设置默认 yarn
 
-``` bash
+```bash
 vim ~/.vuerc
 ```
 
-``` json
+```json
 {
- "useTaobaoRegistry": false,
- "packageManager": "yarn"
+  "useTaobaoRegistry": false,
+  "packageManager": "yarn"
 }
 ```
 
@@ -101,7 +103,7 @@ vim ~/.vuerc
 - C:\Users\sunsboyxu\ .vuerc
 - 使用 编辑器编辑 .vuerc
 
-``` json
+```json
 {
   "useTaobaoRegistry": true,
   "packageManager": "yarn",
