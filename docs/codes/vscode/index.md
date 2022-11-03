@@ -4,10 +4,11 @@
 - [JetBrains全系列软件激活教程激活码以及JetBrains系列软件汉化包](https://www.macwk.com/article/jetbrains-crack)
 - [中文网 vscode](https://www.php.cn/tool/vscode/)
 
-## 扩展
+## 扩展安装
 
-- 代码主题 **Atom One Dark Theme**
-- 文件图标 **Ayu**
+- 代码主题        **Atom One Dark Theme**
+- 文件图标        **Ayu**
+- Tailwindcss    **Tailwind CSS IntelliSense**
 
 ## 清理 vscode 缓存
 

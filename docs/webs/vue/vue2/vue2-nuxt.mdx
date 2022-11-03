@@ -5,6 +5,7 @@ import TabItem from "@theme/TabItem";
 
 - [nuxtjs 中文网](https://www.nuxtjs.cn/)
 - [nuxtjs 官网](https://nuxtjs.org/)
+- [在 Nuxt.js 中安装 Tailwind CSS](https://www.tailwindcss.cn/docs/guides/nuxtjs)
 
 ## 安装项目
 
@@ -41,7 +42,7 @@ npx create-nuxt-app 项目名称
 <TabItem label='npm' value='npm'>
 
 ```bash
-npm init
+npm init nuxt-app 项目名称
 ```
 
 </TabItem>
@@ -83,3 +84,29 @@ nuxt-app1
 - [nuxt 路由](https://www.nuxtjs.cn/guide/routing)
 
 Nuxt.js 会依据 pages 目录中的所有 \*.vue 文件生成应用的路由配置
+
+## 使用 Tailwindcss
+
+- [Tailwindcss](https://www.tailwindcss.cn)
+- [在 Nuxt.js 中安装 Tailwind CSS](https://www.tailwindcss.cn/docs/guides/nuxtjs)
+
+<Tabs>
+<TabItem label="yarn" value="yarn">
+
+yarn 安装相关依赖
+
+```bash
+yarn add @nuxtjs/tailwindcss tailwindcss@latest postcss@latest autoprefixer@latest -D
+```
+
+</TabItem>
+<TabItem label="npm" value="npm">
+
+npm 安装相关依赖
+
+```bash
+npm install @nuxtjs/tailwindcss tailwindcss@latest postcss@latest autoprefixer@latest -D
+```
+
+</TabItem>
+</Tabs>

@@ -141,7 +141,7 @@ git diff --name-only --diff-filter=U
 
 ## 远程地址发生变化，将项目迁移到别的项目时
 
-```
+```bash
 git remote set-url origin https://git.xxx.com.cn/abc/新路径/xxx.git
 ```
 
@@ -300,6 +300,8 @@ git push -u origin master
 ## 问题处理
 
 - [git 安装 出现 443](https://github.com/hawtim/blog/issues/10)
+
+- [git命令需要使用命令行开发者工具](https://blog.csdn.net/willianzhu/article/details/126854531)
 
 ### fatal: refusing to merge unrelated histories
 

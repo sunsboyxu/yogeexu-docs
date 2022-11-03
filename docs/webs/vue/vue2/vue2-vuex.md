@@ -24,13 +24,13 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-		msg: 'hello vuex'
+  msg: 'hello vuex'
   },
   mutations: {
-		
+  
   },
   actions: {
-		
+  
   },
   modules: {
     config
@@ -99,6 +99,7 @@ export default {
 ```
 
 ## 引用 vuex
+
 ``` js
 // /src/main.js
 import Vue from 'vue'
@@ -114,6 +115,7 @@ new Vue({
 ```
 
 ## 页面使用 vuex
+
 ``` html
 // /src/views/home.vue
 <template>
@@ -140,21 +142,21 @@ export default {
     lang() {
       return this.$store.state.config.lang
     },
-		themeColor() {
-			return this.$store.state.config.configData
-		},
-		topHtml2() {
-			return this.$store.getters['config/topHtml']
-		}
+  themeColor() {
+   return this.$store.state.config.configData
+  },
+  topHtml2() {
+   return this.$store.getters['config/topHtml']
+  }
   },
   async created() {
     const info = this.$store.dispatch('cofig/getConfigData')
-		console.log(info)
+  console.log(info)
   },
   methods: {
-		change() {
-			this.$sotre.commit('config/setConfigData',{})
-		}
+  change() {
+   this.$sotre.commit('config/setConfigData',{})
+  }
   }
 }
 </script>

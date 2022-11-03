@@ -719,6 +719,8 @@ flutter_swiper
 
 ## 其他问题
 
+- [MacOS 安装 Flutter 开发环境__排坑版](https://blog.csdn.net/weixin_44137575/article/details/120005219)
+
 [夜神模拟器](https://www.yeshen.com/faq/)
 [电脑VT开启教程](https://www.yeshen.com/faqs/SklVHWleZ)
 [Flutter 热加载](https://flutter.dev/docs/development/tools/hot-reload)
