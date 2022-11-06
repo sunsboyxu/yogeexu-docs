@@ -121,3 +121,7 @@ C:\Python310\Scripts\;C:\Python310\;%SystemRoot%\system32;%SystemRoot%;%SystemRo
 - nvm current                // 当前使用的 node 版本
 - nvm use 16                 // 切换 node 版本
 - nvm alias default v16.13.1 // 设置默认使用 node 版本
+
+## 其他问题
+
+在安装 node 如 14.18.2 版本时，如果 npm 无法安装成功，在 [node版本下载](https://nodejs.org/dist) 选择对应版本和对应的平台，替换掉 nvm 安装位置中的 node 即可
