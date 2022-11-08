@@ -8,5 +8,5 @@
 ## eslint 安装
 
 ``` bash
-yarn add eslint 
+yarn add eslint
 ```

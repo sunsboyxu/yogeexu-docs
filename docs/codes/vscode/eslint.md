@@ -104,13 +104,13 @@ module.exports = {
     'no-irregular-whitespace': 'off',
     'no-unused-vars': 'off',
     'vue/multi-word-component-names': 'off',
- 'no-throw-literal': 'off',
- eqeqeq: 'off',
- // eqeqeq: ['warn', 'smart']
- // 'vue/valid-v-on': 'off',
- // 'vue/valid-v-on': ['warn'],
- 'vue/valid-v-on': ['error', {
-  modifiers: ['my-input-search']
+    'no-throw-literal': 'off',
+    eqeqeq: 'off',
+    // eqeqeq: ['warn', 'smart']
+    // 'vue/valid-v-on': 'off',
+    // 'vue/valid-v-on': ['warn'],
+    'vue/valid-v-on': ['error', {
+    modifiers: ['my-input-search']
  }],
  'multiline-ternary': ['always-multiline']
   }

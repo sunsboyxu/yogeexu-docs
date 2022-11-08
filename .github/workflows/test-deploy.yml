@@ -1,24 +1,23 @@
-name: Test deployment
+name: test-deploy
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-    # 如果你想要进一步定义触发条件、路径等，可以查看文档
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+  pull_request:
 
 jobs:
-  test-deploy:
-    name: Test deployment
+  deploy:
+    name: test-deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: npm
 
-      - name: Install dependencies
-        run: npm install --frozen-lockfile
-      - name: Test build website
-        run: npm build
+      - name: Insatall Packages
+        run: npm run install
+      - name: Build Docsusaurus Docs
+        run: npm run build
