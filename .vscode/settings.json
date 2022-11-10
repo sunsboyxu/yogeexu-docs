@@ -1,6 +1,6 @@
 {
   "workbench.sideBar.location": "right",
-  "workbench.iconTheme": "eq-material-theme-icons-palenight",
+  "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.colorTheme": "Atom One Dark",
   "files.autoSave": "onFocusChange",
   "editor.fontSize": 14,

@@ -7,17 +7,4 @@ on:
   pull_request:
 
 jobs:
-  deploy:
-    name: test-deploy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-
-      - name: Insatall Packages
-        run: npm run install
-      - name: Build Docsusaurus Docs
-        run: npm run build
+  test_deploy:
