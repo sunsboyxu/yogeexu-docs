@@ -14,6 +14,17 @@
 }
 ```
 
+## 资源管理靠右显示
+
+文件 -> 首选项 -> 设置 -> 输入: workbench.sideBar.location 选择 left 或者 right
+
+``` json
+// settings.json
+{
+  "workbench.sideBar.location": "right"
+}
+```
+
 ## 保存代码格式化
 
 windows 下 文件 -> 首选项 -> 设置 -> 输入：editor.codeActionsOnSave -> 点击 在 settings.json 中编辑

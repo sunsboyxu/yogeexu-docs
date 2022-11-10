@@ -46,6 +46,25 @@ To disable this prompt instead, configure `"experimentalDisableTemplateSupport":
 - Vetur › Validation: Template 取消勾选 √
 - 文件->首选项->设置-> '搜索设置：eslint' -> 找到 Eslint: Enable
 
+## vscode 显示 .git 隐藏文件夹
+
+文件->首选项->设置-> '搜索设置: 输入 files' -> 找到 Files.Assocications, 将 .git 的配置删除
+
+对应的 settings.json
+
+``` json
+{
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript"
+  },
+  "files.exclude": {
+    "**/.git": false
+  }
+}
+```
+
 ## 其他问题
 
 - [Comments are not permitted in JSON](https://blog.csdn.net/qq_21271511/article/details/108219791)

@@ -7,8 +7,17 @@
 ## 扩展安装
 
 - 代码主题        **Atom One Dark Theme**
-- 文件图标        **Ayu**
+- 文件图标        **Ayu** **Material Icon Theme** **Material Theme Icons**
 - Tailwindcss    **Tailwind CSS IntelliSense**
+- Eslint
+- Highlight Matching Tag
+- Markdown
+- Markdownlint
+- MDX
+- Prettier
+- Stylint
+- Tailwindcss
+- Volar
 
 ## 清理 vscode 缓存
 

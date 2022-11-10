@@ -1,24 +1,10 @@
 # eslint
 
-- [eslint](https://eslint.org/docs/latest/user-guide/getting-started)
+- [eslint](https://eslint.org/)
+- [eslint github](https://github.com/eslint/eslint)
 - [eslint-plugin-vue](https://eslint.vuejs.org/)
-
-## .editorconfig
-
-``` bash
-root = true // 最顶级的配置,相当于根 editorconfig 直到查找到 root=true 才会停止查找不然会一直向上查找
-
-[*] // 通配符匹配 任意字符串的文件
-charset = utf-8 // 编码格式
-indent_style = space
-indent_size = 2
-end_of_line = lf // 定义换行符: lf | cr | crlf
-insert_final_newline = true // 设为 true 表明使文件以一个空白行结尾, false 反之
-trim_trailing_whitespace = true // 设为 true 表示会除去换行行首的任意空白字符，false 反之
-
-[*.md] // 通配符匹配 .md 的文件
-trim_trailing_whitespace = false
-```
+- [使用ESLint+Prettier规范React+Typescript项目](https://zhuanlan.zhihu.com/p/62401626)
+- [深入理解 ESlint](https://juejin.cn/post/6844903901292920846)
 
 ## .eslintrc.js rules 规则配置说明
 
@@ -104,13 +90,13 @@ module.exports = {
     'no-irregular-whitespace': 'off',
     'no-unused-vars': 'off',
     'vue/multi-word-component-names': 'off',
- 'no-throw-literal': 'off',
- eqeqeq: 'off',
- // eqeqeq: ['warn', 'smart']
- // 'vue/valid-v-on': 'off',
- // 'vue/valid-v-on': ['warn'],
- 'vue/valid-v-on': ['error', {
-  modifiers: ['my-input-search']
+    'no-throw-literal': 'off',
+    eqeqeq: 'off',
+    // eqeqeq: ['warn', 'smart']
+    // 'vue/valid-v-on': 'off',
+    // 'vue/valid-v-on': ['warn'],
+    'vue/valid-v-on': ['error', {
+    modifiers: ['my-input-search']
  }],
  'multiline-ternary': ['always-multiline']
   }
