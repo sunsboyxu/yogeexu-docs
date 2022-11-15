@@ -2,6 +2,7 @@
 
 - [jokerps](https://vip.jokerps.com/)
 - [](https://www.crsky.com/)
+- [腾讯软件下载中心](https://pc.qq.com/)
 -
 
 ## 视频剪辑
@@ -35,3 +36,12 @@
 - [addyoutube](https://addyoutube.com/)
 - [snapsave](https://snapsave.io/zh-cn)
 [](https://www.ganbey.com/youtube-download-3774)
+
+## 驱动
+
+- [绿联-驱动下载中心](https://www.lulian.cn/download/list-34-cn.html)
+
+## Wifi
+
+- [火星Wifi](http://www.zkytech.com/index.html)
+- [绿联新版USB2.0无线网卡操作演示丨CM448-20204](https://www.lulian.cn/video/943-cn.html)
