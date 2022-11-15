@@ -1,5 +1,7 @@
 # 代码规范 eslint + prettier + stylelint
 
+- [前端基于 husky 通过 eslint 检测提交代码](https://mp.weixin.qq.com/s/2G4dr4hdLn1JZSR0fXs_kw)
+
 - [vue项目中使用eslint+prettier规范与检查代码的方法](https://www.jb51.net/article/178614.htm)
 - [怎么在Vue项目中使用eslint + prettier规范代码风格](https://www.yisu.com/zixun/175905.html)
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
@@ -22,36 +24,369 @@
 
 - [vue3-eslint-stylelint-demo](https://github.com/sethidden/vue3-eslint-stylelint-demo)
 
-## vue-cli 项目使用 eslint + prettier + stylelint
+## 编辑器设置
 
-``` bash
-vue create vue-app1
-```
+前端项目基本都是使用 vscode 进行开发
 
-新建项目时，选择 eslint + prettier 的配置
+### vscode 设置
 
-vscode 扩展使用 [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint)
+安装相关的扩展和一些配置，如果安装 Vetur 扩展的可以先卸载了
 
-vscode 设置
+- ESLint 扩展
+- Prettier 扩展
+- Stylelint 扩展
+- Prettier ESLint 扩展，这个扩展看个人需求安装
+- Volar 扩展，默认支持 vue3，对 vue2 项目需要做个兼容处理
+
+[Prettier ESLint 扩展](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint)
+
+vscode 进行设置
+
+### 自动保存代码、代码类型类型操作、保存时格式化
+
+首选项 -> 设置 -> 在搜索设置中输入 files.autoSave、editor.formatOnSave、editor.codeActionsOnSave
+
+或者在 设置 界面，点击 右上角的 文件图标（打开设置json）的图标，打开 settigns.json 文件，进行设置
+
+### 相关设置说明
 
 ``` json
+// settgins.json
 {
-  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint", // 配置默认格式化程序为 Prettier Eslint
-  "editor.formatOnPaste": false, 
-  "editor.formatOnType": false,
-  "editor.formatOnSave": true, // 保存时格式化代码
+  "files.autoSave": "onFocusChange", // 控制具有未保存更改的编辑器的 自动保存
+  "files.associations": { // 配置语言的文件关联
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.scss": "css",
+    "*.js": "javascript"
+  },
+  "files.exclude": { // 配置 glob 模式以排除文件和文件夹。例如，文件资源管理器根据此设置决定要显示或隐藏的文件和文件夹
+    "**/.git": false // 显示 .git 文件夹
+  },
+  "editor.tabSize": 2, // 一个制表符等于的空格数
+  "editor.fontSize": 14, // 控制字体大小
+  "editor.formatOnSave": true,       // 在保存时格式化文件，格式化程序必须可用，延迟后文件不能保存，并且编辑器不能关闭
+
+  // 控制在保存时设置格式是设置整个文件格式还是仅设置修改内容的格式。editor.formatOnSave 处于启用状态时适用
   "editor.formatOnSaveMode": "file",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.markdownlint": true, // 每次保存的时候将代码按 markdonwlint 格式进行修复
-    "source.fixAll.stylelint": true, // 每次保存的时候将代码按 stylelint 格式进行修复
-    "source.fixAll.eslint": true // 每次保存的时候将代码按 eslint 格式进行修复
+
+  "editor.tabCompletion": "on", // 启用 Tab 补全
+  "editor.fontLigatures": false, // 配置字体连字或字体特性。可以是用于启用/禁用连字的布尔值
+  "editor.fontFamily": "Consolas,JetBrainsMono Nerd Font", // 控制字体系列
+
+  // 定义一个默认格式化程序, 该格式化程序优先于所有其他格式化程序设置。必须是提供格式化程序的扩展的标识符
+  // 这个标识是：Prettier ESLint 扩展
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.codeActionsOnSave": { // 在保存时运行的代码操作类型
+    "source.fixAll": true, // 控制是否应在文件保存时运行自动修复操作
+    "source.fixAll.markdownlint": true,
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
   },
-  "files.autoSave": "onFocusChange",
-  "[vue]": { // .vue 文件使用 Prettier Eslint 来格式化
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  "editor.unicodeHighlight.allowedCharacters": { // 定义未突出显示的允许字符
+    "，": true,
+    "：": true,
+    "（": true,
+    "’": true
   },
-  "[javascript]": { // .js 文件使用 Prettier Eslint 来格式化
+  "eslint.alwaysShowStatus": true, // 底部是否始终显示 ESLint 标识
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 200,
+  "prettier.singleAttributePerLine": true,
+  "[markdown]": { // 针对某种语言，配置替代编辑器设置
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
 }
+```
+
+### 我的完整配置
+
+``` json
+{
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1,
+  "volar.completion.preferredTagNameCase": "kebab",
+  "volar.completion.preferredAttrNameCase": "kebab",
+  "files.autoSave": "onFocusChange",
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.scss": "css",
+    "*.js": "javascript"
+  },
+  "files.exclude": {
+    "**/.git": false
+  },
+  "editor.tabSize": 2,
+  "editor.fontSize": 14,
+  "editor.tabCompletion": "on",
+  "editor.fontLigatures": false,
+  "editor.fontFamily": "Consolas,JetBrainsMono Nerd Font",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.markdownlint": true,
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "，": true,
+    "：": true,
+    "（": true,
+    "’": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "prettier.semi": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 200,
+  "prettier.singleQuote": true,
+  "prettier.singleAttributePerLine": true,
+  "prettier.trailingComma": "none",
+  "prettier.bracketSameLine": true,
+  "prettier.vueIndentScriptAndStyle": true,
+  "prettier.bracketSpacing": true,
+  "html.format.extraLiners": "",
+  "html.format.contentUnformatted": "",
+  "explorer.confirmDelete": false,
+  "emmet.includeLanguages": {
+    "wxml": "html",
+    "vue-html": "html",
+    "vue": "html"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "fish": {
+      "path": "fish",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "tcsh": {
+      "path": "/bin/tcsh"
+    },
+    "dash": {
+      "path": "/bin/dash"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdownlint.config": {
+    "no-reversed-links": false,
+    "no-bare-urls": true
+  },
+  "emmet.triggerExpansionOnTab": true
+}
+```
+
+## vue-cli 项目使用 eslint + prettier + stylelint + husky
+
+``` bash
+vue create eslint-prettier-demo
+```
+
+### 新建项目时的选择
+
+- 选择 Manually select features(自定义配置)
+- 使用 上下键定位到 Linter / Formatter，使用 空格键 ☑️ 选中，其他的配置根据项目需要勾选 ☑️
+- 提示 Pick a linter / formatter config 时，上下键 定位到 ESLint + Prettier，并回车
+
+### 相关依赖说明
+
+- eslint                  配置代码风格、质量的校验
+- prettier                用于代码格式的校验
+- eslint-config-prettier  使用 prettier 默认推荐配置，关闭 eslint 自身的格式化功能，防止 prettier 和 eslint 的自动格式化冲突
+- eslint-plugin-prettier  eslint 插件， 由 Prettier 生态提供，用于报告错误给 ESLint  
+- eslint-plugin-vue       vue 专门的 eslint 规则插件，用于检查 .vue 文件
+- @babel/eslint-parser    eslint 的 babel 解析器代替 babel-eslint
+- @vue/cli-plugin-eslint
+
+### 对于未使用 Linter / Formatter 选项初始化的项目，安装下面相关依赖
+
+``` bash
+yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-vue -D
+yarn add @babel/core @babel/eslint-parser @vue/cli-plugin-eslint -D
+```
+
+### vscode 使用 volar 扩展的设置
+
+修改 jsconfig.json 或者 typescript.config.json
+
+``` json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "vueCompilerOptions": {
+    "target": 2.7,
+    // "target": 2 // vue <= 2.6
+    "extensions": [
+      ".vue"
+    ]
+  }
+}
+```
+
+新建 .eslintrc.js 文件
+
+``` js
+module.exports = {
+  root: true,
+  env: {
+    node: true
+  },
+  extends: [
+    'plugin:vue/essential',
+    'eslint:recommended',
+    'plugin:prettier/recommended'
+  ],
+  parserOptions: {
+    parser: '@babel/eslint-parser'
+  },
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/multi-word-component-names': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'none'
+      }
+    ]
+  }
+}
+```
+
+新建 .prettierrc 文件
+
+``` json
+{
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none"
+}
+```
+
+## 配置 husky + lint-staged
+
+- [Prettier官方提供的 pre-commit 方式](https://prettier.io/docs/en/precommit.html)
+
+``` bash
+npx mrm@2 lint-staged
 ```

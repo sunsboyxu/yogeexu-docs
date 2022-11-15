@@ -60,7 +60,7 @@ module.exports = {
   sourceType: 'module'
  },
   env: {
-  browser: true, // 预定义的全局变量，这里是浏览器环境
+    browser: true, // 预定义的全局变量，这里是浏览器环境
     node: true // node 环境
   },
  // 比如使用 微信js-sdk，js是 cdn方式引用的，调用 wx.config 等方法
