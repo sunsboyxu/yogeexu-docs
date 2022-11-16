@@ -21,11 +21,8 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 // node-sass 切换镜像源的命令
 npm config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g
-```
 
-## npm 清除缓存
-
-``` bash
+// npm 清除缓存
 npm cache clean --force
 ```
 
@@ -35,21 +32,6 @@ npm cache clean --force
 - [node-sass国内镜像加速](https://newsn.net/say/node-sass-mirror.html)
 - [npm scripts 指南](https://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
 - [Win10恢复Shift+右键菜单“在此处打开命令窗口”](https://zhuanlan.zhihu.com/p/38166769)
-
-## nrm
-
-[nrm安装和配置](https://www.jianshu.com/p/94d084ce6834)
-
-## npx
-
-- [npx使用教程](https://www.ruanyifeng.com/blog/2019/02/npx.html)
-
-## yarn
-
-``` bash
-// 设置 node-sass 镜像
-yarn config set sass-binary-site https://npm.taobao.org/mirrors/node-sass
-```
 
 ## package.json
 
