@@ -2,6 +2,7 @@
 
 ## GitHub Actions
 
+- [使用GitHub Actions实现自动化部署](https://mp.weixin.qq.com/s/usELNo3LE-77D5pdFYFcTw)
 - [docusaurus 部署到 GitHub Pages](https://docusaurus.io/zh-CN/docs/deployment#deploying-to-github-pages)
 - [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
 - [docusaurus actions-gh-pages](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus)

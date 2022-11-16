@@ -4,6 +4,7 @@
 
 - [element-2.14.1](https://element.eleme.cn/2.14/#/zh-CN)
 - [element-2.15.7](https://element.eleme.cn/2.15/#/zh-CN)
+- [Elementui select 设置点击事件，在Change事件前触发](https://blog.csdn.net/weixin_47988564/article/details/114984764)
 
 ### 安装
 

@@ -1,9 +1,19 @@
 # Windows Software
 
+- [sbkko导航](https://nav.sbkko.com/)
+- [bandisoft](https://www.bandisoft.com/)
 - [jokerps](https://vip.jokerps.com/)
-- [](https://www.crsky.com/)
+- [jokerps](https://www.jokerps.com/)
+- [非凡软件站](https://www.crsky.com/)
 - [腾讯软件下载中心](https://pc.qq.com/)
--
+
+## 图片相关软件
+
+### Honeycam
+
+Honeycam 是一款高质量的 GIF/WebP动图制作和编辑器，制作您专属的游戏、视频锦集、电脑教程的动画文件
+
+- [Honeycam - 最好的GIF/WebP动图软件](https://www.bandisoft.com/honeycam)
 
 ## 视频剪辑
 
@@ -45,3 +55,7 @@
 
 - [火星Wifi](http://www.zkytech.com/index.html)
 - [绿联新版USB2.0无线网卡操作演示丨CM448-20204](https://www.lulian.cn/video/943-cn.html)
+
+## 其他
+
+- [Office2016及永久激活工具](https://www.matools.com/blog/190164836)

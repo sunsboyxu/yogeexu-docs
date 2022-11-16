@@ -3,7 +3,7 @@ title: 文档说明
 sidebar_position: 1
 ---
 
-欢迎，来到 [yogeexu的博客](https://sunsboyxu.github.io/yogeexu-docs/) 此博客使用 [**Docusaurus 2**](https://docusaurus.io/zh-CN)搭建
+:微笑猫: 欢迎，来到 [yogeexu的博客](https://sunsboyxu.github.io/yogeexu-docs/) 此博客使用 [**Docusaurus 2**](https://docusaurus.io/zh-CN)搭建
 
 ![Docusaurus Plushie](https://docusaurus.io/zh-CN/assets/images/social-card-8dc2413b4f9e86328bf77575e91171d7.png)
 
@@ -19,7 +19,7 @@ sidebar_position: 1
 
 🧐 Docusaurus 是一款静态站点生成器。 可以搭建带有快速客户端导航的单页应用，充分利用了 React，让你的网站具有交互能力。 它提供了开箱即用的文档功能，不过也可用于搭建各种网站（个人网站、产品、博客、营销主页，等等）
 
-**deploy**
+## deploy
 
 - [部署文档](https://docusaurus.io/zh-CN/docs/deployment)
 - [环境设置](https://docusaurus.io/zh-CN/docs/deployment#environment-settings)

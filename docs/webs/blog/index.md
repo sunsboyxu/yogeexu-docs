@@ -1,5 +1,5 @@
 
-# 博客搭建
+# 博客
 
 收录博客的搭建、优秀的博客主
 
@@ -8,9 +8,14 @@
 - [docusaurus](https://docusaurus.io/zh-CN/)
 - [hexo](https://hexo.io/)
 - [hexo中文](https://hexo.io/zh-cn/)
+- [Hexo集成Algolia搜索插件](https://blog.naaln.com/2016/07/hexo-with-algolia/)
 - [butterfly](https://butterfly.js.org/)
 - [hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
 - [WordPress菜鸟建站篇](https://www.dujin.org/13131.html)
+
+## docusaurus 博客
+
+- [messiahhh](https://messiahhh.github.io/blog/)
 
 ## 博客案例
 
@@ -29,6 +34,7 @@
 
 ## 博客收藏
 
+- [蒋大侠](https://developer.aliyun.com/profile/expert/k2t6summrgmug)
 - [小马部落阁](http://maqib.cn/)
 - [狂奔滴小马](https://juejin.cn/user/2189882895384093)
 - [狂奔滴小马 github](https://github.com/maqi1520)

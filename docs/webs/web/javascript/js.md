@@ -12,3 +12,7 @@
 - [js-cookie github](https://github.com/js-cookie/js-cookie)
 - [js-cookie的基本使用](https://blog.csdn.net/qq_16828495/article/details/120783389)
 - [js-cookie](https://www.jianshu.com/p/fb7571bd9539)
+
+## scrollIntoView
+
+- [scrollIntoView 的用法 scrollTop](https://blog.csdn.net/github_39319000/article/details/88638734)

@@ -315,6 +315,8 @@ module.exports = {
 
 ### Markdown 前言
 
+- [Markdown 特性](https://docusaurus.io/zh-CN/docs/markdown-features)
+
 Markdown 文档可以使用以下前言元数据字段, 前言的两端应用 --- 包裹
 
 ``` md title=在 .md 文件使用 Markdown 前言
@@ -338,3 +340,5 @@ title 相当于 #
 - [Algolia crawler](https://crawler.algolia.com/)
 - [Algolia搜索功能申请](https://docsearch.algolia.com/apply)
 - [相关无法登录问题](https://discourse.algolia.com/t/cost-of-netlify-algolia-plugin/12277)
+- [docsearchPlugin插件使用](https://blog.csdn.net/jiudenggushijingguo/article/details/125909267)
+- [algolia 全文检索](https://juejin.cn/post/7030456110930722847#heading-2)

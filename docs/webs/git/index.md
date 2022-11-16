@@ -7,6 +7,7 @@
 - [git简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
 - [git提交代码五部曲](https://jingyan.baidu.com/article/359911f5a4fe4b57fe03060d.html)
 - [Git安装教程-Windows11安装](https://blog.csdn.net/weixin_42425618/article/details/123501071)
+- [45 个 Git 经典操作场景，专治不会合代码](https://mp.weixin.qq.com/s/XSvE3x9WjHMIfINnqvplEQ)
 
 ## Gogs
 

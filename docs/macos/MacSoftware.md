@@ -4,6 +4,7 @@ macOS 系统常用软件下载网址
 
 ## Mac 软件下载
 
+- [macapp](https://macapp.org.cn/)
 - [jokerps](https://vip.jokerps.com/)
 - [Macyy](https://www.macyy.cn/)
 - [Haxmac](https://haxmac.cc/)
