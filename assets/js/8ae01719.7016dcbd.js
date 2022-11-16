@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkyogeexu_docs=self.webpackChunkyogeexu_docs||[]).push([[8354],{2852:e=>{e.exports=JSON.parse('{"permalink":"/yogeexu-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"\u535a\u5ba2","blogTitle":"\u535a\u5ba2\u6807\u9898"}')}}]);
