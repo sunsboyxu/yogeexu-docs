@@ -383,10 +383,43 @@ module.exports = {
 }
 ```
 
-## 配置 husky + lint-staged
+## 配置 pre-commit
 
 - [Prettier官方提供的 pre-commit 方式](https://prettier.io/docs/en/precommit.html)
 
-``` bash
+### husky + lint-staged
+
+``` js
+// 执行该命令，确保 git init 已经初始化过
 npx mrm@2 lint-staged
+```
+
+如果该命令响应的时间太慢，可以先将 npm 的镜像源切换为国内镜像(如：淘宝镜像源)，或者使用 nrm
+[nrm文档](https://sunsboyxu.github.io/yogeexu-docs/PackagesTool/nrm) 来管理你的镜像源
+
+执行该命令的日志：
+
+``` js
+// 执行 npx mrm@2 lint-staged 成功的日志
+Running lint-staged...
+Update package.json
+husky - Git hooks installed
+husky - created .husky/pre-commit
+```
+
+该命令会 修改 package.json 的内容
+
+该命令会 创建 .husky 文件夹
+
+``` json
+// package.json 新增的内容
+{
+  "scripts": {
+    ...
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
 ```
