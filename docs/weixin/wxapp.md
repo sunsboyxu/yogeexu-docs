@@ -33,6 +33,13 @@
 - [自定义组件 behaviors 计算属性 computed 支持](https://github.com/wechat-miniprogram/computed)
 - [组件生命周期](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/lifetimes.html)
 
+## 获取头像昵称
+
+- [wx.getUserProfile](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserProfile.html)
+- [小程序用户头像昵称获取规则调整公告](https://developers.weixin.qq.com/community/develop/doc/00022c683e8a80b29bed2142b56c01)
+- [头像昵称填写](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/userProfile.html)
+- [低版本兼容](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
+
 ## 订阅消息
 
 [订阅消息](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/subscribe-message/wx.requestSubscribeMessage.html)
@@ -103,3 +110,7 @@
 
 [程序实现类似微信提现-自定义键盘](https://blog.csdn.net/clli_Chain/article/details/120065731)
 [](https://blog.csdn.net/GG_com/article/details/103623541)
+
+### 兼容
+
+- [低版本兼容](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)

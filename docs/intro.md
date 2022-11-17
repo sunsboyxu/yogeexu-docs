@@ -3,7 +3,7 @@ title: 文档说明
 sidebar_position: 1
 ---
 
-:微笑猫: 欢迎，来到 [yogeexu的博客](https://sunsboyxu.github.io/yogeexu-docs/) 此博客使用 [**Docusaurus 2**](https://docusaurus.io/zh-CN)搭建
+欢迎，来到 [yogeexu的博客](https://sunsboyxu.github.io/yogeexu-docs/) 此博客使用 [**Docusaurus 2**](https://docusaurus.io/zh-CN)搭建
 
 ![Docusaurus Plushie](https://docusaurus.io/zh-CN/assets/images/social-card-8dc2413b4f9e86328bf77575e91171d7.png)
 
