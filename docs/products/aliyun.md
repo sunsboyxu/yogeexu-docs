@@ -18,3 +18,15 @@
 ## 阿里滑块验证
 
 - [阿里滑块验证](https://help.aliyun.com/document_detail/121892.html)
+
+## 对象存储 OSS
+
+- [对象存储OSS](https://www.aliyun.com/product/oss)
+- [对象存储OSS](https://help.aliyun.com/product/31815.html)
+- [OSS 学习路径](https://help.aliyun.com/learn/learningpath/oss.html?spm=5176.7933691.J_7985555940.3.28324c59T6wdHn)
+- [OSS常用工具汇总](https://help.aliyun.com/document_detail/44075.html?spm=a2c4g.11186623.0.0.2ee17a473LYP33)
+- [oss-browser](https://github.com/aliyun/oss-browser)
+
+### 图片处理
+
+- [对象存储OSS - 新版图片处理指南](https://help.aliyun.com/document_detail/101260.html)

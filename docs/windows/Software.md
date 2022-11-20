@@ -51,7 +51,7 @@ Honeycam 是一款高质量的 GIF/WebP动图制作和编辑器，制作您专�
 
 - [绿联-驱动下载中心](https://www.lulian.cn/download/list-34-cn.html)
 
-## Wifi
+## 网络
 
 - [火星Wifi](http://www.zkytech.com/index.html)
 - [绿联新版USB2.0无线网卡操作演示丨CM448-20204](https://www.lulian.cn/video/943-cn.html)
