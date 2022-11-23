@@ -14,6 +14,34 @@
 
 🧐 Docusaurus 是一款静态站点生成器。 可以搭建带有快速客户端导航的单页应用，充分利用了 React，让你的网站具有交互能力。 它提供了开箱即用的文档功能，不过也可用于搭建各种网站（个人网站、产品、博客、营销主页，等等）
 
+## components
+
+``` js
+// .mdx
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+<Tabs>
+
+<TabItem label="npm" value="npm">
+
+``` bash
+npm install
+
+```
+
+</TabItem>
+<TabItem label="yarn" value="yarn">
+
+``` bash
+yarn install
+```
+
+</TabItem>
+
+</Tabs>
+```
+
 ## deploy
 
 - [部署文档](https://docusaurus.io/zh-CN/docs/deployment)

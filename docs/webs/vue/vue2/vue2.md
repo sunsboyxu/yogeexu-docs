@@ -1,4 +1,4 @@
-# vue2 doc
+# vue
 
 - [vue-press](https://walure.gitee.io/vue-press)
 - [](https://walure.gitee.io/vue-press/vue2)

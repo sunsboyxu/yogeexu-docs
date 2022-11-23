@@ -1,8 +1,15 @@
-# vitejs
+---
+position: 1
+---
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+# vite
 
 - [vitejs](https://cn.vitejs.dev/)
 
-## vite 文档
+## vite2 文档
 
 - [vite中文网](https://cn.vitejs.dev/)
 - [vite config](https://vitejs.dev/config/#config-file)
@@ -17,9 +24,17 @@
 
 ## vite 初始化项目
 
-<CodeGroup>
+:::danger vite-app 这个包有问题
 
-<CodeGroupItem title="npm 方式" active>
+``` bash
+#这个的包有问题
+yarn create vite-app 项目名称
+```
+:::
+
+<Tabs>
+
+<TabItem label="npm" value="npm">
 
 ``` bash
 npm init @vitejs/app 项目名称
@@ -28,29 +43,22 @@ npm init @vitejs/app 项目名称 --template vue-ts
 
 ```
 
-</CodeGroupItem>
-<CodeGroupItem title="yarn 方式">
+</TabItem>
+<TabItem label="yarn" value="yarn">
 
 ``` bash
+# yarn create vite-app 项目名称
 yarn create @vitejs/app 项目名称
-// 或者
-yarn create vite-app 项目名称
-
+yarn create @vitejs/app 项目名称 --template vue
+yarn create @vitejs/app 项目名称 --template vue-ts
 ```
-
 会让你选择 vue 或者 vue-ts react等
-</CodeGroupItem>
 
-</CodeGroup>
+</TabItem>
 
-::: danger vite-app 这个包有问题
+</Tabs>
 
-``` bash
-// 这个的包有问题
-yarn create vite-app 项目名称
-```
-
-:::
+如果不输入项目名称，如：yarn create @vitejs/app ，会让你填写 项目名称 和 选择项目要使用的框架
 
 ## vite 插件使用
 
