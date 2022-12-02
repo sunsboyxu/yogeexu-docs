@@ -36,6 +36,7 @@
 ## 获取头像昵称
 
 - [wx.getUserProfile](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserProfile.html)
+- [open-data](https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html)
 - [小程序用户头像昵称获取规则调整公告](https://developers.weixin.qq.com/community/develop/doc/00022c683e8a80b29bed2142b56c01)
 - [头像昵称填写](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/userProfile.html)
 - [低版本兼容](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)

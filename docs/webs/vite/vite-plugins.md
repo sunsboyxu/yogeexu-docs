@@ -1,3 +1,7 @@
-# vitejs 插件
+---
+position: 3
+---
 
-[](https://vitejs.cn/plugins/)
+# vite插件
+
+- [vite plugins](https://vitejs.cn/plugins/)
