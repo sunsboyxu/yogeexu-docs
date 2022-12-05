@@ -4,6 +4,27 @@
 
 [vue.config.js 配置](https://uniapp.dcloud.io/collocation/vue-config)
 
+## 下拉刷新
+
+- [onPulldownRefresh](https://uniapp.dcloud.net.cn/api/ui/pulldown.html#onpulldownrefresh)
+
+页面设置允许下拉刷新
+
+``` json
+{
+  "pages": [{
+   "path": "pages/tabbar/home/home",
+   "style": {
+    // 是否允许下拉刷新
+    "enablePullDownRefresh": true,
+    // 下拉刷新样式
+    "backgroundTextStyle": "light"
+   }
+  }],
+  ...
+}
+```
+
 ## 全局配置不展示 topBar
 
 ``` js

@@ -1,5 +1,6 @@
 # 代码规范 eslint + prettier + stylelint
 
+- [搞懂 ESLint 和 Prettier](https://zhuanlan.zhihu.com/p/80574300)
 - [前端基于 husky 通过 eslint 检测提交代码](https://mp.weixin.qq.com/s/2G4dr4hdLn1JZSR0fXs_kw)
 
 - [vue项目中使用eslint+prettier规范与检查代码的方法](https://www.jb51.net/article/178614.htm)
@@ -11,10 +12,11 @@
 - [vite2 + vue3 + ts + volar 代码检测](https://blog.csdn.net/u013344993/article/details/122089458)
 - [Vue3 + TypeScript + Pinia 搭建一套企业级的开发脚手架](https://www.jianshu.com/p/063188d494ed)
 - [基于Vue3+TypeScript+ Vue-Cli4.0构建手机端模板脚手架](https://www.jianshu.com/p/adb0983830f6)
+- [使用ESLint+Prettier来统一前端代码风格](https://zhuanlan.zhihu.com/p/38267286)
 - [使用ESLint+Prettier来统一前端代码风格](https://mp.weixin.qq.com/s/B8C6PLELiUOsqyM56MHczA)
 - [vite+Vue3+ts搭建通用后台管理系统](https://mp.weixin.qq.com/s/6xsfxH70VjPtbwJWZ7mmbg)
 - [简单实用的ESLint + Prettier配置](https://blog.csdn.net/MrLiuSixsix/article/details/125189022)
-
+- [使用ESLint+Prettier规范React+Typescript项目](https://zhuanlan.zhihu.com/p/62401626)
 - [vue项目中配置eslint和prettier](https://blog.csdn.net/weixin_42349568/article/details/120937200)
 - [vue3项目中简单实用的ESLint + Prettier配置](https://blog.csdn.net/MrLiuSixsix/article/details/125189022)
 - [Vue2项目中配置ESLint和Prettier](https://blog.csdn.net/dreamingbaobei3/article/details/124643312)

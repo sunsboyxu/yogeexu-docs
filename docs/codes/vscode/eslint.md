@@ -5,6 +5,7 @@
 - [eslint-plugin-vue](https://eslint.vuejs.org/)
 - [使用ESLint+Prettier规范React+Typescript项目](https://zhuanlan.zhihu.com/p/62401626)
 - [深入理解 ESlint](https://juejin.cn/post/6844903901292920846)
+- [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
 
 ## .eslintrc.js rules 规则配置说明
 
