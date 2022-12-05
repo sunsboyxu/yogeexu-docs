@@ -2,54 +2,67 @@
 
 ## 配置 .vue 文件 快速模板
 
-文件->首选项->用户代码片段-> '输入 vue' -> 点击 vue.json 进行配置
+文件 -> 首选项 -> 用户代码片段 -> '输入 vue' -> 点击 vue.json 进行配置
 
 ``` json
 // vue.json
 {
-    "vue template": {
-        "prefix": "!vue", // 快捷键命令
-        "body": [ // 模板内容
-            "<template>",
-            "\t<div></div>",
-            "</template>\n",
-            "<script>",
-            "export default {",
-            "\tname: 'routername',",
-            "\tdata () {",
-            "\t\treturn {\n",
-            "\t\t}",
-            "\t}",
-            "}",
-            "</script>\n",
-            "<style lang='scss' scoped>\n",
-            "</style>"
-        ],
-        "description": "vue 快速生成模板！" // 显示的提示！
-    },
- "vue3 template": {
-         "prefix": "!vue3",
-         "body": [
-             "<template>",
-             "\t<div></div>",
-             "</template>\n",
-             "<script>",
-             "import { defineComponent } from 'vue'",
-             "export default defineComponent({",
-             "\tname: 'xx'",
-             "})",
-             "</script>\n",
-             "<style lang='scss' scoped>\n",
-             "</style>\n"
-         ],
-         "description": "vue3 快速生成模板！"
-     }
+  "vue template": {
+  "prefix": "!vue", // 快捷键命令
+  "body": [ // 模板内容
+      "<template>",
+      "\t<div></div>",
+      "</template>\n",
+      "<script>",
+      "export default {",
+      "\tname: 'routername',",
+      "\tdata () {",
+      "\t\treturn {\n",
+      "\t\t}",
+      "\t}",
+      "}",
+      "</script>\n",
+      "<style lang='scss' scoped>\n",
+      "</style>"
+  ],
+  "description": "vue 快速生成模板！" // 显示的提示！
+  },
+  "vue3 template": {
+      "prefix": "!vue3",
+      "body": [
+          "<template>",
+          "\t<div></div>",
+          "</template>\n",
+          "<script>",
+          "import { defineComponent } from 'vue'",
+          "export default defineComponent({",
+          "\tname: 'xx'",
+          "})",
+          "</script>\n",
+          "<style lang='scss' scoped>\n",
+          "</style>\n"
+      ],
+      "description": "vue3 快速生成模板！"
+  },
+  "vue3 setup": {
+    "prefix": "!vue3-setup",
+    "body": [
+        "<template>",
+        "\t<div></div>",
+        "</template>\n",
+        "<script setup>",
+        "</script>\n",
+        "<style lang='scss' scoped>\n",
+        "</style>\n"
+    ],
+    "description": "vue3 快速生成模板！"
+  }
 }
 ```
 
 ## 配置 .html 文件 快速模板
 
-``` html
+``` json
 {
     "html5 template": {
         "prefix": "!html5",

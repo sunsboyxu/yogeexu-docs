@@ -65,6 +65,29 @@ To disable this prompt instead, configure `"experimentalDisableTemplateSupport":
 }
 ```
 
+### tab 键自动补全代码
+
+- [vscode里div等html标签代码补全](https://cloud.tencent.com/developer/article/1649420)
+
+文件 -> 首选项 -> 设置 -> 搜索设置: 输入 emmet.triggerExpansionOnTab，☑️ 勾选中
+
+文件 -> 首选项 -> 设置 -> 搜索设置: 输入 files.associations'，配置语言的文件关联 (如: "*.vue": "html")
+
+```json
+//settings.json
+{
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.scss": "css",
+    "*.js": "html",
+    "*.vue": "html"
+  }, 
+}
+```
+
 ## 其他问题
 
 - [Comments are not permitted in JSON](https://blog.csdn.net/qq_21271511/article/details/108219791)
