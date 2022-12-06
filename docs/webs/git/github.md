@@ -1,5 +1,11 @@
 # github
 
+## github hosts
+
+- [GitHub520](https://github.com/521xueweihan/GitHub520)
+- [Github Hosts](https://gitee.com/fliu2476/github-hosts)
+- [github hosts 远程地址](https://gitee.com/fliu2476/github-hosts/raw/main/hosts)
+
 ## GitHub Actions
 
 - [使用GitHub Actions实现自动化部署](https://mp.weixin.qq.com/s/usELNo3LE-77D5pdFYFcTw)
