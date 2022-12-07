@@ -11,6 +11,8 @@ Pinia 是 Vue 的专属状态管理库，它允许你跨组件或页面共享状
 如果熟悉组合式 API 的话，你可能会认为可以通过一行简单的 ***export const state = reactive({ })*** 来共享一个全局状态，对于单页应用来说确实可以，
 如果应用在服务器端渲染，这可能会使你的应用暴露出一些安全漏洞，
 
+Pinia.js 是新一代的状态管理器，由 Vue.js团队中成员所开发的，因此也被认为是下一代的 Vuex，即 Vuex5.x，在 Vue3.0 的项目中使用也是备受推崇
+
 使用 Pinia，即使在小型单页应用中，可以获得如下功能：
 
 ## devtools 支持
@@ -31,6 +33,10 @@ Pinia 是 Vue 的专属状态管理库，它允许你跨组件或页面共享状
 - 支持服务端渲染
 
 ## 对比 vuex
+
+pinia 足够轻量，压缩后的体积只有1.6kb
+
+pinia 去除 mutations，只有 state，getters，actions，actions 支持同步和异步
 
 pinia 用于取代 vuex，支持 vue2 和 vue3，同时 有更好的 typescript 的类型支持
 
@@ -58,4 +64,141 @@ yarn create vite vite3-pinia-app --template vue
 yarn add pinia -S
 # pnpm install pinia -S
 # npm install pinia -S
+```
+
+在 src 目录下，新建 store目录，并新建 index.js 用于初始化 pinia 即 vue.use() pinia 插件的注册、count1.js、count2.js
+
+项目目录结构
+
+```json title=vite3-pinia-app
+├── README.md
+├── index.html
+├── package.json
+├── public
+|  └── vite.svg
+├── src
+|  ├── App.vue
+|  ├── assets
+|  |  └── vue.svg
+|  ├── components
+|  ├── main.js
+|  ├── store
+|  |  ├── count1.js // countStore1 采用 options API 写法
+|  |  ├── count2.js // countStore2 采用 composition API 写法
+|  |  └── index.js // 初始化 pinia,vue.use()
+|  └── style.css
+├── vite.config.js
+└── yarn.lock
+```
+
+## createPinia pinia的初始化，插件的注册
+
+src/store/index.js 代码
+
+``` js
+// src/store/index.js
+import { createPinia } from 'pinia'
+
+const store = createPinia()
+
+export default store
+```
+
+src/main.js
+
+``` js
+// src/main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+import store from './store'
+
+const app = createApp(App)
+
+app.use(store).mount('#app')
+```
+
+## defineStore 创建 store
+
+defineStore 方法 用于 创建 store
+
+``` js
+import { defineStore } from 'pinia'
+// const store = defineStore(id,options)
+// const store = defineStore(options)
+// const store = defineStore(id, fn)
+```
+
+## 创建 store 的几种方式
+
+- defineStore(id,options)
+- defineStore(options)
+- defineStore(id, fn)
+
+``` js
+// defineStore(id,options) 方式
+import { defineStore } from 'pinia'
+
+// 使用的地方解构的方式导入
+export const useCountStore1 = defineStore('countStore1', {
+  // state 需要定义为函数
+  state:() => ({ // state 定义方式一
+    count: 0 
+  }),
+  state: () => { // state 定义方式二
+    return {
+      count: 0
+    }
+  },
+  getters: {
+    dounbleCount() {
+      return this.count * 2
+    }
+  },
+  actions: {
+    increment() {
+      this.count++
+    }
+  }
+})
+```
+
+将 定义 id 放在 options 中
+
+``` js
+import { defineStore } from 'pinia'
+const useCountStore1 = defineStore({
+  id: 'countStore1',
+  state: () => ({
+    count: 0
+  }),
+  getters: {
+    ...
+  },
+  actions: {
+    ...
+  }
+})
+```
+
+采用函数式方式，类似 hooks，更好的将代码聚集
+
+``` js
+import { defineStore } from 'pinia'
+import { ref, computed } from 'vue'
+const useCountStore1 = defineStore('countStore2', () => {
+  const count = ref(0)
+  const double = computed(() => count.value * 2)
+  const increment = () => {
+    count.value++
+  }
+  const decrement = () => {
+    count.value--
+  }
+  return {
+    count,
+    doubleCount,
+    increment,
+    decrement
+  }
+})
 ```
