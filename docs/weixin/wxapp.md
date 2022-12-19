@@ -21,6 +21,11 @@
 - [vuemini](https://vuemini.org/)
 - [vue-mini github](https://github.com/vue-mini/vue-mini)
 
+## WeUI
+
+- [WeUI组件文档](https://wechat-miniprogram.github.io/weui/docs/)
+- [useExtendedLib](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib)
+
 ## 小程序项目 npm 支持
 
 [npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
