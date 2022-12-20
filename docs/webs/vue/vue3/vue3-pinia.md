@@ -202,3 +202,177 @@ const useCountStore1 = defineStore('countStore2', () => {
   }
 })
 ```
+
+## 页面或者组件使用创建的 store
+
+上面介绍了 defineStore 的使用，即 store 创建以及创建方式，如：useCountStore1 和 useCountStore2
+
+创建 store 后，下面介绍如何在页面使用
+
+首先，在 src/store 下，建立 count1.js 和 count2.js
+
+useCountStore1 使用 options API 的方式创建
+
+```js title=src/store/count1.js
+// src/store/count1.js
+// useCountStore1
+
+/**
+ * options API 方式创建
+ * state 需要返回一个函数
+ * this 指向当前 store -> useCountStore1
+*/
+import { defineStore } from 'pinia'
+
+const useCountStore1 = defineStore('countStore1', {
+  // state: () => {
+  //   return {
+  //     count: 0
+  //   }
+  // },
+  state: () => ({
+    count: 0
+  }),
+  getters: {
+    doubleCount() {
+      return this.count * 2
+    }
+  },
+  actions: {
+    // 加入购物车
+    increment() {
+      this.count++
+    },
+    // 移除购物车
+    decrement() {
+      this.count--
+    }
+  }
+})
+
+export default useCountStore1
+```
+
+useCountStore2 使用 Composition API 的方式创建
+
+```js title=src/store/count2.js
+// src/store/count2.js
+// useCountStore2
+
+/**
+ * Composition API 方式创建
+ * state 需要返回一个函数
+*/
+import { defineStore } from 'pinia'
+import { computed, ref } from 'vue'
+
+const useCountStore2 = defineStore('countStore2', () => {
+  // 定义一个响应式数据，类似 state
+  const count = ref(0)
+
+  // 定义一个计算属性，类似 getters
+  const doubleCount = computed(() => count.value * 2)
+
+  // 下面的方法，类似 actions
+  
+  // 加入购物车
+  // const increment = () => {
+  //   count.value++
+  // }
+  
+  /**
+   * 上面使用的 箭头函数，this -> undefined
+   * 尝试不使用 箭头函数 this 指向当前 store -> useCountStore2，this.count++ 或者 count.value++
+  */
+  
+  // 加入购物车
+  const increment = function() {
+    // this.count++
+    count.value++
+    console.log(this)
+    console.log(this.count)
+    console.log(this.doubleCount)
+  }
+
+  // 移除购物车
+  const decrement = () => {
+    count.value--
+  }
+
+  return {
+    count,
+    doubleCount,
+    increment,
+    decrement
+  }
+  // 感觉就像写 .vue 中的 script??? 很像 hooks???觉得这样更好的将代码聚集起来，一目了然
+})
+
+export default useCountStore2
+```
+
+当前是在 App.vue 中来使用 useCountStore1 和 useCountStore2
+
+```html title=src/App.vue
+<template>
+  <div>
+    <h3>vue3 + vite3 + pinia</h3>
+    <div>
+      <h3>useCountStore1</h3>
+      <p>购物车：{{ countStore1.count }} / {{ countStore1.doubleCount }}</p>
+      <div>
+        <button @click="handleAdd1">加入购物车1</button>
+        <!-- 允许直接通过 countStore1 来修改 state，但这种操作一般都放在 actions 中来统一封装 -->
+        <button @click="countStore1.count++">加入购物车2</button>
+        <button @click="handleRemove1">移除购物车1</button>
+      </div>
+      <hr color="#646cff" />
+      <h3>useCountStore2</h3>
+      <p>使用，解构方式</p>
+      <p>购物车：{{ count2 }} / {{ doubleCount2 }}</p>
+      <div>
+        <button @click="handleAdd2">加入购物车2</button>
+        <button @click="handleRemove2">移除购物车2</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+  /**
+   * @store 是在 vite.config.js 中配置了 resolve 下的 alias
+   */
+  import useCountStore1 from '@store/count1'
+  import useCountStore2 from '@store/count2'
+  import { storeToRefs } from 'pinia'
+
+  // useCountStore1
+  const countStore1 = useCountStore1()
+  console.log(countStore1, 'countStore1--')
+  const handleAdd1 = () => {
+    countStore1.increment()
+  }
+  const handleRemove1 = () => {
+    countStore1.decrement()
+  }
+
+  // useCountStore2
+  const countStore2 = useCountStore2()
+  console.log(countStore2, 'countStore2--')
+
+  // state 和 getter 的 解构
+  // 直接解构会失去响应式，通过 pinia 提供的方法 storeToRefs 进行解构
+  // count: count2 解构时，起别名
+  const { count: count2, doubleCount: doubleCount2 } = storeToRefs(countStore2)
+
+  // actions 的解构
+  // decrement: decrement2 解构时，起别名
+  const { increment, decrement: decrement2 } = countStore2
+  const handleAdd2 = () => {
+    increment()
+  }
+  const handleRemove2 = () => {
+    decrement2()
+  }
+</script>
+```
