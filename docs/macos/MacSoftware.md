@@ -18,6 +18,10 @@ macOS 系统常用软件下载网址
 - [玩机手册](https://www.rjsos.com/)
 - [Better365](https://www.better365.cn/)
 
+## 录屏软件
+
+- [](https://zh.okaapps.com/)
+
 ## 压缩软件
 
 - [Betterzip](https://www.betterzipcn.com/)

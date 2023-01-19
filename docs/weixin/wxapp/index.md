@@ -18,29 +18,10 @@
 
 ## 开发框架
 
-## TDesign
-
-- [tdesign官方](https://tdesign.tencent.com/)
-
-- [vuemini](https://vuemini.org/)
-- [vue-mini github](https://github.com/vue-mini/vue-mini)
-
 ## WeUI
 
 - [WeUI组件文档](https://wechat-miniprogram.github.io/weui/docs/)
 - [useExtendedLib](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#useExtendedLib)
-
-## 小程序项目 npm 支持
-
-[npm 支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
-
-## 自定义组件
-
-- [自定义组件说明](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/)
-- [Component](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html)
-- [自定义组件 behaviors](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/behaviors.html)
-- [自定义组件 behaviors 计算属性 computed 支持](https://github.com/wechat-miniprogram/computed)
-- [组件生命周期](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/lifetimes.html)
 
 ## 获取头像昵称
 
