@@ -1,5 +1,7 @@
 # 文件下载
 
+- [前端文件下载的正确打开方式](https://mp.weixin.qq.com/s/o_gec-HblMKAov88qcc7EA)
+
 ## a 链接下载文件
 
 [a标签详解](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)

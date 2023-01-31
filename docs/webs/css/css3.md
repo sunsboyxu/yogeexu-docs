@@ -1,6 +1,7 @@
 # css文档
 
-[](https://www.jq22.com/)
+- [](https://www.jq22.com/)
+- [CSS 背景生成器](https://mp.weixin.qq.com/s/X7R2EZHKgzZF0A-v8XTgGQ)
 
 ## filter 属性
 

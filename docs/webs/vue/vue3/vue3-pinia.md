@@ -6,6 +6,7 @@
 - [pinia中文](https://pinia.vuejs.org/zh/index.html)
 - [新一代状态管理工具，Pinia.js 上手指南](https://mp.weixin.qq.com/s/rA879t1-pI_F4TdWNkXafQ)
 - [pinia入门教程1](https://www.jianshu.com/p/c7e6386577ce)
+- [一文解析 Pinia 和 Vuex ，带你全面理解这两个 Vue 状态管理模式](https://mp.weixin.qq.com/s/uRN2QCitn8Ikkbp9gHMBfA)
 
 Pinia 是 Vue 的专属状态管理库，它允许你跨组件或页面共享状态。
 如果熟悉组合式 API 的话，你可能会认为可以通过一行简单的 ***export const state = reactive({ })*** 来共享一个全局状态，对于单页应用来说确实可以，
