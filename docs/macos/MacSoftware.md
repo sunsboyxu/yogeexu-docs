@@ -18,6 +18,10 @@ macOS 系统常用软件下载网址
 - [玩机手册](https://www.rjsos.com/)
 - [Better365](https://www.better365.cn/)
 
+## 视频剪辑
+
+- [Rebebuca Rust 桌面端 FFMPEG 管理器](https://rebebuca.com/)
+
 ## 压缩软件
 
 - [Betterzip](https://www.betterzipcn.com/)
