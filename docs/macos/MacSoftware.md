@@ -1,5 +1,7 @@
 # Mac Software
 
+- [Mac 软件博客](https://zh.okaapps.com/blog)
+
 macOS 系统常用软件下载网址
 
 ## Mac 软件下载
@@ -18,13 +20,32 @@ macOS 系统常用软件下载网址
 - [玩机手册](https://www.rjsos.com/)
 - [Better365](https://www.better365.cn/)
 
+## 录屏软件
+
+- [Omi录屏专家](https://zh.okaapps.com/)
+
+Omi录屏专家，Mac下最好的免费录屏和摄像头录制工具。Omi录屏专家支持在Mac上全屏录制，划区域录制，摄像头画中画录制，单独摄像头录制等。同时支持录制系统声音，麦克风，鼠标点击事件。支持15帧到60帧，720P，1080P，4K分辨率。也支持对录制好的视频进行裁剪编辑，选择指定的分辨率，帧率和画质进行导出
+
 ## 视频剪辑
 
 - [Rebebuca Rust 桌面端 FFMPEG 管理器](https://rebebuca.com/)
 
+## 视频格式转换器
+
+- [OmniConverter](https://zh.okaapps.com/product/1580856488)
+
 ## 压缩软件
 
+- [解压专家 Oka](https://zh.okaapps.com/)
 - [Betterzip](https://www.betterzipcn.com/)
+
+## 文件压缩加密
+
+- [文件压缩加密助手](https://zh.okaapps.com/product/1467156679)
+
+## 视频播放器
+
+- [OmniPlayer](https://zh.okaapps.com/)
 
 ## CleanMyMacX
 
