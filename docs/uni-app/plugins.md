@@ -13,6 +13,8 @@
 - [Android 和 IOS 佳博 蓝牙小票 、标签 打印插件](https://ext.dcloud.net.cn/plugin?id=462)
 - [人脸识别iOS原生插件](https://ext.dcloud.net.cn/plugin?id=1245)
 - [lucky-canvas抽奖插件](https://ext.dcloud.net.cn/plugin?id=3499)
+- [z-paging下拉刷新、上拉加载](https://ext.dcloud.net.cn/plugin?id=3935)
+- [支付宝原生扫码插件](https://ext.dcloud.net.cn/plugin?id=2636)
 
 ## 语言插件
 
@@ -184,7 +186,7 @@ module.exports = {
 
 [一体项目配套管理后台](https://ext.dcloud.net.cn/plugin?id=7293)
 
-# 原生插件
+## 原生插件
 
 ## uni-app 原生插件
 
@@ -198,3 +200,7 @@ module.exports = {
 ## 地图插件配置
 
 [地图插件配置](https://ask.dcloud.net.cn/article/29)
+
+## App更新插件
+
+- [整包更新和热更新组件](https://ext.dcloud.net.cn/plugin?id=7286)

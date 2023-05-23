@@ -82,6 +82,18 @@
 }
 ```
 
+### 自定义配置
+
+``` json
+// pages.json
+{
+ // uView 配置 easycom
+ "easycom": {
+  "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+ }
+}
+```
+
 ## onLaunch 同步
 
 [onLaunch 同步](https://blog.csdn.net/yfx000/article/details/108186719)
@@ -265,6 +277,28 @@ jweixin.config({
  ]
 })
 // ...
+```
+
+## 上下级页面传参
+
+在 A 页面 点击 选择 开发人员，跳转到 B 页面 进行开发人员选择
+在 C 页面 点击 选择 开发人员，跳转到 B 页面 进行开发人员选择
+
+``` js
+export default {
+  methods: {
+    selectUser() {
+      uni.navigateTo({
+        url: '/pages/userBooks/userBooks',
+        events: {
+          selectUser: user => {
+            
+          }
+        }
+      })
+    }
+  }
+}
 ```
 
 ## 其他
