@@ -3,8 +3,11 @@
 ## 查看用户名、邮箱
 
 ``` bash
+
+# 查看 git 配置列表 按住 Q 键退出
 git config --list
-// 查看当前项目的 git 信息
+
+# 查看当前项目的 git 信息
 git config --list --local
 git config user.name
 git config user.email
