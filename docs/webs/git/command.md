@@ -244,7 +244,7 @@ Date:   Fri Mar 4 17:51:16 2022 +0800
 
 ## 新建项目，并且提交
 
-``` bash
+``` js
 // 全局设置
 git config --global user.name "sunsboyxu"
 git config --global user.email "1109895279@qq.com"
