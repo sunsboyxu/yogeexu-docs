@@ -409,6 +409,16 @@ watch(
 
 ## 图片裁剪
 
-## 表格插件
+## Excele 表格插件
 
 [Luckysheet](https://mengshukeji.gitee.io/LuckysheetDocs/zh/)
+
+## Table 表格 插件
+
+vue3.2+ 需要安装 xe-utils
+
+### 安装
+
+``` bash
+npm install xe-utils vxe-table
+```

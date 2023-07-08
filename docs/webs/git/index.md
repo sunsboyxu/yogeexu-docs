@@ -15,7 +15,7 @@
 
 ## 使用 vue-cli 创建的项目，默认会 有 .git 文件夹
 
-``` bash
+``` js
  // 1 远程 git 或者 gitee 或者 gitlab,新建项目目录如：vue-app1
  // 2 删除项目的 .git 文件夹
  // 3 git 初始化 // --initial-branch=main 初始化的分支名称

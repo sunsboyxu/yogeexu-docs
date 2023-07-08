@@ -8,8 +8,9 @@
 
 ## react 学习文档
 
-[从零搭建webpack4+react+typescript+eslint脚手架(一)](https://www.jianshu.com/p/3867422f9b3d)
-[ts-react-boilerplate](https://github.com/mecoepcoo/ts-react-boilerplate)
+- [从零搭建webpack4+react+typescript+eslint脚手架(一)](https://www.jianshu.com/p/3867422f9b3d)
+- [ts-react-boilerplate](https://github.com/mecoepcoo/ts-react-boilerplate)
+- [一文吃透React v18 全部 Api](https://mp.weixin.qq.com/s/9k7wMxYoXCOoVhsK5zPwIw)
 
 ## 环境搭建
 

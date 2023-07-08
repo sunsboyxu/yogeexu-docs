@@ -3,8 +3,6 @@
 ## github hosts
 
 - [GitHub520](https://github.com/521xueweihan/GitHub520)
-- [Github Hosts](https://gitee.com/fliu2476/github-hosts)
-- [github hosts 远程地址](https://gitee.com/fliu2476/github-hosts/raw/main/hosts)
 
 ## GitHub Actions
 
