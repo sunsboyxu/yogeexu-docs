@@ -1,6 +1,7 @@
 # 科学上网
 
 - [Sabrina的万事屋](https://merlinblog.xyz/)
+- [爱远眺](https://iyuantiao.com/)
 - [Ghelper](http://googlehelper.net/)
 - [节点列表](https://9.234456.xyz/abc.html)
 - [fastlink](http://byfastlink.xyz/auth/login)
@@ -27,6 +28,7 @@
 - [苹果账号购买](https://buy.aneeo.com/)
 - [租用Apple ID](https://buy.aneeo.com/)
 - [iOS注册美区Apple ID教程](https://github.com/Alvin9999/new-pac/wiki/)
+- [地址生成大全](https://www.shenfendaquan.com/)
 
 ## 4 v2rayN
 
