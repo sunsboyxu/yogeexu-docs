@@ -1,0 +1,58 @@
+# vscode & vue
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+## volar 支持 vue2
+
+```html
+先将 Vetur 卸载，Vue 2 的设置，对于 Vue 版本 <= 2.6.14，需要通过安装 @vue/runtime-dom 添加 JSX 类型， 此扩展需要来自
+@vue/runtime-dom 的 Vue 3 类型
+```
+
+<Tabs>
+<TabItem label="yarn" value="yarn">
+
+```bash
+yarn add @vue/runtime-dom -D
+```
+
+</TabItem>
+<TabItem label="npm" value="npm">
+```bash
+npm install @vue/runtime-dom -D
+```
+</TabItem>
+</Tabs>
+
+Volar 优先支持 Vue 3，Vue 3 和 Vue 2 模板有一些区别，需要设置目标选项以支持 Vue 2 模板
+
+在 tsconfig.json 或者 jsconfig.json 中添加 vue 编译选项
+
+```js
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "extensions": [
+      ".vue"
+    ]
+  }
+}
+```
