@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksunsboyxu_docs=self.webpackChunksunsboyxu_docs||[]).push([[2328],{114:s=>{s.exports=JSON.parse('{"label":"\u535a\u5ba2","permalink":"/yogeexu-docs/blog/tags/\u535a\u5ba2","allTagsPath":"/yogeexu-docs/blog/tags","count":1,"unlisted":false}')}}]);

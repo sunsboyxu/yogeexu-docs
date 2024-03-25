@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksunsboyxu_docs=self.webpackChunksunsboyxu_docs||[]).push([[7095],{7077:s=>{s.exports=JSON.parse('{"permalink":"/yogeexu-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"\u535a\u5ba2","blogTitle":"\u535a\u5ba2\u6807\u9898"}')}}]);
