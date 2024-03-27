@@ -1,27 +1,5 @@
 # Flutter
 
-- [Flutter中文网](https://flutterchina.club/get-started/install/)
-- [Flutter官网-英文](https://flutter.dev/docs)
-- [Flutter实战书籍](https://book.flutterchina.club/)
-- [Flutter中文网开源项目](https://flutterchina.club/opensource.html)
-- [Flutter github](https://github.com/flutter/flutter)
-- [Flutter examples](https://github.com/flutter/website/tree/master/examples/layout)
-- [flutter-go 官网](https://flutter-go.pub/website/)
-- [flutter-掘金](https://juejin.cn/tag/Flutter)
-- [flutter插件官网地址](https://pub.dev/packages)
-
-## 1 Flutter - 续博客
-
-- [《Flutter实战》](https://book.flutterchina.club/)
-- [jianshu](https://www.jianshu.com/u/39bb72583e13)
-- [Flutter | 老孟](http://laomengit.com/)
-- [全局点击空白处隐藏键盘](https://mp.weixin.qq.com/s/jaWUgUaO5eFmoUZpkoGPXw)
-
-## 2 Dart 官网
-
-- [dart](https://dart.dev/)
-- [Get the Dart SDK](https://dart.dev/get-dart)
-
 ## 3 Gradle
 
 - [gradle](https://gradle.org/)
