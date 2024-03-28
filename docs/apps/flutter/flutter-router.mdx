@@ -1,0 +1,85 @@
+# Flutter 路由管理
+
+## 路由管理
+
+所谓路由管理，就是管理页面之间如何跳转，通常也可被称为导航管理。
+flutter 中的路由管理和原生开发类似，无论是 Android 还是 iOS，导航管理都会维护一个路由栈，
+路由入栈（push）操作对应打开一个新页面，路由出栈（pop）操作对应页面关闭操作，而 路由管理 主要是指如何来管理路由栈
+
+## PageRoute
+
+PageRoute 是一个抽象类，表示占有整个屏幕空间的一个模态路由页面，它还定义了路由构建及切换时过渡动画的相关接口及属性
+
+## MaterialPageRoute
+
+**_MaterialPageRoute_** 继承自 PageRoute 类，Material 组件库提供的组件，
+它可以针对不同平台，实现与平台页面切换动画风格一致的路由切换动画
+
+- 对于 Android，当打开新页面时，新的页面会从屏幕底部滑动到屏幕顶部。
+  当关闭页面时，当前页面会从屏幕顶部滑动到屏幕底部后消失，同时上一个页面会显示到屏幕上
+
+- 对于 iOS，当打开页面时，新的页面会从屏幕右侧边缘一直滑动到屏幕左边，直到新页面全部显示到屏幕上，而上一个页面则会从当前屏幕滑动到屏幕左侧而消失。
+  当关闭页面时，正好相反，当前页面会从屏幕右侧滑出，同时上一个页面会从屏幕左侧滑入
+
+### 构造函数参数的说明
+
+```js
+MaterialPageRoute({
+  WidgetBuilder builder,
+  RouteSettings settings,
+  bool maintainState true,
+  bool fullscreenDialog false
+})
+```
+
+### WidgetBuilder builder
+
+builder 是一个 WidgetBuilder 类型的回调函数，它的作用是构建路由页面的具体内容，返回值是一个 widget。通常要实现此回调，返回新路由的实例
+
+### RouteSettings settings
+
+settings 包含路由的配置信息，如路由名称、是否初始路由（首页）
+
+### maintainState
+
+默认情况下，当入栈一个新路由时，原来的路由仍然会被保存在内存中，如果想在路由没用的时候释放其所占用的所有资源，可以设置 maintainState 为 false
+
+### fullscreenDialog
+
+fullscreenDialog 表示新的路由页面是否是一个全屏的模态对话框，在 iOS 中，如果 fullscreenDialog 为 true，新页面将会从屏幕底部滑入（而不是水平方向）
+
+:::tip 自定义路由动画
+如果想自定义路由切换动画，可以自己继承 PageRoute 来实现，我们将在后面介绍动画时，实现一个自定义的路由组件
+:::
+
+## Navigator 路由管理组件
+
+## 路由传值
+
+### 非命名路由传值方式
+
+### 命名路由传值方式
+
+新建一个 AboutPage.dart 页面
+
+```js
+import "package:flutter/material.dart";
+
+class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('About Page'),
+      ),
+      body: const Center(
+        child: Text('关于页面'),
+      ),
+    );
+  }
+}
+```
+
+import { js } from '@site/docs/webs/vue/vue3/vue3-pinia.md'
